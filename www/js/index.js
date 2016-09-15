@@ -34,6 +34,9 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+        console.log('About to launch BOIDS');
+        BoidsEngine.launch();
+        console.log('Come back from BOIDS');
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
