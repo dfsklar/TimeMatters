@@ -41,7 +41,7 @@ body {
 }
 
 @keyframes updown {
-           to { transform: translateY(80px); } 
+           to { transform: translateY(200%); } 
 }
 
 
