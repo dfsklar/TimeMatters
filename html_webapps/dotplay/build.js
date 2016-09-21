@@ -11,17 +11,20 @@ $(document).ready(function() {
     console.log('hello');
     // Ready to construct the boids
     $slate = $('.slate');
+    fullAnimDuration = 8;
     for (var i=0; i < 50; i++) {
         left = getRandomIntInclusive(10,200);
         width = getRandomIntInclusive(5,10);
         height = getRandomIntInclusive(5,10);
+        animDelay = getRandomIntInclusive(0, 7);
         $inner = $(`<div class="circle" id="cc${i}"></div></div>`);
         $inner.css({
             backgroundColor: 'blue',
             height: `${height}px`,
             width: `${width}px`,
             transformOrigin: 'center 300%',
-            animationDuration: '7s'
+            animationDuration: '7s',
+            animationDelay: `${animDelay}s`
         });
         $outer = $(`<div class="circle-outer" id="c${i}"></div>`);
         $outer.css({
