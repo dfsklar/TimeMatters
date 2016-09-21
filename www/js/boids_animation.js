@@ -199,16 +199,17 @@ var BoidsEngine = {
 					this.spray(150,function() { return [
 						null,
 						null,
-						Vector.create(
-							this.width * Math.random(),
-							this.height * Math.random()
-						),
+                        // velocity: sklard changed this to zero to see what occurs
+						Vector.create(0, 0),
+						//this.width * Math.random(),
+						//this.height * Math.random()
+					    //),
 						Vector.random(1),
 						.75 + (Math.random() * .5),
 						100 * Math.random(), [
-							this.behavior.cohesion(),
+                                              //							this.behavior.cohesion(),
 							this.behavior.alignment(),
-							this.behavior.separation(),
+                            //							this.behavior.separation(),
 							
 							this.behavior.limit(1 + Math.random()),
 							
@@ -239,6 +240,8 @@ var BoidsEngine = {
 						// nothing
 				},
 				action: function(x, y) {
+                    console.log("action was called");
+                        return;  //sklard disabling this but this is only if you click i think
 					
 						// disperse if near
 						this.particles.forEach(function(p){
@@ -578,32 +581,6 @@ var BoidsEngine = {
 
 										// handle collisions?
 
-								}
-						},
-						eat: function(food) {
-								food = food || [];
-								return function(particle) {
-
-										var i = 0;
-										var l = particles.length;
-										var prey;
-
-										for (; i < l; i++) {
-
-												prey = particles[i];
-
-												// can't eat itself, also, needs to be tasty
-												if (prey === particle || food.indexOf(prey.group) === -1) {
-														continue;
-												}
-
-												// calculate force vector
-												if (Vector.distanceSquared(particle.position, neighbour.position) < 2 && particle.size >= neighbour.size) {
-														particle.size += neighbour.size;
-														destroy(neighbour);
-												}
-
-										}
 								}
 						},
 						force: function(x, y) {
