@@ -71,9 +71,28 @@ function getRandomMember(items) {
 $(document).ready(function() {
     updownAmounts = ['10','15','20','50'];
     colors = COLORS;
-    
-    // Leftmost portion
+
     $slate = $('.slate');
+
+
+
+    // 2 HADRONS
+    // 2 HADRONS
+    // 2 HADRONS
+
+    $hadron = $(`<div class="hadron"><div class="quark upq upleft"></div><div class="quark upq upright"></div><div class="quark downq down"></div></div>`);
+    $hadron_holder = $(`<div class="circle-outer"></div>`);
+    $hadron.appendTo($hadron_holder);
+    $hadron_holder.appendTo($slate);
+
+    return;
+
+    
+    // 1 BEGINNING OF THE UNIVERSE
+    // 1 BEGINNING OF THE UNIVERSE
+    // 1 BEGINNING OF THE UNIVERSE
+    // 1 BEGINNING OF THE UNIVERSE
+
     for (var i=0; i < 300; i++) {
         fullAnimDuration = getRandomFloatInclusive(2,3);
         X = triangular(0, 900, 100);

@@ -3,6 +3,39 @@ body {
 }
 
 
+.hadron {
+    position: absolute;
+        background-color: yellow;
+        border-radius: 50%;
+        width: 31px;
+        height: 31px;
+}
+.quark {
+    position: absolute;
+       background-color: red;
+       border-radius: 50%;
+       width: 11px;
+       height: 11px;
+}
+
+.quark.upleft {
+    left: 4px;
+    top: 4.5px;
+}
+
+.quark.upright {
+    left: 16px;
+    top: 4.5px;
+}
+
+.quark.down {
+    left: 10px;
+    top: 17px;
+}
+
+
+
+
 .slate {
   position: absolute;
   left: 200px;
