@@ -20,15 +20,6 @@ body {
   transform: translate3d(0px,0px,-80px);
 }
 
-.green {
-  background-color: #00FF00;
-}
-.yellow {
-  background-color: yellow;
-}
-.red {
-  background-color: red;
-}
 
 /* INNERMOST div */
 .circle {

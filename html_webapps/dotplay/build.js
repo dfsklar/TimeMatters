@@ -1,3 +1,27 @@
+var COLORS = [
+    '#7c9262',
+    '#f9a86b',
+    '#fed5a7',
+    '#7ebea2',
+    '#c7b2d6',
+    '#9b6791',
+    '#463060',
+    '#766a8c',
+    '#b7d39d',
+    '#90ca6d',
+    '#c19287',
+    '#e07553',
+    '#006e8d',
+    '#64aaba',
+    '#2673b6',
+    '#7ad0e2',
+    '#a8444a',
+    '#b4666a',
+    '#0087ce',
+    '#008fba'
+];
+
+
 
 // Returns a random integer between min (included) and max (included)
 // Using Math.round() will give you a non-uniform distribution!
@@ -20,7 +44,7 @@ function getRandomMember(items) {
 
 $(document).ready(function() {
     updownAmounts = ['10','15','20','50'];
-    colors = ['green','yellow','red','blue'];
+    colors = COLORS;
     
     // Ready to construct the boids
     $slate = $('.slate');
@@ -28,8 +52,8 @@ $(document).ready(function() {
         fullAnimDuration = getRandomFloatInclusive(2,3);
         X = getRandomIntInclusive(10,800);
         Y = getRandomIntInclusive(10,30);
-        width = getRandomIntInclusive(5,15);
-        height = getRandomIntInclusive(5,13);
+        width = getRandomIntInclusive(5,8);
+        height = width;
         animDelay = getRandomFloatInclusive(0, fullAnimDuration);
 
         // . c i r c l e  (the innermost)
