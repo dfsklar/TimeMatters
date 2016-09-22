@@ -13,15 +13,20 @@ function getRandomFloatInclusive(min, max) {
   return (Math.random() * (max - min + 1)) + min;
 }
 
+function getRandomMember(items) {
+    return items[Math.floor(Math.random()*items.length)];
+}
 
 
 $(document).ready(function() {
-    console.log('hello');
+    updownAmounts = ['10','15','20','50'];
+    colors = ['green','yellow','red','blue'];
+    
     // Ready to construct the boids
     $slate = $('.slate');
-    for (var i=0; i < 50; i++) {
+    for (var i=0; i < 200; i++) {
         fullAnimDuration = getRandomFloatInclusive(2,3);
-        X = getRandomIntInclusive(10,400);
+        X = getRandomIntInclusive(10,800);
         Y = getRandomIntInclusive(10,30);
         width = getRandomIntInclusive(5,15);
         height = getRandomIntInclusive(5,13);
@@ -30,18 +35,22 @@ $(document).ready(function() {
         // . c i r c l e  (the innermost)
         $inner = $(`<div class="circle" id="cc${i}"></div></div>`);
         $inner.css({
-            backgroundColor: 'blue',
+            backgroundColor: getRandomMember(colors),
             height: `${height}px`,
             width: `${width}px`,
-            animationDuration: `${fullAnimDuration}s`,
-            animationDelay: `${animDelay+(fullAnimDuration/4)}s`
+            left: `-${width/2}px`,
+            top: `-${height/2}px`,
+            animation: `animcircle ${fullAnimDuration}s infinite ease-in-out alternate`,
+            animationDelay: `${animDelay+(fullAnimDuration/2)}s`
         });
 
+        // . c i r c l e - o u t e r
+        yVar = getRandomMember(updownAmounts);
         $outer = $(`<div class="circle-outer" id="c${i}"></div>`);
         $outer.css({
             position: 'absolute',
             left: `${X}px`,
-            animation: `updown ${fullAnimDuration/2.0}s infinite ease-in-out alternate`,
+            animation: `updown${yVar} ${fullAnimDuration}s infinite ease-in-out alternate`,
             animationDelay: `${animDelay}s`
         });
 

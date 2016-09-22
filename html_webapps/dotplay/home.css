@@ -30,20 +30,32 @@ body {
 }
 
 .circle {
-  border-radius: 50%;
-  animation: animcircle infinite ease-in-out alternate;
-}
-
-@keyframes animcircleViaRotate { 
-      to { transform: rotate(1turn); } 
+    border-radius: 50%;
+    position: absolute;
 }
 
 
 @keyframes animcircle { 
-    from { transform: translateX(-40px); } 
-      to { transform: translateY( 40px); } 
+    from { transform: translateX(-10px) translateZ(-10px); } 
+    to { transform: translateX( 10px) translateZ(10px); } 
 }
-@keyframes updown {
+
+@keyframes updown10 {
+    from { transform: translateY(-10px); } 
+      to { transform: translateY( 10px); } 
+}
+
+@keyframes updown15 {
+    from { transform: translateY(-15px); } 
+      to { transform: translateY( 15px); } 
+}
+
+@keyframes updown20 {
     from { transform: translateY(-20px); } 
-      to { transform: translateY(20px); } 
+      to { transform: translateY( 20px); }
+}
+
+@keyframes updown50 {
+    from { transform: translateY(-50px); } 
+      to { transform: translateY( 50px); }
 }
