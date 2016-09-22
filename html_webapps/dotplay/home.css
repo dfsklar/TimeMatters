@@ -8,15 +8,16 @@ body {
   left: 200px;
   top: 200px;
   width: 20000px;
+  perspective: 9000px;
 }
 
 
 .axis {
-  position: absolute;
-  top: 0px;
   background-color: #333333;
   height: 1px;
-  width: 1000px;
+  width: 999999px;
+  transform-style: preserve-3d;
+  transform: translate3d(0px,0px,-80px);
 }
 
 .green {
@@ -29,15 +30,20 @@ body {
   background-color: red;
 }
 
+/* INNERMOST div */
 .circle {
     border-radius: 50%;
-    position: absolute;
+    transform-style: preserve-3d;
+}
+
+.circle-outer {
+    transform-style: preserve-3d;
 }
 
 
 @keyframes animcircle { 
-    from { transform: translateX(-10px) translateZ(-10px); } 
-    to { transform: translateX( 10px) translateZ(10px); } 
+    from { transform: translate3d(-10px, 0px, -30px); } 
+    to { transform: translate3d(10px, 0px, 30px); } 
 }
 
 @keyframes updown10 {
