@@ -36,23 +36,3 @@ body {
     from { transform: translate3d(-10px, 0px, -30px); } 
     to { transform: translate3d(10px, 0px, 30px); } 
 }
-
-@keyframes updown10 {
-    from { transform: translateY(-10px); } 
-      to { transform: translateY( 10px); } 
-}
-
-@keyframes updown15 {
-    from { transform: translateY(-15px); } 
-      to { transform: translateY( 15px); } 
-}
-
-@keyframes updown20 {
-    from { transform: translateY(-20px); } 
-      to { transform: translateY( 20px); }
-}
-
-@keyframes updown50 {
-    from { transform: translateY(-50px); } 
-      to { transform: translateY( 50px); }
-}

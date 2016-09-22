@@ -1,3 +1,70 @@
+var spareRandom = null;
+
+function normalRandom()
+{
+	var val, u, v, s, mul;
+
+	if(spareRandom !== null)
+	{
+		val = spareRandom;
+		spareRandom = null;
+	}
+	else
+	{
+		do
+		{
+			u = Math.random()*2-1;
+			v = Math.random()*2-1;
+
+			s = u*u+v*v;
+		} while(s === 0 || s >= 1);
+
+		mul = Math.sqrt(-2 * Math.log(s) / s);
+
+		val = u * mul;
+		spareRandom = v * mul;
+	}
+	
+	return val / 14;	// 7 standard deviations on either side
+}
+
+
+function normalRandomInRange(min, max)
+{
+	var val;
+	do
+	{
+		val = normalRandom();
+	} while(val < min || val > max);
+	
+	return val;
+}
+
+function normalRandomScaled(mean, stddev)
+{
+	var r = normalRandomInRange(-1, 1);
+
+	r = r * stddev + mean;
+
+	return Math.round(r);
+}
+
+function lnRandomScaled(gmean, gstddev)
+{
+	var r = normalRandomInRange(-1, 1);
+
+	r = r * Math.log(gstddev) + Math.log(gmean);
+
+	return Math.round(Math.exp(r));
+}
+
+
+function toNearestFive(val) {
+    return 5 * (1 + Math.floor(val / 5));
+}
+
+
+
 var COLORS = [
     '#7c9262',
     '#f9a86b',
@@ -46,12 +113,13 @@ $(document).ready(function() {
     updownAmounts = ['10','15','20','50'];
     colors = COLORS;
     
-    // Ready to construct the boids
+    // Leftmost portion
     $slate = $('.slate');
-    for (var i=0; i < 200; i++) {
+    for (var i=0; i < 100; i++) {
         fullAnimDuration = getRandomFloatInclusive(2,3);
-        X = getRandomIntInclusive(10,800);
-        Y = getRandomIntInclusive(10,30);
+        X = lnRandomScaled(40, 1.0);
+        console.log(`X = ${X}`);
+        Y = Math.floor(X * 0.8) + 1;
         width = getRandomIntInclusive(5,8);
         height = width;
         animDelay = getRandomFloatInclusive(0, fullAnimDuration);
@@ -69,7 +137,7 @@ $(document).ready(function() {
         });
 
         // . c i r c l e - o u t e r
-        yVar = getRandomMember(updownAmounts);
+        yVar = 77;
         $outer = $(`<div class="circle-outer" id="c${i}"></div>`);
         $outer.css({
             position: 'absolute',
