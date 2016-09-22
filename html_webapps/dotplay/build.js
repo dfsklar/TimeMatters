@@ -85,7 +85,21 @@ $(document).ready(function() {
     $hadron.appendTo($hadron_holder);
     $hadron_holder.appendTo($slate);
 
-    return;
+    $hadron.css({
+        animation: `animcircle 3s infinite ease-in-out alternate`,
+        animationDelay: `0s`,
+        left: '-15px',
+        top: '-15px'
+    });
+
+    $hadron_holder.css({
+            position: 'absolute',
+            left: `250px`,
+            animation: `updown30 3s infinite ease-in-out alternate`,
+            animationDelay: `0s`
+        });
+
+
 
     
     // 1 BEGINNING OF THE UNIVERSE
