@@ -74,13 +74,12 @@ $(document).ready(function() {
     
     // Leftmost portion
     $slate = $('.slate');
-    for (var i=0; i < 700; i++) {
+    for (var i=0; i < 300; i++) {
         fullAnimDuration = getRandomFloatInclusive(2,3);
-        // X = lnRandomScaled(0, 0.5) * 200;
-        X = triangular(0, 800, 80);
+        X = triangular(0, 900, 100);
         console.log(`X = ${X}`);
-        Y = Math.floor(X * 0.5) + 1;
-        width = getRandomIntInclusive(5,8);
+        Y = Math.floor(getRandomFloatInclusive(X*0.02, X*0.25));
+        width = getRandomIntInclusive(6,10);
         height = width;
         animDelay = getRandomFloatInclusive(0, fullAnimDuration);
 
