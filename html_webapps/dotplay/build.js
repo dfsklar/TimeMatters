@@ -80,10 +80,10 @@ $(document).ready(function() {
     // 2 HADRONS
     // 2 HADRONS
 
-    Xbase = 200;
+    Xbase = 300;
     for (var i=0; i < 50; i++) {
-        fullAnimDuration = getRandomFloatInclusive(2,3);
-        Xdelta = triangular(0, 700, 100);
+        fullAnimDuration = getRandomFloatInclusive(5,9);
+        Xdelta = triangular(0, 900, 500);
         X = Xbase + Xdelta;
         Y = Math.floor(getRandomFloatInclusive(Xdelta*0.02, Xdelta*0.25));
         width = 31;  // hardwired for now, must match css spec
@@ -120,7 +120,7 @@ $(document).ready(function() {
 
     for (var i=0; i < 300; i++) {
         fullAnimDuration = getRandomFloatInclusive(2,3);
-        X = triangular(0, 900, 100);
+        X = triangular(0, 1300, 160);
         console.log(`X = ${X}`);
         Y = Math.floor(getRandomFloatInclusive(X*0.02, X*0.25));
         width = getRandomIntInclusive(6,10);
