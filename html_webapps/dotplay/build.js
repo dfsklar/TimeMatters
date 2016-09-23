@@ -75,6 +75,29 @@ $(document).ready(function() {
     $slate = $('.slate');
 
 
+    timeline_in_yaml = `
+seq_timeline:
+   -
+     x: 0
+     time: 0
+     label: Cosmic Egg?
+   -
+     x: 1
+     time: 10<sup>-36</sup> of a second
+     label: Expansion Burst
+   -
+     x: 3
+     time: 10<sup>-6</sup> of a second
+     label: Infant Matter
+   -
+     x: 4
+     time: 1 second
+     label: Marriages of Matter
+    `;
+
+    timeline = YAML.parse(timeline_in_yaml);
+    console.log(timeline);
+
 
     // 2 HADRONS
     // 2 HADRONS

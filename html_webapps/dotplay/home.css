@@ -3,6 +3,18 @@ body {
 }
 
 
+
+.atom {
+    position: absolute;
+    background-color: #89b4dd;
+    border-radius: 50%;
+    width: 41px;
+    height: 41px;
+}
+
+
+
+
 .hadron {
     position: absolute;
     background-color: #bfe2f7;
@@ -10,6 +22,8 @@ body {
     width: 31px;
     height: 31px;
 }
+
+
 .quark {
     position: absolute;
        background-color: red;
