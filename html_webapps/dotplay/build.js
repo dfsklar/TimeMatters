@@ -80,26 +80,37 @@ $(document).ready(function() {
     // 2 HADRONS
     // 2 HADRONS
 
-    $hadron = $(`<div class="hadron"><div class="quark upq upleft"></div><div class="quark upq upright"></div><div class="quark downq down"></div></div>`);
-    $hadron_holder = $(`<div class="circle-outer"></div>`);
-    $hadron.appendTo($hadron_holder);
-    $hadron_holder.appendTo($slate);
-
-    $hadron.css({
-        animation: `animcircle 3s infinite ease-in-out alternate`,
-        animationDelay: `0s`,
-        left: '-15px',
-        top: '-15px'
-    });
-
-    $hadron_holder.css({
-            position: 'absolute',
-            left: `250px`,
-            animation: `updown30 3s infinite ease-in-out alternate`,
+    Xbase = 200;
+    for (var i=0; i < 50; i++) {
+        fullAnimDuration = getRandomFloatInclusive(2,3);
+        Xdelta = triangular(0, 700, 100);
+        X = Xbase + Xdelta;
+        Y = Math.floor(getRandomFloatInclusive(Xdelta*0.02, Xdelta*0.25));
+        width = 31;  // hardwired for now, must match css spec
+        height = width;
+        animDelay = getRandomFloatInclusive(0, fullAnimDuration);
+        $hadron = $(`<div class="hadron"><div class="quark upq upleft"></div><div class="quark upq upright"></div><div class="quark downq down"></div></div>`);
+        $hadron_holder = $(`<div class="circle-outer"></div>`);
+        $hadron.appendTo($hadron_holder);
+        $hadron_holder.appendTo($slate);
+        $hadron.css({
+            left: `-${width/2}px`,
+            top: `-${height/2}px`,
+            animation: `animcircle ${fullAnimDuration}s infinite ease-in-out alternate`,
+            animationDelay: `${animDelay+(fullAnimDuration/2)}s`,
             animationDelay: `0s`
         });
 
+        yVar = Math.min(Y, 99);
+        $hadron_holder.css({
+            position: 'absolute',
+            left: `${X}px`,
+            animation: `updown${yVar} ${fullAnimDuration}s infinite ease-in-out alternate`,
+            animationDelay: `${animDelay}s`
+        });
+    }
 
+        
 
     
     // 1 BEGINNING OF THE UNIVERSE

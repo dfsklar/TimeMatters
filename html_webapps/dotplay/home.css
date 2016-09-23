@@ -5,10 +5,10 @@ body {
 
 .hadron {
     position: absolute;
-        background-color: yellow;
-        border-radius: 50%;
-        width: 31px;
-        height: 31px;
+    background-color: #bfe2f7;
+    border-radius: 50%;
+    width: 31px;
+    height: 31px;
 }
 .quark {
     position: absolute;
@@ -21,16 +21,19 @@ body {
 .quark.upleft {
     left: 4px;
     top: 4.5px;
+    background-color: #7ebea2;
 }
 
 .quark.upright {
     left: 16px;
     top: 4.5px;
+    background-color: #7ebea2;
 }
 
 .quark.down {
     left: 10px;
     top: 17px;
+    background-color: #90ca6d;
 }
 
 
