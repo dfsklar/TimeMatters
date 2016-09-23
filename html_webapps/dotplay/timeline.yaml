@@ -1,17 +1,22 @@
+window.TIMELINE_IN_YAML = `
+
 seq_timeline:
+
    -
      x: 0
      time: 0
      label: Cosmic Egg?
    -
      x: 1
-     time: 10<sup>-36</sup> of a second
+     time: 10<sup>-36</sup> of<br/>a second
      label: Expansion Burst
    -
-     x: 3
-     time: 10<sup>-6</sup> of a second
+     x: 2.7
+     time: 10<sup>-6</sup> of<br/>a second
      label: Infant Matter
    -
      x: 4
      time: 1 second
      label: Marriages of Matter
+
+`;

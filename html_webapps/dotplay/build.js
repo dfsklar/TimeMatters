@@ -74,30 +74,21 @@ $(document).ready(function() {
 
     $slate = $('.slate');
 
+    $timeline = $('.timeline');
 
-    timeline_in_yaml = `
-seq_timeline:
-   -
-     x: 0
-     time: 0
-     label: Cosmic Egg?
-   -
-     x: 1
-     time: 10<sup>-36</sup> of a second
-     label: Expansion Burst
-   -
-     x: 3
-     time: 10<sup>-6</sup> of a second
-     label: Infant Matter
-   -
-     x: 4
-     time: 1 second
-     label: Marriages of Matter
-    `;
-
-    timeline = YAML.parse(timeline_in_yaml);
+    timeline = YAML.parse(window.TIMELINE_IN_YAML);
+    timeline_points = timeline.seq_timeline;
     console.log(timeline);
 
+    timeline_x_factor = 80;
+    for (i=0; i < timeline_points.length; i++) {
+        rec = timeline_points[i];
+        $newbie = $(`<div class=timemarker><div class=notch></div><div class=label><div class=time>${rec['time']}</div><div>${rec['label']}</div></div></div>`);
+        $newbie.css({
+            left: `${rec.x * timeline_x_factor}`
+        });
+        $timeline.append($newbie);
+    }
 
     // 2 HADRONS
     // 2 HADRONS
