@@ -74,6 +74,11 @@ $(document).ready(function() {
 
     $slate = $('.slate');
 
+
+    // TIMELINE!!
+    // TIMELINE!!
+    // TIMELINE!!
+
     $timeline = $('.timeline');
 
     timeline = YAML.parse(window.TIMELINE_IN_YAML);
@@ -90,6 +95,44 @@ $(document).ready(function() {
         $timeline.append($newbie);
     }
 
+
+
+
+    // ATOMS
+
+    Xbase = 500;
+    for (var i=0; i < 20; i++) {
+        fullAnimDuration = getRandomFloatInclusive(5,9);
+        Xdelta = triangular(0, 900, 300);
+        X = Xbase + Xdelta;
+        Y = Math.floor(getRandomFloatInclusive(Xdelta*0.02, Xdelta*0.25));
+        width = 41;  // hardwired for now, must match css spec
+        height = width;
+        animDelay = getRandomFloatInclusive(0, fullAnimDuration);
+        $atom = $(`<div class='atom childcount1'><div class="hadron"><div class="quark upq upleft"></div><div class="quark upq upright"></div><div class="quark downq down"></div></div></div>`);
+        $atom_holder = $(`<div class="circle-outer"></div>`);
+        $atom.appendTo($atom_holder);
+        $atom_holder.appendTo($slate);
+        $atom.css({
+            left: `-${width/2}px`,
+            top: `-${height/2}px`,
+            animation: `animcircle ${fullAnimDuration}s infinite ease-in-out alternate`,
+            animationDelay: `${animDelay+(fullAnimDuration/2)}s`,
+            animationDelay: `0s`
+        });
+
+        yVar = Math.min(Y, 99);
+        $atom_holder.css({
+            position: 'absolute',
+            left: `${X}px`,
+            animation: `updown${yVar} ${fullAnimDuration}s infinite ease-in-out alternate`,
+            animationDelay: `${animDelay}s`
+        });
+    }
+    
+
+
+
     // 2 HADRONS
     // 2 HADRONS
     // 2 HADRONS
@@ -97,7 +140,7 @@ $(document).ready(function() {
     Xbase = 300;
     for (var i=0; i < 50; i++) {
         fullAnimDuration = getRandomFloatInclusive(5,9);
-        Xdelta = triangular(0, 900, 500);
+        Xdelta = triangular(0, 900, 200);
         X = Xbase + Xdelta;
         Y = Math.floor(getRandomFloatInclusive(Xdelta*0.02, Xdelta*0.25));
         width = 31;  // hardwired for now, must match css spec
