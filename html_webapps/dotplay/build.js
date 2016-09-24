@@ -101,7 +101,7 @@ $(document).ready(function() {
     // ATOMS
 
     Xbase = 500;
-    for (var i=0; i < 20; i++) {
+    for (var i=0; i < 80; i++) {
         fullAnimDuration = getRandomFloatInclusive(5,9);
         Xdelta = triangular(0, 600, 300);
         X = Xbase + Xdelta;
@@ -143,7 +143,7 @@ $(document).ready(function() {
     // 2 HADRONS
 
     Xbase = 300;
-    for (var i=0; i < 50; i++) {
+    for (var i=0; i < 80; i++) {
         fullAnimDuration = getRandomFloatInclusive(5,9);
         Xdelta = triangular(0, 900, 200);
         X = Xbase + Xdelta;
