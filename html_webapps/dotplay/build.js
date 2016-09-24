@@ -93,6 +93,9 @@ $(document).ready(function() {
             left: `${rec.x * timeline_x_factor}`
         });
         $timeline.append($newbie);
+        $newbie.on("tap", function(event) {
+            $( "#mypanel" ).panel( "open" , {} );
+        });
     }
 
 
@@ -103,7 +106,7 @@ $(document).ready(function() {
     Xbase = 500;
     for (var i=0; i < 80; i++) {
         fullAnimDuration = getRandomFloatInclusive(5,9);
-        Xdelta = triangular(0, 600, 300);
+        Xdelta = triangular(0, 1600, 800);
         X = Xbase + Xdelta;
         Y = Math.floor(getRandomFloatInclusive(Xdelta*0.02, Xdelta*0.25));
         width = 41;  // hardwired for now, must match css spec
@@ -123,7 +126,6 @@ $(document).ready(function() {
             top: `-${height/2}px`,
             animation: `animcircle ${fullAnimDuration}s infinite ease-in-out alternate`,
             animationDelay: `${animDelay+(fullAnimDuration/2)}s`,
-            animationDelay: `0s`
         });
 
         yVar = Math.min(Y, 99);
@@ -159,8 +161,7 @@ $(document).ready(function() {
             left: `-${width/2}px`,
             top: `-${height/2}px`,
             animation: `animcircle ${fullAnimDuration}s infinite ease-in-out alternate`,
-            animationDelay: `${animDelay+(fullAnimDuration/2)}s`,
-            animationDelay: `0s`
+            animationDelay: `${animDelay+(fullAnimDuration/2)}s`
         });
 
         yVar = Math.min(Y, 99);
@@ -180,11 +181,11 @@ $(document).ready(function() {
     // 1 BEGINNING OF THE UNIVERSE
     // 1 BEGINNING OF THE UNIVERSE
 
-    for (var i=0; i < 1800; i++) {
+    for (var i=0; i < 800; i++) {
         fullAnimDuration = getRandomFloatInclusive(2,3);
-        X = triangular(0, 2500, 360);
+        X = triangular(0, 3000, 120);
         console.log(`X = ${X}`);
-        Y = Math.floor(getRandomFloatInclusive(X*0.02, X*0.25));
+        Y = Math.floor(getRandomFloatInclusive(X*0.02, X*0.18));
         width = getRandomIntInclusive(6,10);
         height = width;
         animDelay = getRandomFloatInclusive(0, fullAnimDuration);

@@ -6,6 +6,8 @@ seq_timeline:
      x: 0
      time: 0
      label: Cosmic Egg?
+     details: <p>Prevailing theory suggests that all energy in our known Universe was condensed into a tiny area, possibly smaller than a single atom. It was hot, dense, a singularity. No one knows what surrounded it or came before it. Theories include Infinite Everything; Nothing.</p><p>An alternate theory imagines a Multiverse, millions of Universes-- fabrics or membranes-- vibrating in close proximity. As the membranes of two universes collided, our Universe, was born. It is possible that there was no beginning.</p>
+
    -
      x: 1
      time: 10<sup>-36</sup> of<br/>a second
@@ -18,5 +20,21 @@ seq_timeline:
      x: 4
      time: 1 second
      label: Marriages of Matter
+   -
+     x: 5.3
+     time: 20 minutes
+     label: Merging Matter
+   -
+     x: 6.5
+     time: 300,000 years
+     label: Merging Matter
+   -
+     x: 8
+     time: 200 million years
+     label: Quiet Expanse
+   -
+     x: 11
+     time: 1 billion years
+     label: Simmering
 
 `;
