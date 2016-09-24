@@ -180,9 +180,9 @@ $(document).ready(function() {
     // 1 BEGINNING OF THE UNIVERSE
     // 1 BEGINNING OF THE UNIVERSE
 
-    for (var i=0; i < 300; i++) {
+    for (var i=0; i < 1800; i++) {
         fullAnimDuration = getRandomFloatInclusive(2,3);
-        X = triangular(0, 1300, 160);
+        X = triangular(0, 2500, 360);
         console.log(`X = ${X}`);
         Y = Math.floor(getRandomFloatInclusive(X*0.02, X*0.25));
         width = getRandomIntInclusive(6,10);
