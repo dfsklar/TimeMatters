@@ -103,13 +103,18 @@ $(document).ready(function() {
     Xbase = 500;
     for (var i=0; i < 20; i++) {
         fullAnimDuration = getRandomFloatInclusive(5,9);
-        Xdelta = triangular(0, 900, 300);
+        Xdelta = triangular(0, 600, 300);
         X = Xbase + Xdelta;
         Y = Math.floor(getRandomFloatInclusive(Xdelta*0.02, Xdelta*0.25));
         width = 41;  // hardwired for now, must match css spec
         height = width;
         animDelay = getRandomFloatInclusive(0, fullAnimDuration);
-        $atom = $(`<div class='atom childcount1'><div class="hadron"><div class="quark upq upleft"></div><div class="quark upq upright"></div><div class="quark downq down"></div></div></div>`);
+        child_count = (i%2) ? 1 : 2;
+        $atom = $(`<div class='atom childcount${child_count}'></div>`);
+        for (childidx = 0; childidx < child_count; childidx++) {
+            $h = $(`<div class="hadron h${childidx}"><div class="quark upq upleft"></div><div class="quark upq upright"></div><div class="quark downq down"></div></div>`);
+            $h.appendTo($atom);
+        }
         $atom_holder = $(`<div class="circle-outer"></div>`);
         $atom.appendTo($atom_holder);
         $atom_holder.appendTo($slate);

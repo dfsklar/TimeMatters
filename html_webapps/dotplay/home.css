@@ -79,6 +79,13 @@ body {
     transform: scale3d(0.6,0.6,1) translate3d(8px,8px,0px);
 }
 
+.atom.childcount2 .h0 {
+    transform: scale3d(0.6,0.6,1) translate3d(-2px,-2px,0px);
+}
+.atom.childcount2 .h1 {
+    transform: scale3d(0.6,0.6,1) translate3d(20px, 20px, 0px);
+}
+
 
 .hadron {
     position: absolute;
