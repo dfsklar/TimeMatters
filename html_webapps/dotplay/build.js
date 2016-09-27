@@ -181,14 +181,20 @@ $(document).ready(function() {
     // 1 BEGINNING OF THE UNIVERSE
     // 1 BEGINNING OF THE UNIVERSE
 
-    for (var i=0; i < 800; i++) {
-        fullAnimDuration = getRandomFloatInclusive(2,3);
+    time_compression = 0.1;
+
+    for (var i=0; i < 1000; i++) {
+
         X = triangular(0, 3000, 120);
+        //fullAnimDuration = Math.log(X*time_compression);
+        fullAnimDuration = X / (300 + getRandomFloatInclusive(0, 60));
         console.log(`X = ${X}`);
+        console.log(fullAnimDuration);
+
         Y = Math.floor(getRandomFloatInclusive(X*0.02, X*0.18));
         width = getRandomIntInclusive(6,10);
         height = width;
-        animDelay = getRandomFloatInclusive(0, fullAnimDuration);
+        animDelay = 0; //getRandomFloatInclusive(0, fullAnimDuration);
 
         // . c i r c l e  (the innermost)
         $inner = $(`<div class="circle" id="cc${i}"></div></div>`);
@@ -199,7 +205,7 @@ $(document).ready(function() {
             left: `-${width/2}px`,
             top: `-${height/2}px`,
             animation: `animcircle ${fullAnimDuration}s infinite ease-in-out alternate`,
-            animationDelay: `${animDelay+(fullAnimDuration/2)}s`
+            animationDelay: 0 //`${animDelay+(fullAnimDuration/2)}s`
         });
 
         // . c i r c l e - o u t e r
