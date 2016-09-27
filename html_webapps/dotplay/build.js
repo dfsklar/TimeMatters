@@ -99,120 +99,55 @@ $(document).ready(function() {
     }
 
 
+    // build_atoms();
 
+    // build_hadrons();
 
-    // ATOMS
-
-    Xbase = 500;
-    for (var i=0; i < 80; i++) {
-        fullAnimDuration = getRandomFloatInclusive(5,9);
-        Xdelta = triangular(0, 1600, 800);
-        X = Xbase + Xdelta;
-        Y = Math.floor(getRandomFloatInclusive(Xdelta*0.02, Xdelta*0.25));
-        width = 41;  // hardwired for now, must match css spec
-        height = width;
-        animDelay = getRandomFloatInclusive(0, fullAnimDuration);
-        child_count = (i%2) ? 1 : 2;
-        $atom = $(`<div class='atom childcount${child_count}'></div>`);
-        for (childidx = 0; childidx < child_count; childidx++) {
-            $h = $(`<div class="hadron h${childidx}"><div class="quark upq upleft"></div><div class="quark upq upright"></div><div class="quark downq down"></div></div>`);
-            $h.appendTo($atom);
-        }
-        $atom_holder = $(`<div class="circle-outer"></div>`);
-        $atom.appendTo($atom_holder);
-        $atom_holder.appendTo($slate);
-        $atom.css({
-            left: `-${width/2}px`,
-            top: `-${height/2}px`,
-            animation: `animcircle ${fullAnimDuration}s infinite ease-in-out alternate`,
-            animationDelay: `${animDelay+(fullAnimDuration/2)}s`,
-        });
-
-        yVar = Math.min(Y, 99);
-        $atom_holder.css({
-            position: 'absolute',
-            left: `${X}px`,
-            animation: `updown${yVar} ${fullAnimDuration}s infinite ease-in-out alternate`,
-            animationDelay: `${animDelay}s`
-        });
-    }
-    
-
-
-
-    // 2 HADRONS
-    // 2 HADRONS
-    // 2 HADRONS
-
-    Xbase = 300;
-    for (var i=0; i < 80; i++) {
-        fullAnimDuration = getRandomFloatInclusive(5,9);
-        Xdelta = triangular(0, 900, 200);
-        X = Xbase + Xdelta;
-        Y = Math.floor(getRandomFloatInclusive(Xdelta*0.02, Xdelta*0.25));
-        width = 31;  // hardwired for now, must match css spec
-        height = width;
-        animDelay = getRandomFloatInclusive(0, fullAnimDuration);
-        $hadron = $(`<div class="hadron"><div class="quark upq upleft"></div><div class="quark upq upright"></div><div class="quark downq down"></div></div>`);
-        $hadron_holder = $(`<div class="circle-outer"></div>`);
-        $hadron.appendTo($hadron_holder);
-        $hadron_holder.appendTo($slate);
-        $hadron.css({
-            left: `-${width/2}px`,
-            top: `-${height/2}px`,
-            animation: `animcircle ${fullAnimDuration}s infinite ease-in-out alternate`,
-            animationDelay: `${animDelay+(fullAnimDuration/2)}s`
-        });
-
-        yVar = Math.min(Y, 99);
-        $hadron_holder.css({
-            position: 'absolute',
-            left: `${X}px`,
-            animation: `updown${yVar} ${fullAnimDuration}s infinite ease-in-out alternate`,
-            animationDelay: `${animDelay}s`
-        });
-    }
-
-        
 
     
     // 1 BEGINNING OF THE UNIVERSE
     // 1 BEGINNING OF THE UNIVERSE
     // 1 BEGINNING OF THE UNIVERSE
     // 1 BEGINNING OF THE UNIVERSE
-
-    for (var i=0; i < 800; i++) {
+    
+    maxy_to_x_ratio = 0.10;
+    for (var i=0; i < 300; i++) {
         fullAnimDuration = getRandomFloatInclusive(2,3);
         X = triangular(0, 3000, 120);
-        console.log(`X = ${X}`);
-        Y = Math.floor(getRandomFloatInclusive(X*0.02, X*0.18));
-        width = getRandomIntInclusive(6,10);
+        Y = getRandomFloatInclusive(-X*maxy_to_x_ratio, X*maxy_to_x_ratio);
+        width = getRandomIntInclusive(7,11);
         height = width;
-        animDelay = getRandomFloatInclusive(0, fullAnimDuration);
+        animDelay = 0; //getRandomFloatInclusive(0, fullAnimDuration);
+        animStyle = getRandomIntInclusive(0, 9);
 
         // . c i r c l e  (the innermost)
         $inner = $(`<div class="circle" id="cc${i}"></div></div>`);
         $inner.css({
+            position: 'absolute',
             backgroundColor: getRandomMember(colors),
             height: `${height}px`,
             width: `${width}px`,
-            left: `-${width/2}px`,
-            top: `-${height/2}px`,
-            animation: `animcircle ${fullAnimDuration}s infinite ease-in-out alternate`,
-            animationDelay: `${animDelay+(fullAnimDuration/2)}s`
+            left: `${X-width/2}px`,
+            top: `${Y-height/2}px`,
+            animation: `throbinplace${animStyle} ${fullAnimDuration}s infinite ease-in-out alternate`,
+            animationDelay: 0 //`${animDelay+(fullAnimDuration/2)}s`
         });
 
-        // . c i r c l e - o u t e r
-        yVar = Math.min(Y, 99);
-        $outer = $(`<div class="circle-outer" id="c${i}"></div>`);
-        $outer.css({
-            position: 'absolute',
-            left: `${X}px`,
-            animation: `updown${yVar} ${fullAnimDuration}s infinite ease-in-out alternate`,
-            animationDelay: `${animDelay}s`
-        });
-
-        $inner.appendTo($outer);
-        $outer.appendTo($slate);
+        if (0) {
+            // . c i r c l e - o u t e r
+            yVar = Math.min(Y, 99);
+            $outer = $(`<div class="circle-outer" id="c${i}"></div>`);
+            $outer.css({
+                position: 'absolute',
+                left: `${X}px`,
+                animation: `updown${yVar} ${fullAnimDuration}s infinite ease-in-out alternate`,
+                animationDelay: `${animDelay}s`
+            });
+            $inner.appendTo($outer);
+            $outer.appendTo($slate);
+        } else {
+            $inner.appendTo($slate);
+        }
     }
+
 });
