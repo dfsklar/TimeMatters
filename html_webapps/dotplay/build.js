@@ -1,3 +1,4 @@
+// Returns a random number between A and C, where B is the "most likely" outcome
 function triangular(a, b, c) {
     var U = Math.random();
     var F = (c - a) / (b - a);
@@ -99,11 +100,21 @@ $(document).ready(function() {
     }
 
 
-    // build_atoms();
+    // PARAMS:
+    // 1) how many to build
+    // 2) leftmost X before these start appearing
+    // 3) X value where density should be highest (triangular dist)
+    // 4) rightmost X
+    // 5) maxY at the leftmost point
+    // 6) maxY at the rightmost point
+    build_hadrons(8, 300, 500, 900, 30, 80);
 
-    // build_hadrons();
+    return;
+
+    build_hadrons();
 
 
+    return;
     
     // 1 BEGINNING OF THE UNIVERSE
     // 1 BEGINNING OF THE UNIVERSE

@@ -87,12 +87,13 @@ body, .ui-page {
 }
 
 .leaf {
+    visibility: hidden;
     z-index: 100;
     position: absolute;
     width: 42px;
     height: 42px;
     background-size: 42px 42px;
-    animation-name: leafAnim;
+    /* animation-name: leafAnim; */
     animation-duration: 8s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;

@@ -1,34 +1,33 @@
-function build_hadrons() {
-    // 2 HADRONS
-    // 2 HADRONS
-    // 2 HADRONS
 
-    Xbase = 300;
-    for (var i=0; i < 80; i++) {
-        fullAnimDuration = getRandomFloatInclusive(5,9);
-        Xdelta = triangular(0, 900, 200);
-        X = Xbase + Xdelta;
-        Y = Math.floor(getRandomFloatInclusive(Xdelta*0.02, Xdelta*0.25));
+// ANIMATION: a simple quiver-in-place, with the duration varying randomly
+// SIZE: hardwired constant, source of truth is CSS
+function build_hadrons(qty, Xleft, Xdens, Xright, YmaxL, YmaxR) {
+    $slate = $('.slate');
+    Xbase = Xleft;
+    for (var i=0; i < qty; i++) {
+        fullAnimDuration = getRandomFloatInclusive(3,8);
+        X = triangular(Xleft, Xright, Xdens);
+        Ymax = YmaxL + (YmaxR-YmaxL)/(X-Xleft);
+        Y = getRandomFloatInclusive(-Ymax, Ymax);
         width = 31;  // hardwired for now, must match css spec
         height = width;
-        animDelay = getRandomFloatInclusive(0, fullAnimDuration);
-        $hadron = $(`<div class="hadron"><div class="quark upq upleft"></div><div class="quark upq upright"></div><div class="quark downq down"></div></div>`);
-        $hadron_holder = $(`<div class="circle-outer"></div>`);
-        $hadron.appendTo($hadron_holder);
-        $hadron_holder.appendTo($slate);
-        $hadron.css({
-            left: `-${width/2}px`,
-            top: `-${height/2}px`,
-            animation: `animcircle ${fullAnimDuration}s infinite ease-in-out alternate`,
-            animationDelay: `${animDelay+(fullAnimDuration/2)}s`
-        });
 
-        yVar = Math.min(Y, 99);
-        $hadron_holder.css({
+        // NO NEED FOR A "HOLDER" DIV
+        $hadron = $(`<div class="hadron"><div class="quark upq upleft"></div><div class="quark upq upright"></div><div class="quark downq down"></div></div>`);
+        // $hadron_holder = $(`<div class="circle-outer"></div>`);
+        // $hadron_holder.appendTo($slate);
+
+        $hadron.appendTo($slate);
+
+        animDelay = getRandomFloatInclusive(0, fullAnimDuration);
+        animStyle = getRandomIntInclusive(0, 9);
+
+        $hadron.css({
             position: 'absolute',
-            left: `${X}px`,
-            animation: `updown${yVar} ${fullAnimDuration}s infinite ease-in-out alternate`,
-            animationDelay: `${animDelay}s`
+            left: `${X-width/2}px`,
+            top: `${Y-height/2}px`,
+            animation: `throbinplace${animStyle} ${fullAnimDuration}s infinite ease-in-out alternate`,
+            animationDelay: `${animDelay+(fullAnimDuration/2)}s`
         });
     }
 }
