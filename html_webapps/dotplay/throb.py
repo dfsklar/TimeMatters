@@ -21,9 +21,9 @@ def randomScale():
 for v in range(0,10):
     print '''@keyframes throbinplace%d {
       0%% { }
-     25%% { transform: %s %s; }
-     50%% { transform: %s %s; }
-     75%% { transform: %s %s; }
+     25%% { transform: %s %s; opacity: 1 }
+     50%% { transform: %s %s; opacity: 0 }
+     75%% { transform: %s %s; opacity: 1 }
     100%% { transform: %s %s; }
 }
 ''' % (v, randomTranslate(), randomScale(), randomTranslate(), randomScale(), randomTranslate(), randomScale(), randomTranslate(), randomScale())
