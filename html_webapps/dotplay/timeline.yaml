@@ -13,28 +13,121 @@ seq_timeline:
      time: 10<sup>-36</sup> of<br/>a second
      label: Expansion Burst
    -
-     x: 2.7
+     x: 2
      time: 10<sup>-6</sup> of<br/>a second
      label: Infant Matter
    -
-     x: 4
+     x: 3
      time: 1 second
      label: Marriages of Matter
    -
-     x: 5.3
+     x: 4
      time: 20 minutes
      label: Merging Matter
    -
-     x: 6.5
+     x: 5
      time: 300,000 years
      label: Merging Matter
    -
-     x: 8
+     x: 6
      time: 200 million years
      label: Quiet Expanse
    -
-     x: 11
+     x: 7.5
      time: 1 billion years
      label: Simmering
+
+   -
+     x: 8.5
+     time: 8 billion years
+     label: Galaxies
+ 
+   -  
+     x: 9.5
+     time: 9 billion years
+     label: Sun
+
+   -
+     x: 10.5
+     time: 9.2 billion years
+     label: Earth 
+     
+   -
+     x: 11.5
+     time: 10 billion years
+     label: Tumult
+
+   -
+     x: 12.5
+     time: 11.3 billions years 
+     label: Life
+     description: Toward the end of the Pre-Cambrian period, signs of life emerged. As far as we know, the first known life was cyanobacteria, now fossilized in ancient glaciers.<p>How can life form form non-life? Scientists who study Abiogenesis, life arising from non-living matter, seek methods of self-replication. They look at the conditions of early Earth and try to replicate genesis using its ingredients. Most believe that RNA, which stores genetic information and triggers the creation of proteins, came first, evolving later into the incredible data storage device, DNA, that we have today.<p>These theories are predicated on the idea that the conditions of Earth gave rise to life. But there are alternatives. Could life have existed in asteroids and other small chunks of matter, crashing into Earth during the early Pre-Cambrian Era?
+
+   -
+     x: 13.5
+     time: 13.6 billion years
+     label: Death
+     description: In the Paleozoic Era, life exploded, after the amount of oxygen in the environment grew. In a mere 250 million years, billions of life forms, including plants and fish. At the end of this period was the largest mass extinction event on record, killing almost all marine life and around 70% of land-based life. The reasons for this mass extinction aren’t entirely known but are believed to be a combination of volcanic activity, temperature changes, and impact from space.
+
+   -
+     x: 14.5
+     time: 13.75 billion years
+     label: Dawn
+     description: It took time for life to resurge after the extinction event. But during the Mesozoic era was the dawn of dinosaurs and early mammals. At the end of this period, another extinction event occurred. Most scientists believe it was a catastrophic, massive impact from space that again destroyed much of life on Earth. 
+
+   -
+     x: 15.5
+     time: 13.8 billion years
+     label: Present
+     description: Earth’s last major extinction event paved the way for mammals to diversify and flourish in our Cenozoic Era. It was only a mere 2.8 million years ago that our first recognizable ancestors, Homo Habilis, evolved. A millions years after that, the brain and neural connections grew, finally evolving into Homo Sapiens 200,000 years ago. 
+
+   -
+     x: 16.5
+     time: 15 billion
+     label: Re-Death
+     description: At some point in Earth’s future, another mass extinction event will occur, marking the end of the Cenozoic Era. Whether because of an asteroid’s impact or other factors, the Earth will change. We also know that our Sun grows warmer and brighter by about 10% every 1 billion years. Eventually, our Home will become hotter. The oceans will evaporate, while Mars will reach temperatures similar to an Earthly ice age.
+
+   -
+     x: 17.5
+     time: 19.5 billion
+     label: Fade
+     description: Our sun will turn into a red giant, a star in the final stages of its life. Red giants are cooling stars, which often grow bigger before their die. The outer layers of the Sun will shed in solar winds, releasing a cloud of ionized gas, called a planetary nebula. As the sun grows to more than 200 times its current size, Mars, Venus, and Earth will likely fall into its mass.
+
+   -
+     x: 18.5
+     time: 20 billion years
+     label: Cold Sun
+     description: Stars die in many ways, mostly depending on how big they are. As our small Sun dies, it will become a White Dwarf, dense matter that will radiate heat and for a long time, even though fusion is no longer occuring. Suns that are bigger than ours can become Neutron Stars, extremely dense, spinning mass that can release pulses of light. Even more massive stars may become black holes. 
+
+   -
+     x: 19.5
+     time: 100 billion years
+     label: Blending
+     description: While our small galaxy goes through its life cycles, the fabric of Universe will continue to expand. If the rate of expansion does not result in matter tearing apart before this time, then matter will continue to combine into dense areas of space, even as the Universe stretches. As matter attracts matter, galaxies will begin to merge. At the center of a galaxy is almost always a black hole. 
+
+   -
+     x: 20.5
+     time: 100 trillion years
+     label: Branches
+     description: If matter continues to combine, eventually, it will all collapse into stars and stars will have gone through their life cycle. After we run out of small particles, stars will stop forming. They will exhaust and all die. The Universe will be filled with dying and dead stars. Black holes will grow larger and larger, and more black holes will form at a growing rate. On the other hand, if the rate of expansion and contraction stay in a fine balance, then the Universe might go on creating and destroying indefinitely.  
+
+   -
+     x: 21.5
+     time: 10<sup>60</sup> years
+     label: Re-Death
+     description: If matter continues to merge, then black holes will dominate the Universe. 
+
+   - 
+     x: 22.5
+     time: 10<sup>200</sup> years
+     label: Decay 
+     description: If the theories are true, even black holes die, with their particles instantaneously evaporating into subatomic particles. Protons and other particles will decay, based on the principles of the weak force, into their subcomponents.
+
+   - 
+     x: 23.5
+     time: 10<sup>10<sup>60</sup></sup> years
+     label: The Future
+     description: The further away in time, the harder it is to use what we know of the past to predict the future. Yet most theories relate in some way to the rate of Universal expansion in comparison to the attraction and contraction of matter and whether the Universe is spinning. For example, one theory hypothesizes that rate of the Universe’s expansion would tear matter apart to such an extent that it could not come together to form matter. In that scenario, in less 30 billion years, matter will cease to exist and only pure energy will remain.<p>In the dark era, matter will have disintegrated into pure Energy. Other theories say the matter will outpace the stretching of Universe, resulting in a super-massive black hole that will force the Universe to contract, into an infinitely dense matter that starts the process all over again.
+
 
 `;

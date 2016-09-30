@@ -3,6 +3,35 @@ body, .ui-page {
 }
 
 
+.mfp-fade.mfp-bg {
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+/* overlay animate in */
+.mfp-fade.mfp-bg.mfp-ready {
+  opacity: 0.8;
+}
+/* overlay animate out */
+.mfp-fade.mfp-bg.mfp-removing {
+  opacity: 0;
+}
+
+/* content at start */
+.mfp-fade.mfp-wrap .mfp-content {
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+/* content animate it */
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+  opacity: 1;
+}
+/* content animate out */
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+  opacity: 0;
+}
+
+
+
 
 
 
@@ -137,6 +166,17 @@ body, .ui-page {
     transform: scale3d(0.6,0.6,1) translate3d(20px, 20px, 0px);
 }
 
+
+.timemarker-prose {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    max-width: 300px;
+    color: white;
+    font-family: Arial;
+    font-size: 15px;
+}
 
 .hadron {
     position: absolute;
