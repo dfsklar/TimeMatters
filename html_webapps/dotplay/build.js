@@ -75,6 +75,7 @@ $(document).ready(function() {
 
     $slate = $('.slate');
 
+    var myScroll = new IScroll('.slate-wrapper');
 
     // TIMELINE!!
     // TIMELINE!!
