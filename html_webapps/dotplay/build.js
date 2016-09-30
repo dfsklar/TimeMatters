@@ -75,8 +75,6 @@ $(document).ready(function() {
 
     $slate = $('.slate');
 
-    var myScroll = new IScroll('.slate-wrapper');
-
     // TIMELINE!!
     // TIMELINE!!
     // TIMELINE!!
@@ -166,5 +164,18 @@ $(document).ready(function() {
             $inner.appendTo($slate);
         }
     }
+
+
+    setTimeout(function() {
+        window.mySlateScroller = new IScroll('#slatewrapper', {
+            scrollX: true,
+            momentum: false,
+            tap: true,
+            desktopCompatibility: true,
+            preventDefault: false
+        });
+        document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+    },
+               5);
 
 });

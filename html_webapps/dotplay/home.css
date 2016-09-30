@@ -1,5 +1,6 @@
 body, .ui-page {
     background-color: #080614 !important;
+    overflow: hidden;
 }
 
 
@@ -235,8 +236,7 @@ body, .ui-page {
 
 
 
-.slate-wrapper {
-    position: absolute;
+#slatewrapper {
     width: 100%;
     height: 100%;
     background-color: green;
