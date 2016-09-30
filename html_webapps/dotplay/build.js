@@ -93,9 +93,11 @@ $(document).ready(function() {
             left: `${rec.x * timeline_x_factor}`
         });
         $timeline.append($newbie);
+        /*
         $newbie.on("tap", function(event) {
             $( "#mypanel" ).panel( "open" , {} );
         });
+        */
     }
 
     // Setup prose display upon user tap of a timeline marker
