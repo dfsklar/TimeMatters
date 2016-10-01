@@ -93,11 +93,6 @@ $(document).ready(function() {
             left: `${rec.x * timeline_x_factor}`
         });
         $timeline.append($newbie);
-        /*
-        $newbie.on("tap", function(event) {
-            $( "#mypanel" ).panel( "open" , {} );
-        });
-        */
     }
 
     // Setup prose display upon user tap of a timeline marker
@@ -117,9 +112,10 @@ $(document).ready(function() {
     // 4) rightmost X
     // 5) maxY at the leftmost point
     // 6) maxY at the rightmost point
-    build_hadrons(12, 300, 500, 900, 30, 80);
 
-    build_atoms(12, 400, 800, 1100, 30, 80);
+    // build_hadrons(12, 300, 500, 900, 30, 80);
+
+    // build_atoms(12, 400, 800, 1100, 30, 80);
 
     
     // 1 BEGINNING OF THE UNIVERSE
@@ -131,11 +127,11 @@ $(document).ready(function() {
     for (var i=0; i < 400; i++) {
         fullAnimDuration = getRandomFloatInclusive(2,3);
         X = triangular(0, 3000, 120);
-        Y = getRandomFloatInclusive(-X*maxy_to_x_ratio, X*maxy_to_x_ratio);
+        Y_int = Math.round(getRandomFloatInclusive(1, X*maxy_to_x_ratio));
         width = getRandomIntInclusive(7,11);
         height = width;
         animDelay = 0; //getRandomFloatInclusive(0, fullAnimDuration);
-        animStyle = getRandomIntInclusive(0, 9);
+        animStyle = Math.min(200, getRandomIntInclusive(1, Y_int));
 
         // . c i r c l e  (the innermost)
         $inner = $(`<div class="circle" id="cc${i}"></div></div>`);
@@ -145,26 +141,11 @@ $(document).ready(function() {
             height: `${height}px`,
             width: `${width}px`,
             left: `${X-width/2}px`,
-            top: `${Y-height/2}px`,
-            animation: `throbinplace${animStyle} ${fullAnimDuration}s infinite ease-in-out alternate`,
+            top: `${0-height/2}px`,
+            animation: `cycle${animStyle} ${fullAnimDuration}s infinite linear`,
             animationDelay: 0 //`${animDelay+(fullAnimDuration/2)}s`
         });
-
-        if (0) {
-            // . c i r c l e - o u t e r
-            yVar = Math.min(Y, 99);
-            $outer = $(`<div class="circle-outer" id="c${i}"></div>`);
-            $outer.css({
-                position: 'absolute',
-                left: `${X}px`,
-                animation: `updown${yVar} ${fullAnimDuration}s infinite ease-in-out alternate`,
-                animationDelay: `${animDelay}s`
-            });
-            $inner.appendTo($outer);
-            $outer.appendTo($slate);
-        } else {
-            $inner.appendTo($slate);
-        }
+        $inner.appendTo($slate);
     }
 
 
