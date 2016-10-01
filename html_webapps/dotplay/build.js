@@ -115,9 +115,9 @@ $(document).ready(function() {
     // 5) maxY at the leftmost point
     // 6) maxY at the rightmost point
 
-    // build_hadrons(12, 300, 500, 900, 30, 80);
+    build_hadrons(12, 300, 500, 900, 30, 80);
 
-    // build_atoms(12, 400, 800, 1100, 30, 80);
+    build_atoms(12, 400, 800, 1100, 30, 80);
 
     
     // 1 BEGINNING OF THE UNIVERSE

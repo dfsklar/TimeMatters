@@ -11,7 +11,7 @@ function build_hadrons(qty, Xleft, Xdens, Xright, YmaxL, YmaxR) {
         X = triangular(Xleft, Xright, Xdens);
         Ymax = YmaxL + (YmaxR-YmaxL)/(X-Xleft);
         Y = getRandomFloatInclusive(-Ymax, Ymax);
-        width = 31;  // hardwired for now, must match css spec
+        width = 25;  // hardwired for now, must match css spec
         height = width;
 
         // NO NEED FOR A "HOLDER" DIV
@@ -22,10 +22,10 @@ function build_hadrons(qty, Xleft, Xdens, Xright, YmaxL, YmaxR) {
 
         $hadron.css({
             position: 'absolute',
-            opacity: 0,
+            opacity: 1,
             left: `${X-width/2}px`,
             top: `${Y-height/2}px`,
-            animation: `throbinplace${animStyle} ${fullAnimDuration}s infinite ease-in-out alternate`,
+            animationxxx: `throbinplace${animStyle} ${fullAnimDuration}s infinite ease-in-out alternate`,
             animationDelay: `${animDelay+(fullAnimDuration/2)}s`,
             zIndex: getRandomIntInclusive(1, 50)
         });
