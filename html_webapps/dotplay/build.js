@@ -8,6 +8,15 @@ function triangular(a, b, c) {
         return b - Math.sqrt((1 - U) * (b - a) * (b - c));
 }
 
+function getQueryParameterByName(name, defaultval) {
+    url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return defaultval;
+    if (!results[2]) return defaultval;
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
 
 function lnRandomScaled(gmean, gstddev)
 {
@@ -73,7 +82,7 @@ $(document).ready(function() {
     updownAmounts = ['10','15','20','50'];
     colors = COLORS;
 
-    Math.seedrandom('helloiofjew.');
+    Math.seedrandom(getQueryParameterByName('seed','helloiofjew.'));
 
     $slate = $('.slate');
 
