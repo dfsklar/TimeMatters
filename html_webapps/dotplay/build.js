@@ -124,11 +124,15 @@ $(document).ready(function() {
     // 1 BEGINNING OF THE UNIVERSE
     
     maxy_to_x_ratio = 0.10;
-    for (var i=0; i < 400; i++) {
-        fullAnimDuration = getRandomFloatInclusive(2,3);
-        X = triangular(0, 3000, 120);
-        Y_int = Math.round(getRandomFloatInclusive(1, X*maxy_to_x_ratio));
-        width = getRandomIntInclusive(7,11);
+    for (var i=0; i < 200; i++) {
+        X = triangular(30, 2000, 150);
+        // Y_int = Math.round(getRandomFloatInclusive(1, X*maxy_to_x_ratio));
+        Y_int = Math.round(X * maxy_to_x_ratio);   // Y is the "radius" of the simulated rotation around the X axis
+        rate_of_speed =     (getRandomFloatInclusive(1, 1.5) + Math.pow(2, -Y_int)) * 18;
+        console.log(Y_int);
+        console.log(rate_of_speed);
+        fullAnimDuration = (2*Y_int) / rate_of_speed;
+        width = 2 * getRandomIntInclusive(3,6); // must be even number to avoid "clipped-circle" look
         height = width;
         animDelay = 0; //getRandomFloatInclusive(0, fullAnimDuration);
         animStyle = Math.min(200, getRandomIntInclusive(1, Y_int));
@@ -136,14 +140,15 @@ $(document).ready(function() {
         // . c i r c l e  (the innermost)
         $inner = $(`<div class="circle" id="cc${i}"></div></div>`);
         $inner.css({
+            zIndex: getRandomIntInclusive(1, 50),
             position: 'absolute',
             backgroundColor: getRandomMember(colors),
             height: `${height}px`,
             width: `${width}px`,
             left: `${X-width/2}px`,
-            top: `${0-height/2}px`,
-            animation: `cycle${animStyle} ${fullAnimDuration}s infinite linear`,
-            animationDelay: 0 //`${animDelay+(fullAnimDuration/2)}s`
+            topfiejow: `${0-height/2}px`,
+            animation: `cycle${animStyle} ${fullAnimDuration}s infinite alternate ease-in-out`,
+            animationDelay: `${animDelay+(fullAnimDuration/2)}s`
         });
         $inner.appendTo($slate);
     }

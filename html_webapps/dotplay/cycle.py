@@ -7,22 +7,17 @@ import random
 # The Y value will range from +A to -A.
 # The X value will range from +A/M to -A/M where M provides a ratio (Y-radius over X-radius).
 
-M = 5
+M = 3
 
 for yradius in range(1,200):
-    xradius = yradius / M
+    xradius = (yradius*1.0) / M
     xradius = 0
     print '''@keyframes cycle%d {
-      %s%% { transform: rotate(%sdeg) translateX(%spx) translateY(%spx) rotate(%sdeg); }
-      %s%% { transform: rotate(%sdeg) translateX(%spx) translateY(%spx) rotate(%sdeg); }
-      %s%% { transform: rotate(%sdeg) translateX(%spx) translateY(%spx) rotate(%sdeg); }
-      %s%% { transform: rotate(%sdeg) translateX(%spx) translateY(%spx) rotate(%sdeg); }
-      %s%% { transform: rotate(%sdeg) translateX(%spx) translateY(%spx) rotate(%sdeg); }
+      %s%% { transform: translate3d(%spx,%spx,0px); }
+      %s%% { transform: translate3d(%spx,%spx,0px); }
 }
 ''' % (yradius,
-    0,    0, xradius, yradius/4, 0,
-    25,  90, xradius, yradius/2, -90,
-    50, 180, xradius, yradius, -180,
-    75, 270, xradius, yradius/2, -270,
-   100, 360, xradius, yradius/4, -360)
+    0,   -xradius, -yradius,
+   100,   xradius,  yradius
+   )
     
