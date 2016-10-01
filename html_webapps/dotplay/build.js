@@ -73,6 +73,8 @@ $(document).ready(function() {
     updownAmounts = ['10','15','20','50'];
     colors = COLORS;
 
+    Math.seedrandom('helloiofjew.');
+
     $slate = $('.slate');
 
     // TIMELINE!!
