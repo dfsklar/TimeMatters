@@ -59,10 +59,10 @@ function build_atoms(qty, Xleft, Xdens, Xright, YmaxL, YmaxR) {
 
         $atom.css({
             position: 'absolute',
-            opacity: 0,
+            opacity: 1,
             left: `${X-width/2}px`,
             top: `${Y-height/2}px`,
-            animation: `throbinplace${animStyle} ${fullAnimDuration}s infinite ease-in-out alternate`,
+            animationXXX: `throbinplace${animStyle} ${fullAnimDuration}s infinite ease-in-out alternate`,
             animationDelay: `${animDelay+(fullAnimDuration/2)}s`,
             zIndex: getRandomIntInclusive(1, 50)
         });

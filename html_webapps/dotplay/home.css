@@ -36,14 +36,6 @@ body, .ui-page {
 
 
 
-.atom {
-    position: absolute;
-    background-color: #89b4dd;
-    border-radius: 50%;
-    width: 41px;
-    height: 41px;
-}
-
 
 
 .timeline {
@@ -175,6 +167,13 @@ body, .ui-page {
 
 
 
+.atom {
+    position: absolute;
+    background-color: #89b4dd;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+}
 
 .atom.childcount1 .hadron {
     transform: scale3d(0.6,0.6,1) translate3d(8px,8px,0px);
@@ -184,7 +183,7 @@ body, .ui-page {
     transform: scale3d(0.6,0.6,1) translate3d(-2px,-2px,0px);
 }
 .atom.childcount2 .h1 {
-    transform: scale3d(0.6,0.6,1) translate3d(20px, 20px, 0px);
+    transform: scale3d(0.6,0.6,1) translate3d(18px, 18px, 18px);
 }
 
 
