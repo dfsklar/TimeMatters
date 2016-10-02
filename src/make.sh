@@ -1,4 +1,4 @@
-D=../../deploy
+D=../deploy
 mkdir -p $D
 cp * $D
 OPT=" --presets latest "
