@@ -57,17 +57,7 @@ function getRandomMember(items) {
 }
 
 
-$(document).ready(function() {
-    var updownAmounts = ['10','15','20','50'];
-
-    Math.seedrandom(getQueryParameterByName('seed','helloiofjew.'));
-
-    var $slate = $('.slate');
-
-    // TIMELINE!!
-    // TIMELINE!!
-    // TIMELINE!!
-
+function buildTimeline($slate) {
     var $timeline = $('.timeline');
 
     var timeline = YAML.parse(window.TIMELINE_IN_YAML);
@@ -103,6 +93,18 @@ $(document).ready(function() {
             src: '<div class=timemarker-prose><table><tr><td class=time>0</td><td class=label>Cosmic Egg?</td></tr></table><p>DEMO MODE!  CURRENTLY HARDWIRED TO SHOW ONLY THE COSMIC-EGG PROSE!<p>Prevailing theory suggests that all energy in our known Universe was condensed into a tiny area, possibly smaller than a single atom. It was hot, dense, a singularity. No one knows what surrounded it or came before it. Theories include Infinite Everything; Nothing.</p><p>An alternate theory imagines a Multiverse, millions of Universes-- fabrics or membranes-- vibrating in close proximity. As the membranes of two universes collided, our Universe, was born. It is possible that there was no beginning.</p></div>',
         }
     });
+}
+
+
+
+
+$(document).ready(function() {
+    var updownAmounts = ['10','15','20','50'];
+
+    Math.seedrandom(getQueryParameterByName('seed','helloiofjew.'));
+
+    var $slate = $('.slate');
+
 
 
     // PARAMS:
@@ -134,9 +136,9 @@ $(document).ready(function() {
         // For iscroll to work:
         document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
     }
+
+    // No need to do this in a timeout!
     setup_iscroll();
 
-    //setTimeout(function() {
-    //5);
 
 });
