@@ -168,6 +168,10 @@ $(document).ready(function() {
     setTimeout(function() {
         window.mySlateScroller = new IScroll('#slatewrapper', {
             scrollX: true,
+            zoom: true,
+            zoomMax: 10,
+            zoomMin: 1,
+            startZoom: 1.5,
             momentum: false,
             tap: true,
             desktopCompatibility: true,
