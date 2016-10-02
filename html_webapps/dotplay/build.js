@@ -106,6 +106,18 @@ $(document).ready(function() {
         $timeline.append($newbie);
     }
 
+    if (getQueryParametersByName('showhashmarks', false)) {
+        for (i=0; i < 9999; i = i+100) {
+            $newbie = $(`<div class=xmarker><div class=notch></div><div class=label>${i}</div></div>`);
+            $newbie.css({
+                left: `${i}`
+            });
+            $timeline.append($newbie);
+        }
+    }
+
+
+
     // Setup prose display upon user tap of a timeline marker
     $('.timemarker').magnificPopup({
         type: 'inline',
