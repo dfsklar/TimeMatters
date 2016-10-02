@@ -169,14 +169,15 @@ $(document).ready(function() {
         window.mySlateScroller = new IScroll('#slatewrapper', {
             scrollX: true,
             zoom: true,
-            zoomMax: 10,
-            zoomMin: 1,
-            startZoom: 1.5,
+            zoomMax: 2,
+            zoomMin: 0.2,
+            startZoom: getQueryParameterByName('zoom', 0.6),
             momentum: false,
             tap: true,
             desktopCompatibility: true,
             preventDefault: false
         });
+        // For iscroll to work:
         document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
     },
                5);
