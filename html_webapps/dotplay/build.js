@@ -1,3 +1,5 @@
+"use strict";
+
 // Returns a random number between A and C, where B is the "most likely" outcome
 function triangular(a, b, c) {
     var U = Math.random();
@@ -73,7 +75,7 @@ $(document).ready(function() {
     console.log(timeline);
 
     var timeline_x_factor = 80;
-    for (i=0; i < timeline_points.length; i++) {
+    for (var i=0; i < timeline_points.length; i++) {
         var rec = timeline_points[i];
         var $newbie = $(`<div class=timemarker><div class=notch></div><div class=label><div class=time>${rec['time']}</div><div>${rec['label']}</div></div></div>`);
         $newbie.css({

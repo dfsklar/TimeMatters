@@ -1,3 +1,5 @@
+"use strict";
+
 window.templ_hadron = `<div class="hadron"><div class="quark upq upleft"></div><div class="quark upq upright"></div><div class="quark downq down"></div></div>`;
 
 var COLORS = [
