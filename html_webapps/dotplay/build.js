@@ -9,7 +9,7 @@ function triangular(a, b, c) {
 }
 
 function getQueryParameterByName(name, defaultval) {
-    url = window.location.href;
+    var url = window.location.href;
     name = name.replace(/[\[\]]/g, "\\$&");
     var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
         results = regex.exec(url);
@@ -62,15 +62,15 @@ var COLORS = [
 // Returns a random integer between min (included) and max (included)
 // Using Math.round() will give you a non-uniform distribution!
 function getRandomIntInclusive(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 // Returns a random integer between min (included) and max (included)
 // Using Math.round() will give you a non-uniform distribution!
 function getRandomFloatInclusive(min, max) {
-  return (Math.random() * (max - min + 1)) + min;
+    return (Math.random() * (max - min + 1)) + min;
 }
 
 function getRandomMember(items) {
@@ -79,27 +79,27 @@ function getRandomMember(items) {
 
 
 $(document).ready(function() {
-    updownAmounts = ['10','15','20','50'];
-    colors = COLORS;
+    var updownAmounts = ['10','15','20','50'];
+    var colors = COLORS;
 
     Math.seedrandom(getQueryParameterByName('seed','helloiofjew.'));
 
-    $slate = $('.slate');
+    var $slate = $('.slate');
 
     // TIMELINE!!
     // TIMELINE!!
     // TIMELINE!!
 
-    $timeline = $('.timeline');
+    var $timeline = $('.timeline');
 
-    timeline = YAML.parse(window.TIMELINE_IN_YAML);
-    timeline_points = timeline.seq_timeline;
+    var timeline = YAML.parse(window.TIMELINE_IN_YAML);
+    var timeline_points = timeline.seq_timeline;
     console.log(timeline);
 
-    timeline_x_factor = 80;
+    var timeline_x_factor = 80;
     for (i=0; i < timeline_points.length; i++) {
-        rec = timeline_points[i];
-        $newbie = $(`<div class=timemarker><div class=notch></div><div class=label><div class=time>${rec['time']}</div><div>${rec['label']}</div></div></div>`);
+        var rec = timeline_points[i];
+        var $newbie = $(`<div class=timemarker><div class=notch></div><div class=label><div class=time>${rec['time']}</div><div>${rec['label']}</div></div></div>`);
         $newbie.css({
             left: `${rec.x * timeline_x_factor}`
         });
@@ -146,22 +146,22 @@ $(document).ready(function() {
     // 1 BEGINNING OF THE UNIVERSE
     // 1 BEGINNING OF THE UNIVERSE
     
-    maxy_to_x_ratio = 0.10;
+    var maxy_to_x_ratio = 0.10;
     for (var i=0; i < 200; i++) {
-        X = triangular(30, 2000, 150);
+        var X = triangular(30, 2000, 150);
         // Y_int = Math.round(getRandomFloatInclusive(1, X*maxy_to_x_ratio));
-        Y_int = Math.round(X * maxy_to_x_ratio);   // Y is the "radius" of the simulated rotation around the X axis
-        rate_of_speed =     (getRandomFloatInclusive(1, 1.5) + Math.pow(2, -Y_int)) * 18;
+        var Y_int = Math.round(X * maxy_to_x_ratio);   // Y is the "radius" of the simulated rotation around the X axis
+        var rate_of_speed =     (getRandomFloatInclusive(1, 1.5) + Math.pow(2, -Y_int)) * 18;
         console.log(Y_int);
         console.log(rate_of_speed);
-        fullAnimDuration = (2*Y_int) / rate_of_speed;
-        width = 2 * getRandomIntInclusive(3,6); // must be even number to avoid "clipped-circle" look
-        height = width;
-        animDelay = 0; //getRandomFloatInclusive(0, fullAnimDuration);
-        animStyle = Math.min(200, getRandomIntInclusive(1, Y_int));
+        var fullAnimDuration = (2*Y_int) / rate_of_speed;
+        var width = 2 * getRandomIntInclusive(3,6); // must be even number to avoid "clipped-circle" look
+        var height = width;
+        var animDelay = 0; //getRandomFloatInclusive(0, fullAnimDuration);
+        var animStyle = Math.min(200, getRandomIntInclusive(1, Y_int));
 
         // . c i r c l e  (the innermost)
-        $inner = $(`<div class="circle" id="cc${i}"></div></div>`);
+        var $inner = $(`<div class="circle" id="cc${i}"></div></div>`);
         $inner.css({
             zIndex: getRandomIntInclusive(1, 50),
             position: 'absolute',
@@ -180,6 +180,10 @@ $(document).ready(function() {
     setTimeout(function() {
         window.mySlateScroller = new IScroll('#slatewrapper', {
             scrollX: true,
+            zoom: true,
+            zoomMax: 10,
+            zoomMin: 1,
+            startZoom: 1.5,
             momentum: false,
             tap: true,
             desktopCompatibility: true,
