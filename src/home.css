@@ -39,12 +39,18 @@ body, .ui-page {
 
 
 .timeline {
+    opacity: 0;
     position: absolute;
     top: 215px;
     left: 30px;
     height: 1px;
     width: 1800px;
     color: white;
+    background-color: grey;
+}
+.timeline.visible {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
 }
 
 .timemarker,.xmarker {

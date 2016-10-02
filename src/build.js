@@ -84,7 +84,6 @@ function buildTimeline($slate) {
         }
     }
 
-
     // Setup prose display upon user tap of a timeline marker
     $('.timemarker').magnificPopup({
         type: 'inline',
@@ -93,6 +92,8 @@ function buildTimeline($slate) {
             src: '<div class=timemarker-prose><table><tr><td class=time>0</td><td class=label>Cosmic Egg?</td></tr></table><p>DEMO MODE!  CURRENTLY HARDWIRED TO SHOW ONLY THE COSMIC-EGG PROSE!<p>Prevailing theory suggests that all energy in our known Universe was condensed into a tiny area, possibly smaller than a single atom. It was hot, dense, a singularity. No one knows what surrounded it or came before it. Theories include Infinite Everything; Nothing.</p><p>An alternate theory imagines a Multiverse, millions of Universes-- fabrics or membranes-- vibrating in close proximity. As the membranes of two universes collided, our Universe, was born. It is possible that there was no beginning.</p></div>',
         }
     });
+
+    return $timeline;
 }
 
 
@@ -140,5 +141,10 @@ $(document).ready(function() {
     // No need to do this in a timeout!
     setup_iscroll();
 
+    setTimeout(function() {
+        window.mySlateScroller.zoom(1, 0, 0, 8000);
+        var $T = buildTimeline($slate);
+        $T.addClass('visible');
+    }, 3000);
 
 });
