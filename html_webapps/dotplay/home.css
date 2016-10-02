@@ -48,7 +48,7 @@ body, .ui-page {
     color: white;
 }
 
-.timemarker {
+.timemarker,.xmarker {
     cursor: pointer;
     position: absolute;
 }
@@ -70,6 +70,17 @@ body, .ui-page {
     width: auto;
     top: auto;
 }
+
+
+.xmarker .notch {
+    top: -19px !important;
+    background-color: red !important;
+}
+.xmarker .label {
+    top: -38px !important;
+    color: red !important;
+}
+    
 
 
 .notch {
