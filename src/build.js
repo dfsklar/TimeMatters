@@ -154,11 +154,12 @@ $(document).ready(function() {
     var $egg = build_objects('white',  36, 36,     1,     0,    0,    0,     0,   0);
     $egg.css({zIndex: 33333});
 
-
     build_atoms(45,   500,  700, 1800, 50, 130);
 
 
 
+    // PARTICLES (the tiny dots)
+    //
     // min width
     // max width
     //
@@ -172,7 +173,8 @@ $(document).ready(function() {
     // maxY at the rightmost point
     //
     // 
-    build_particles(9, 13,      100,      10, 100, 700,     10, 120);
+    build_particles(9, 13,       50,      10,   70,  700,     10, 120);
+    build_particles(9, 13,      100,     600, 1000, 1800,    120, 120);
 
     // No need to do this in a timeout!
     setup_iscroll();
