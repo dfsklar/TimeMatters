@@ -147,9 +147,9 @@ $(document).ready(function() {
 
     build_objects('hadron', 25, 25,    45,   320,  500, 1800,     70, 120);
 
-    build_objects('dense1', 25, 50,    20,   600,  1300, 1800,   120, 120);
-    build_objects('dense2', 25, 50,    20,   600,  1300, 1800,   120, 120);
-    build_objects('black',  25, 50,    20,   600,  1300, 1800,   120, 120);
+    build_objects('dense1', 25, 40,    20,   600,  1300, 1800,   120, 120);
+    build_objects('dense2', 25, 40,    20,   600,  1300, 1800,   120, 120);
+    build_objects('black',  25, 40,    20,   600,  1300, 1800,   120, 120);
 
     var $egg = build_objects('white',  36, 36,     1,     0,    0,    0,     0,   0);
     $egg.css({zIndex: 33333});
@@ -175,7 +175,7 @@ $(document).ready(function() {
     // maxY at the rightmost point
     //
     // 
-    build_particles(9, 13,       50,      58,   null,  700,     10, 120);
+    build_particles(9, 13,       70,      58,   null,  700,     10, 120);
     build_particles(9, 13,      100,     600, 1000, 1800,    120, 120);
 
     // No need to do this in a timeout!

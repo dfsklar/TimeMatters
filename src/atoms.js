@@ -60,7 +60,7 @@ function build_particles(Wmin, Wmax, qty, Xleft, Xdens, Xright, YmaxL, YmaxR) {
         var Y = Ymax;   //(Ymax > 0) ? getRandomFloatInclusive(0, Ymax) : 10;
         var width = getRandomFloatInclusive(Wmin, Wmax);
         var height = width;
-        var fullAnimDuration = Math.min(YmaxR / 85, 2) * getRandomFloatInclusive(0.93,1.07);
+        var fullAnimDuration = Math.min(YmaxR / 75, 2) * getRandomFloatInclusive(0.93,1.07);
         if (false) {
             console.log('------');
             console.log(Xleft);
@@ -105,10 +105,10 @@ function build_objects(template, Wmin, Wmax, qty, Xleft, Xdens, Xright, YmaxL, Y
     var D = window.Xtimeline_start;
     var $obj = null;
     for (var i=0; i < qty; i++) {
-        var fullAnimDuration = getRandomFloatInclusive(2,3);
+        var fullAnimDuration = getRandomFloatInclusive(2.5,4);
         var X = (Xright > Xleft) ? triangular(Xleft, Xright, Xdens) : Xleft;
         var Ymax = (X > Xleft) ? (YmaxL + (YmaxR-YmaxL)*(X-Xleft)/(Xright-Xleft)) : YmaxL;
-        var Yabs = (Ymax > 0) ? getRandomFloatInclusive(0, Ymax) : 0;
+        var Yabs = (Ymax > 0) ? getRandomFloatInclusive(2*Ymax/3, Ymax) : 0;
         var width = getRandomFloatInclusive(Wmin, Wmax);
         var height = width;
 
