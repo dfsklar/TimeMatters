@@ -145,18 +145,34 @@ $(document).ready(function() {
     // maxY at the leftmost point
     // maxY at the rightmost point
 
+    var dense_types = ['dense1', 'dense2', 'black', 'hadron'];
+    var atom_types = ['atom1', 'atom2'];
+
     build_objects('hadron', 25, 25,    45,   320,  500, 1800,     70, 120);
 
-    build_objects('dense1', 25, 40,    20,   600,  1300, 1800,   120, 120);
-    build_objects('dense2', 25, 40,    20,   600,  1300, 1800,   120, 120);
-    build_objects('black',  25, 40,    20,   600,  1300, 1800,   120, 120);
+    for (let s of dense_types) {
+        if (s != 'hadron') {
+            build_objects(s, 25, 40,    20,   600,  1300, 1800,   120, 120);
+        }
+    }
 
     var $egg = build_objects('white',  36, 36,     1,     0,    0,    0,     0,   0);
     $egg.css({zIndex: 33333});
 
     // ATOMS
-    build_objects('atom1',   35, 35,   20,   500,  700, 1800,    80, 120);
-    build_objects('atom2',   35, 35,   20,   500,  700, 1800,    80, 120);
+    for (let att of atom_types) {
+        build_objects(att,   35, 35,   20,   500,  700, 1800,    80, 120);
+    }
+
+    // ***************
+    // MIDDLE BRANCH
+    for (let s of dense_types) {
+        build_objects(s, 20, 30,    6,   1500,  1900, 2100,   30, 15);
+    }
+
+
+    // UPPER BRANCH
+    // build_particles(9, 13,      30,     1600, 1800, 2200,    120, 120);
 
 
 
