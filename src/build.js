@@ -145,17 +145,34 @@ $(document).ready(function() {
     // maxY at the leftmost point
     // maxY at the rightmost point
 
-    build_objects('hadron', 25, 25,    45,   320,  500, 1800,   130, 250);
+    build_objects('hadron', 25, 25,    45,   320,  500, 1800,     70, 120);
 
-    build_objects('dense1', 25, 50,    20,   600,  1300, 1800,   200, 200);
-    build_objects('dense2', 25, 50,    20,   600,  1300, 1800,   200, 200);
-    build_objects('black',  25, 50,    20,   600,  1300, 1800,   200, 200);
+    build_objects('dense1', 25, 50,    20,   600,  1300, 1800,   120, 120);
+    build_objects('dense2', 25, 50,    20,   600,  1300, 1800,   120, 120);
+    build_objects('black',  25, 50,    20,   600,  1300, 1800,   120, 120);
 
-    build_objects('white',  36, 36,     1,     0,    0,    0,     0,   0);
+    var $egg = build_objects('white',  36, 36,     1,     0,    0,    0,     0,   0);
+    $egg.css({zIndex: 33333});
+
 
     build_atoms(45,   500,  700, 1800, 50, 130);
 
-    build_particles(150);
+
+
+    // min width
+    // max width
+    //
+    // how many to build
+    //
+    // leftmost X before these start appearing
+    // X value where density should be highest (triangular dist)
+    // rightmost X
+    //
+    // maxY at the leftmost point
+    // maxY at the rightmost point
+    //
+    // 
+    build_particles(9, 13,      100,      10, 100, 700,     10, 120);
 
     // No need to do this in a timeout!
     setup_iscroll();

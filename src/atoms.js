@@ -34,19 +34,31 @@ var COLORS = [
 ];
 
 
-function build_particles(qty) {
+function build_particles(Wmin, Wmax, qty, Xleft, Xdens, Xright, YmaxL, YmaxR) {
     var $slate = $('.slate');
-    var maxy_to_x_ratio = 0.15;
     var colors = COLORS;
-    for (var i=0; i < 200; i++) {
-        var X = triangular(30, 2000, 150);
-        // Y_int = Math.round(getRandomFloatInclusive(1, X*maxy_to_x_ratio));
-        var Y_int = Math.round(X * maxy_to_x_ratio);   // Y is the "radius" of the simulated rotation around the X axis
-        var rate_of_speed =     (getRandomFloatInclusive(1, 1.5) + Math.pow(2, -Y_int)) * 18;
-        //console.log(Y_int);
-        //console.log(rate_of_speed);
+    for (var i=0; i < qty; i++) {
+        var X = (Xright > Xleft) ? triangular(Xleft, Xright, Xdens) : Xleft;
+        var Ymax = (X > Xleft) ? (YmaxL + (YmaxR-YmaxL)*(X-Xleft)/(Xright-Xleft)) : YmaxL;
+        var Y = Ymax;   //(Ymax > 0) ? getRandomFloatInclusive(0, Ymax) : 10;
+        var width = getRandomFloatInclusive(Wmin, Wmax);
+        var height = width;
+        var Y_int = Math.abs(Math.round(Y));
+        var rate_of_speed = (getRandomFloatInclusive(1, 1.5) + Math.pow(2, -Y_int)) * 180;
+        console.log('------');
+        console.log(Xleft);
+        console.log(X);
+        console.log(Xright);
+        console.log('. . . .');
+        console.log(YmaxL);
+        console.log(Ymax);
+        console.log(YmaxR);
+        console.log('. . . .');
+        console.log(Y);
+        console.log(Y_int);
+        console.log(rate_of_speed);
         var fullAnimDuration = (2*Y_int) / rate_of_speed;
-        var width = 2 * getRandomIntInclusive(3,6); // must be even number to avoid "clipped-circle" look
+        var width = 2 * Math.round(getRandomFloatInclusive(Wmin/2.0, Wmax/2.0)); // must be even number to avoid "clipped-circle" look
         var height = width;
         var animDelay = 0; //getRandomFloatInclusive(0, fullAnimDuration);
         var animStyle = Math.min(window.Ymax, getRandomIntInclusive(1, Y_int));
