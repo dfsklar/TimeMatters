@@ -157,7 +157,7 @@ function construct() {
     // maxY at the rightmost point
 
 
-    build_objects($slate, 'hadron', 25, 25,    20,   320, 400, 600,   70, 120);
+    build_objects($slate, 'hadron', 25, 25,    20,   320, 400, 900,   70, 120);
 
     for (let s of dense_types) {
         build_objects($slate, s, 25, 40,    20,   600,  1300, 1800,   120, 120);
@@ -171,10 +171,24 @@ function construct() {
         build_objects($slate, att,   35, 35,   20,   500,  700, 1800,    80, 120);
     }
 
+
+
     // ***************
     // MIDDLE BRANCH
     for (let s of dense_types) {
-        build_objects($slate, s, 20, 30,    6,   1500,  1900, 2100,   30, 15);
+        build_objects($slate, s, 20, 30,    4,   1500,  1900, 2100,   30, 15);
+    }
+
+
+
+    // ***************
+    // LOWER BRANCH
+    var $low = $('.lower_branch');
+    for (let s of dense_types) {
+        build_objects($low, s, 20, 30,    4,   1500,  1900, 2100,   30, 15);
+    }
+    for (let s of atom_types) {
+        build_objects($low, s, 35, 35,    4,   1500,  1900, 2100,   30, 15);
     }
 
 
@@ -195,9 +209,9 @@ function construct() {
     //
     // 
     // 1. Cone shape of particles near the origin
-    build_particles($slate, 9, 13,       70,      58,   null,  700,     10, 120);
+    build_particles($slate, 9, 13,       60,      58, null,  500,     10, 120);
     // 2. Particles once we get past 300K years
-    build_particles($slate, 9, 13,      100,     500, 1500, 1900,    120, 120);
+    build_particles($slate, 9, 13,       80,     500, 1500, 1900,    120, 120);
 
 }
 
