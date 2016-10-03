@@ -50,7 +50,7 @@ seq_timeline:
      x: 7.5
      time: 1 billion years
      label: Simmering
-     description: What we know: Radiation, photons travelling by particle or wave from a source, increased across the Universe. The waves or particles travelled so fast that they knocked electrons off of hydrogen; the amount of positively charged (ionized) hydrogen outnumbered the amount of neutral hydrogen.<p>The causes of this radiation increase are theory. But most begin with Gravity. As matter formed, areas of the Universe became more dense, attracting matter to matter, eventually leading to areas so dense that they collapsed inward. Gravitational collapse results in different things. If the particles being condensed are small enough, nuclear fusion can kick in-- the merging of particles under extreme force. This releases explosive energy, radiation, that fights against the implosive density of matter.<p>This is how solar nebula are born, eventually growing into stars, suns. When the material is too heavy to undergo fusion, all that’s left is dense, imploding matter. A black hole.<p>Quasars, old forms in our Universe, are particle clusters revolving around super massive black holes. Up to the point of a massive black hole’s event horizon, particles are moving fast, breaking up and colliding to releasing huge amounts radiation.  
+     description: What we know: Radiation, photons travelling by particle or wave from a source, increased across the Universe. The waves or particles travelled so fast that they knocked electrons off of hydrogen; the amount of positively charged (ionized) hydrogen outnumbered the amount of neutral hydrogen.<p>The causes of this radiation increase are theory. But most begin with Gravity. As matter formed, areas of the Universe became more dense, attracting matter to matter, eventually leading to areas so dense that they collapsed inward. Gravitational collapse results in different things. If the particles being condensed are small enough, nuclear fusion can kick in-- the merging of particles under extreme force. This releases explosive energy, radiation, that fights against the implosive density of matter.<p>This is how solar nebula are born, eventually growing into stars, suns. When the material is too heavy to undergo fusion, all that's left is dense, imploding matter. A black hole.<p>Quasars, old forms in our Universe, are particle clusters revolving around super massive black holes. Up to the point of a massive black hole's event horizon, particles are moving fast, breaking up and colliding to releasing huge amounts radiation.  
 
 
    -
@@ -90,7 +90,7 @@ seq_timeline:
      x: 13.5
      time: 13.6 billion years
      label: Death
-     description: In the Paleozoic Era, life exploded, after the amount of oxygen in the environment grew. In a mere 250 million years, billions of life forms, including plants and fish. At the end of this period was the largest mass extinction event on record, killing almost all marine life and around 70% of land-based life. The reasons for this mass extinction aren’t entirely known but are believed to be a combination of volcanic activity, temperature changes, and impact from space.
+     description: In the Paleozoic Era, life exploded, after the amount of oxygen in the environment grew. In a mere 250 million years, billions of life forms, including plants and fish. At the end of this period was the largest mass extinction event on record, killing almost all marine life and around 70% of land-based life. The reasons for this mass extinction aren't entirely known but are believed to be a combination of volcanic activity, temperature changes, and impact from space.
 
    -
      x: 14.5
@@ -102,13 +102,13 @@ seq_timeline:
      x: 15.5
      time: 13.8 billion years
      label: Present
-     description: Earth’s last major extinction event paved the way for mammals to diversify and flourish in our Cenozoic Era. It was only a mere 2.8 million years ago that our first recognizable ancestors, Homo Habilis, evolved. A millions years after that, the brain and neural connections grew, finally evolving into Homo Sapiens 200,000 years ago. 
+     description: Earth's last major extinction event paved the way for mammals to diversify and flourish in our Cenozoic Era. It was only a mere 2.8 million years ago that our first recognizable ancestors, Homo Habilis, evolved. A millions years after that, the brain and neural connections grew, finally evolving into Homo Sapiens 200,000 years ago. 
 
    -
      x: 16.5
      time: 15 billion years
      label: Re-Death<br/>&nbsp;
-     description: At some point in Earth’s future, another mass extinction event will occur, marking the end of the Cenozoic Era. Whether because of an asteroid’s impact or other factors, the Earth will change. We also know that our Sun grows warmer and brighter by about 10% every 1 billion years. Eventually, our Home will become hotter. The oceans will evaporate, while Mars will reach temperatures similar to an Earthly ice age.
+     description: At some point in Earth's future, another mass extinction event will occur, marking the end of the Cenozoic Era. Whether because of an asteroid's impact or other factors, the Earth will change. We also know that our Sun grows warmer and brighter by about 10% every 1 billion years. Eventually, our Home will become hotter. The oceans will evaporate, while Mars will reach temperatures similar to an Earthly ice age.
 
    -
      x: 17.5
