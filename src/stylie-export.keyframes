@@ -1,6 +1,6 @@
 .stylie {
 animation-name: stylie-transform-keyframes;
-animation-duration: 4000ms;
+animation-duration: 5000ms;
 animation-delay: 0ms;
 animation-fill-mode: forwards;
 animation-timing-function: linear;
@@ -8,11 +8,10 @@ animation-iteration-count: infinite;
 transform-origin: 0 0;
 }
 @keyframes stylie-transform-keyframes {
-0% {transform:translate(1350px, 139px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);animation-timing-function: cubic-bezier(.25,.25,.75,.75);}
-25% {transform:translate(1558px, 196px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(-28deg) translate(-50%, -50%);animation-timing-function: cubic-bezier(.25,.25,.75,.75);}
-50% {transform:translate(1656px, 287px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(46deg) translate(-50%, -50%);animation-timing-function: cubic-bezier(.25,.25,.75,.75);}
-75% {transform:translate(1755px, 312px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(112deg) translate(-50%, -50%);animation-timing-function: cubic-bezier(.25,.25,.75,.75);}
-100% {transform:translate(2117px, 282px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(37deg) translate(-50%, -50%);}
+0% {opacity: 0.5; transform:translate(1350px, 0px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);animation-timing-function: cubic-bezier(.25,.25,.75,.75);}
+20% {opacity: 1; transform:translate(1567px, 33px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(-28deg) translate(-50%, -50%);animation-timing-function: cubic-bezier(.25,.25,.75,.75);}
+40% {opacity: 1; transform:translate(1706px, 119px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(46deg) translate(-50%, -50%);animation-timing-function: cubic-bezier(.25,.25,.75,.75);}
+60% {opacity: 1; transform:translate(1856px, 139px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(112deg) translate(-50%, -50%);animation-timing-function: cubic-bezier(.25,.25,.75,.75);}
+90% {opacity: 1; transform:translate(2040px, 144px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(37deg) translate(-50%, -50%);animation-timing-function: cubic-bezier(.25,.25,.75,.75);}
+100% {opacity:0; transform:translate(2127px, 133px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(37deg) translate(-50%, -50%);}
 }
-
-
