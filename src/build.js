@@ -154,7 +154,9 @@ $(document).ready(function() {
     var $egg = build_objects('white',  36, 36,     1,     0,    0,    0,     0,   0);
     $egg.css({zIndex: 33333});
 
-    build_atoms(45,   500,  700, 1800, 50, 130);
+    // ATOMS
+    build_objects('atom1',   35, 35,   20,   500,  700, 1800,    80, 120);
+    build_objects('atom2',   35, 35,   20,   500,  700, 1800,    80, 120);
 
 
 

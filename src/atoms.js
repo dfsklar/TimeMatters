@@ -5,7 +5,10 @@ window.matter_templates = {
     'dense1': `<div class="densematt dense1"></div>`,
     'dense2': `<div class="densematt dense2"></div>`,
     'black':  `<div class="densematt blackhole"></div>`,
-    'white':  `<div class="densematt egg"></div>`
+    'white':  `<div class="densematt egg"></div>`,
+
+    'atom1':  `<div class='atom childcount1'></div>`,
+    'atom2':  `<div class='atom childcount2'></div>`
 };
 
 
@@ -90,7 +93,7 @@ function build_objects(template, Wmin, Wmax, qty, Xleft, Xdens, Xright, YmaxL, Y
     var D = window.Xtimeline_start;
     var $obj = null;
     for (var i=0; i < qty; i++) {
-        var fullAnimDuration = getRandomFloatInclusive(3,6);
+        var fullAnimDuration = getRandomFloatInclusive(2,3);
         var X = (Xright > Xleft) ? triangular(Xleft, Xright, Xdens) : Xleft;
         var Ymax = (X > Xleft) ? (YmaxL + (YmaxR-YmaxL)*(X-Xleft)/(Xright-Xleft)) : YmaxL;
         var Yabs = (Ymax > 0) ? getRandomFloatInclusive(0, Ymax) : 0;
@@ -99,7 +102,23 @@ function build_objects(template, Wmin, Wmax, qty, Xleft, Xdens, Xright, YmaxL, Y
 
         $obj = $(window.matter_templates[template]);
 
-        var animDelay = getRandomFloatInclusive(0, fullAnimDuration);
+        var child_count = 0;
+
+        if (template == 'atom1') {
+            child_count = 1;
+        }
+        if (template == 'atom2') {
+            child_count = 2;
+        }
+        if (child_count) {
+            for (var childidx = 0; childidx < child_count; childidx++) {
+                var $h = $(window.matter_templates['hadron']);
+                $h.addClass(`h${childidx}`);
+                $h.appendTo($obj);
+            }
+        }
+
+        var animDelay = getRandomFloatInclusive(0, fullAnimDuration/2);
         var animStyle = Math.min(window.Ymax, Math.round(Yabs));
 
         var css_struct = 
@@ -111,7 +130,7 @@ function build_objects(template, Wmin, Wmax, qty, Xleft, Xdens, Xright, YmaxL, Y
             left: `${D+X-width/2}px`,
             top: `${0-height/2}px`,
             animation: `cycle${animStyle} ${fullAnimDuration}s infinite alternate ease-in-out`,
-            animationDelay: `${animDelay+(fullAnimDuration/2)}s`,
+            animationDelay: `${animDelay}s`,
             zIndex: getRandomIntInclusive(1, 50)
             };
         console.log(css_struct);
@@ -123,39 +142,3 @@ function build_objects(template, Wmin, Wmax, qty, Xleft, Xdens, Xright, YmaxL, Y
     return $obj;  // Returns the most-recent object built
 }
 
-
-function build_atoms(qty, Xleft, Xdens, Xright, YmaxL, YmaxR) {
-    var $slate = $('.slate');
-    var Xbase = Xleft;
-    for (var i=0; i < qty; i++) {
-        var fullAnimDuration = getRandomFloatInclusive(3,8);
-        var child_count = (i%2) ? 1 : 2;
-        var X = triangular(Xleft, Xright, Xdens);
-        var Ymax = YmaxL + (YmaxR-YmaxL)/(X-Xleft);
-        var Y = getRandomFloatInclusive(-Ymax, Ymax);
-        var width = 41;  // hardwired for now, must match css spec
-        var height = width;
-
-        var $atom = $(`<div class='atom childcount${child_count}'></div>`);
-        for (var childidx = 0; childidx < child_count; childidx++) {
-            var $h = $(window.matter_templates['hadron']);
-            $h.addClass(`h${childidx}`);
-            $h.appendTo($atom);
-        }
-
-        var animDelay = getRandomFloatInclusive(0, fullAnimDuration);
-        var animStyle = getRandomIntInclusive(0, 9);
-
-        $atom.css({
-            position: 'absolute',
-            opacity: 1,
-            left: `${X-width/2}px`,
-            top: `${Y-height/2}px`,
-            animationXXX: `throbinplace${animStyle} ${fullAnimDuration}s infinite ease-in-out alternate`,
-            animationDelay: `${animDelay+(fullAnimDuration/2)}s`,
-            zIndex: getRandomIntInclusive(1, 50)
-        });
-
-        $atom.appendTo($slate);
-    }
-}
