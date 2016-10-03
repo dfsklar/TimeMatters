@@ -127,35 +127,24 @@ body, .ui-page {
 
 
 
-@keyframes leafAnim{
-  0% {
-    transform:  translate(496px,-35px)  rotate(0deg) ;
-  }
-  10% {
-    transform:  translate(531px,-37px)  rotate(-36deg) ;
-  }
-  37% {
-    transform:  translate(618px,-25px)  rotate(-298deg) ;
-  }
-  50% {
-    transform:  translate(625px,15px)  rotate(-100deg) ;
-  }
-  75% {
-    transform:  translate(849px,44px)  rotate(-58deg);
-    opacity: 1.0;
-  }
-  100% {
-    transform:  translate(1249px,44px)  rotate(0deg);
-    opacity: 0.0;
-  }
-}
-
-
 
 @keyframes spin {
     from {transform: translate3d(200px, 0px, 0px)   rotate3d(0, 0, 1, 0deg);}
     to {transform:   translate3d(300px, 0px, 0px)   rotate3d(0, 0, 1, -50deg);}
 }
+
+.sentient-being {
+    z-index: 100;
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    background-color: yellow;
+    animation-name: stylie-transform-keyframes;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
 
 .leaf {
     visibility: hidden;
