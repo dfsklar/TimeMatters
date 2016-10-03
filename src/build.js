@@ -124,11 +124,22 @@ function setup_iscroll() {
 
 
 
-$(document).ready(function() {
+
+function construct() {
+
+    var dense_types = ['dense1', 'dense2', 'black', 'hadron'];
+    var atom_types = ['atom1', 'atom2'];
 
     Math.seedrandom(getQueryParameterByName('seed','helloiofjew.'));
 
     var $slate = $('.slate');
+
+
+    // UPPER BRANCH
+    build_particles($('.upper_branch'), 9, 13,      40,      1500, 2000, 2100,    20, 20);
+    for (let s of dense_types) {
+        build_objects($('.upper_branch'), s, 20, 30,    3,   1500, 1600, 2100,    30, 15);
+    }
 
 
     // PARAMS:
@@ -145,15 +156,11 @@ $(document).ready(function() {
     // maxY at the leftmost point
     // maxY at the rightmost point
 
-    var dense_types = ['dense1', 'dense2', 'black', 'hadron'];
-    var atom_types = ['atom1', 'atom2'];
 
-    build_objects($slate, 'hadron', 25, 25,    45,   320,  500, 1800,     70, 120);
+    build_objects($slate, 'hadron', 25, 25,    20,   320, 400, 600,   70, 120);
 
     for (let s of dense_types) {
-        if (s != 'hadron') {
-            build_objects($slate, s, 25, 40,    20,   600,  1300, 1800,   120, 120);
-        }
+        build_objects($slate, s, 25, 40,    20,   600,  1300, 1800,   120, 120);
     }
 
     var $egg = build_objects($slate, 'white',  36, 36,     1,     0,    0,    0,     0,   0);
@@ -169,10 +176,6 @@ $(document).ready(function() {
     for (let s of dense_types) {
         build_objects($slate, s, 20, 30,    6,   1500,  1900, 2100,   30, 15);
     }
-
-
-    // UPPER BRANCH
-    build_particles($('.upper_branch'), 9, 13,      30,     1500, 1500, 2300,    20, 10);
 
 
 
@@ -191,8 +194,19 @@ $(document).ready(function() {
     // maxY at the rightmost point
     //
     // 
+    // 1. Cone shape of particles near the origin
     build_particles($slate, 9, 13,       70,      58,   null,  700,     10, 120);
-    build_particles($slate, 9, 13,      100,     600, 1000, 1800,    120, 120);
+    // 2. Particles once we get past 300K years
+    build_particles($slate, 9, 13,      100,     500, 1500, 1900,    120, 120);
+
+}
+
+
+$(document).ready(function() {
+
+    var $slate = $('.slate');
+
+    construct();
 
     // No need to do this in a timeout!
     setup_iscroll();
