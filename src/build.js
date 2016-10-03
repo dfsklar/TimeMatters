@@ -1,7 +1,7 @@
 "use strict";
 
 window.Xtimeline_start = 30;
-
+window.Ymax = 200;  // The furthest from the X axis any object's *CENTER* should be
 
 
 // Returns a random number between A and C, where B is the "most likely" outcome
@@ -146,9 +146,10 @@ $(document).ready(function() {
     // maxY at the rightmost point
 
     build_objects('hadron', 25, 25,    45,   320,  500, 1800,   130, 250);
-    build_objects('dense1', 25, 50,    20,   320,  500, 1800,   130, 250);
-    build_objects('dense2', 25, 50,    20,   320,  500, 1800,   130, 250);
-    build_objects('black',  25, 50,    20,   320,  500, 1800,   130, 250);
+
+    build_objects('dense1', 25, 50,    20,   600,  1300, 1800,   200, 200);
+    build_objects('dense2', 25, 50,    20,   600,  1300, 1800,   200, 200);
+    build_objects('black',  25, 50,    20,   600,  1300, 1800,   200, 200);
 
     build_objects('white',  36, 36,     1,     0,    0,    0,     0,   0);
 

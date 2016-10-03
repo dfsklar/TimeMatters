@@ -49,7 +49,7 @@ function build_particles(qty) {
         var width = 2 * getRandomIntInclusive(3,6); // must be even number to avoid "clipped-circle" look
         var height = width;
         var animDelay = 0; //getRandomFloatInclusive(0, fullAnimDuration);
-        var animStyle = Math.min(200, getRandomIntInclusive(1, Y_int));
+        var animStyle = Math.min(window.Ymax, getRandomIntInclusive(1, Y_int));
 
         var $inner = $(`<div class="circle" id="cc${i}"></div></div>`);
         $inner.css({
