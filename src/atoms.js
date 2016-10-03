@@ -4,7 +4,8 @@ window.matter_templates = {
     'hadron': `<div class="hadron"><div class="quark upq upleft"></div><div class="quark upq upright"></div><div class="quark downq down"></div></div>`,
     'dense1': `<div class="densematt dense1"></div>`,
     'dense2': `<div class="densematt dense2"></div>`,
-    'black':  `<div class="densematt blackhole"></div>`
+    'black':  `<div class="densematt blackhole"></div>`,
+    'white':  `<div class="densematt egg"></div>`
 };
 
 
@@ -35,7 +36,7 @@ var COLORS = [
 
 function build_particles(qty) {
     var $slate = $('.slate');
-    var maxy_to_x_ratio = 0.10;
+    var maxy_to_x_ratio = 0.15;
     var colors = COLORS;
     for (var i=0; i < 200; i++) {
         var X = triangular(30, 2000, 150);
@@ -72,16 +73,17 @@ function build_particles(qty) {
 
 function build_objects(template, Wmin, Wmax, qty, Xleft, Xdens, Xright, YmaxL, YmaxR) {
     var $slate = $('.slate');
-    var Xbase = Xleft;
+    var D = window.Xtimeline_start;
+    var $obj = null;
     for (var i=0; i < qty; i++) {
         var fullAnimDuration = getRandomFloatInclusive(3,6);
-        var X = triangular(Xleft, Xright, Xdens);
-        var Ymax = YmaxL + (YmaxR-YmaxL)/(X-Xleft);
-        var Y = getRandomFloatInclusive(-Ymax, Ymax);
+        var X = (Xright > Xleft) ? triangular(Xleft, Xright, Xdens) : Xleft;
+        var Ymax = (X > Xleft) ? (YmaxL + (YmaxR-YmaxL)/(X-Xleft)) : YmaxL;
+        var Y = (Ymax > 0) ? getRandomFloatInclusive(-Ymax, Ymax) : 0;
         var width = getRandomFloatInclusive(Wmin, Wmax);
         var height = width;
 
-        var $obj = $(window.matter_templates[template]);
+        $obj = $(window.matter_templates[template]);
 
         var animDelay = getRandomFloatInclusive(0, fullAnimDuration);
         var animStyle = getRandomIntInclusive(0, 9);
@@ -91,15 +93,16 @@ function build_objects(template, Wmin, Wmax, qty, Xleft, Xdens, Xright, YmaxL, Y
             opacity: 1,
             width: `${width}px`,
             height: `${height}px`,
-            left: `${X-width/2}px`,
+            left: `${D+X-width/2}px`,
             top: `${Y-height/2}px`,
-            animationxxx: `throbinplace${animStyle} ${fullAnimDuration}s infinite ease-in-out alternate`,
+            // animation: `cycle18 ${fullAnimDuration}s infinite ease-in-out alternate`,
             animationDelay: `${animDelay+(fullAnimDuration/2)}s`,
             zIndex: getRandomIntInclusive(1, 50)
         });
 
         $obj.appendTo($slate);
     }
+    return $obj;  // Returns the most-recent object built
 }
 
 
