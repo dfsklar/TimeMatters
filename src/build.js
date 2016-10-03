@@ -175,7 +175,7 @@ $(document).ready(function() {
     // maxY at the rightmost point
     //
     // 
-    build_particles(9, 13,       50,      10,   70,  700,     10, 120);
+    build_particles(9, 13,       50,      58,   null,  700,     10, 120);
     build_particles(9, 13,      100,     600, 1000, 1800,    120, 120);
 
     // No need to do this in a timeout!

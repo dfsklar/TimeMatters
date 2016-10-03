@@ -37,16 +37,30 @@ var COLORS = [
 ];
 
 
+
+// Special meaning for Xleft/dens/right:
+// If Xdens==null, then the desired qty is to be evenly distributed from Xleft to Xright.
 function build_particles(Wmin, Wmax, qty, Xleft, Xdens, Xright, YmaxL, YmaxR) {
     var $slate = $('.slate');
     var colors = COLORS;
+    var Xcur = Xleft;
+    var Xdelta = (Xright-Xleft+1.0) / qty;  // for the non-random uniform-distr
+    var X;
     for (var i=0; i < qty; i++) {
-        var X = (Xright > Xleft) ? triangular(Xleft, Xright, Xdens) : Xleft;
+        if (Xdens!=null) {
+            X = (Xright > Xleft) ? triangular(Xleft, Xright, Xdens) : Xleft;
+        }else{
+            if (i==0) {
+                X = Xleft;
+            }else{
+                X = Xleft + (i*Xdelta);
+            }
+        }
         var Ymax = (X > Xleft) ? (YmaxL + (YmaxR-YmaxL)*(X-Xleft)/(Xright-Xleft)) : YmaxL;
         var Y = Ymax;   //(Ymax > 0) ? getRandomFloatInclusive(0, Ymax) : 10;
         var width = getRandomFloatInclusive(Wmin, Wmax);
         var height = width;
-        var fullAnimDuration = Math.min(Ymax / 80, 3) * getRandomFloatInclusive(0.99,1.01);
+        var fullAnimDuration = Math.min(Ymax / 85, 2) * getRandomFloatInclusive(0.99,1.01);
         if (false) {
             console.log('------');
             console.log(Xleft);
