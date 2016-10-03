@@ -60,7 +60,7 @@ function build_particles(Wmin, Wmax, qty, Xleft, Xdens, Xright, YmaxL, YmaxR) {
         var Y = Ymax;   //(Ymax > 0) ? getRandomFloatInclusive(0, Ymax) : 10;
         var width = getRandomFloatInclusive(Wmin, Wmax);
         var height = width;
-        var fullAnimDuration = Math.min(Ymax / 85, 2) * getRandomFloatInclusive(0.99,1.01);
+        var fullAnimDuration = Math.min(YmaxR / 85, 2) * getRandomFloatInclusive(0.93,1.07);
         if (false) {
             console.log('------');
             console.log(Xleft);

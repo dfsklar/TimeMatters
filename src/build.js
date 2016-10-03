@@ -50,10 +50,10 @@ function getRandomIntInclusive(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-// Returns a random integer between min (included) and max (included)
+// Returns a random integer between min (included) and max (probably not exactly included)
 // Using Math.round() will give you a non-uniform distribution!
 function getRandomFloatInclusive(min, max) {
-    return (Math.random() * (max - min + 1)) + min;
+    return min + (Math.random() * (max - min));
 }
 
 function getRandomMember(items) {
