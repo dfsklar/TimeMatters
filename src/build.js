@@ -148,31 +148,31 @@ $(document).ready(function() {
     var dense_types = ['dense1', 'dense2', 'black', 'hadron'];
     var atom_types = ['atom1', 'atom2'];
 
-    build_objects('hadron', 25, 25,    45,   320,  500, 1800,     70, 120);
+    build_objects($slate, 'hadron', 25, 25,    45,   320,  500, 1800,     70, 120);
 
     for (let s of dense_types) {
         if (s != 'hadron') {
-            build_objects(s, 25, 40,    20,   600,  1300, 1800,   120, 120);
+            build_objects($slate, s, 25, 40,    20,   600,  1300, 1800,   120, 120);
         }
     }
 
-    var $egg = build_objects('white',  36, 36,     1,     0,    0,    0,     0,   0);
+    var $egg = build_objects($slate, 'white',  36, 36,     1,     0,    0,    0,     0,   0);
     $egg.css({zIndex: 33333});
 
     // ATOMS
     for (let att of atom_types) {
-        build_objects(att,   35, 35,   20,   500,  700, 1800,    80, 120);
+        build_objects($slate, att,   35, 35,   20,   500,  700, 1800,    80, 120);
     }
 
     // ***************
     // MIDDLE BRANCH
     for (let s of dense_types) {
-        build_objects(s, 20, 30,    6,   1500,  1900, 2100,   30, 15);
+        build_objects($slate, s, 20, 30,    6,   1500,  1900, 2100,   30, 15);
     }
 
 
     // UPPER BRANCH
-    // build_particles(9, 13,      30,     1600, 1800, 2200,    120, 120);
+    build_particles($('.upper_branch'), 9, 13,      30,     1500, 1500, 2300,    20, 10);
 
 
 
@@ -191,8 +191,8 @@ $(document).ready(function() {
     // maxY at the rightmost point
     //
     // 
-    build_particles(9, 13,       70,      58,   null,  700,     10, 120);
-    build_particles(9, 13,      100,     600, 1000, 1800,    120, 120);
+    build_particles($slate, 9, 13,       70,      58,   null,  700,     10, 120);
+    build_particles($slate, 9, 13,      100,     600, 1000, 1800,    120, 120);
 
     // No need to do this in a timeout!
     setup_iscroll();

@@ -40,8 +40,7 @@ var COLORS = [
 
 // Special meaning for Xleft/dens/right:
 // If Xdens==null, then the desired qty is to be evenly distributed from Xleft to Xright.
-function build_particles(Wmin, Wmax, qty, Xleft, Xdens, Xright, YmaxL, YmaxR) {
-    var $slate = $('.slate');
+function build_particles($root, Wmin, Wmax, qty, Xleft, Xdens, Xright, YmaxL, YmaxR) {
     var colors = COLORS;
     var Xcur = Xleft;
     var Xdelta = (Xright-Xleft+1.0) / qty;  // for the non-random uniform-distr
@@ -60,7 +59,7 @@ function build_particles(Wmin, Wmax, qty, Xleft, Xdens, Xright, YmaxL, YmaxR) {
         var Y = Ymax;   //(Ymax > 0) ? getRandomFloatInclusive(0, Ymax) : 10;
         var width = getRandomFloatInclusive(Wmin, Wmax);
         var height = width;
-        var fullAnimDuration = Math.min(YmaxR / 75, 2) * getRandomFloatInclusive(0.93,1.07);
+        var fullAnimDuration = Math.max(YmaxR / 55, 0.75) * getRandomFloatInclusive(0.93,1.07);
         if (false) {
             console.log('------');
             console.log(Xleft);
@@ -92,7 +91,7 @@ function build_particles(Wmin, Wmax, qty, Xleft, Xdens, Xright, YmaxL, YmaxR) {
             animation: `cycle${animStyle} ${fullAnimDuration}s infinite alternate ease-in-out`,
             animationDelay: `${animDelay}s`
         });
-        $inner.appendTo($slate);
+        $inner.appendTo($root);
     }
 }
 
@@ -100,8 +99,7 @@ function build_particles(Wmin, Wmax, qty, Xleft, Xdens, Xright, YmaxL, YmaxR) {
 
 
 
-function build_objects(template, Wmin, Wmax, qty, Xleft, Xdens, Xright, YmaxL, YmaxR) {
-    var $slate = $('.slate');
+function build_objects($root, template, Wmin, Wmax, qty, Xleft, Xdens, Xright, YmaxL, YmaxR) {
     var D = window.Xtimeline_start;
     var $obj = null;
     for (var i=0; i < qty; i++) {
@@ -149,7 +147,7 @@ function build_objects(template, Wmin, Wmax, qty, Xleft, Xdens, Xright, YmaxL, Y
 
         $obj.css(css_struct);
 
-        $obj.appendTo($slate);
+        $obj.appendTo($root);
     }
     return $obj;  // Returns the most-recent object built
 }
