@@ -77,13 +77,13 @@ body, .ui-page {
     font-weight: bold;
     padding-right: 20px;
     color: white;
-    font-size: 18px;
+    font-size: 18pt;
     vertical-align: top;
 }
 .timemarker-prose td.label {
     font-weight: bold;
     color: white;
-    font-size: 18px;
+    font-size: 18pt;
     vertical-align: top;
     width: auto;
     top: auto;
@@ -221,10 +221,10 @@ body, .ui-page {
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
-    max-width: 300px;
+    max-width: 300pt;
     color: white;
     font-family: Arial;
-    font-size: 15px;
+    font-size: 16pt;
 }
 
 .hadron {

@@ -142,7 +142,8 @@ function construct() {
     }
 
 
-    // PARAMS:
+    // BUILD-OBJECTS PARAMS:
+    //
     // template name
     // min width
     // max width
@@ -156,8 +157,7 @@ function construct() {
     // maxY at the leftmost point
     // maxY at the rightmost point
 
-
-    build_objects($slate, 'hadron', 25, 25,    20,   320, 400, 900,   70, 120);
+    build_objects($slate, 'hadron', 25, 25,    20,   320, 400, 900,   45, 120);
 
     for (let s of dense_types) {
         var width_min = 25;
@@ -211,9 +211,9 @@ function construct() {
     //
     // 
     // 1. Cone shape of particles near the origin
-    build_particles($slate, 9, 13,       60,      58, null,  500,     10, 120);
+    build_particles($slate, 9, 13,       60,      58, null,  500,     10,  43);
     // 2. Particles once we get past 300K years
-    build_particles($slate, 9, 13,       80,     500, 1500, 1900,    120, 120);
+    build_particles($slate, 9, 13,       80,     500,  800, 1900,     43, 120);
 
 }
 
