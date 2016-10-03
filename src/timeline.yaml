@@ -6,56 +6,79 @@ seq_timeline:
      x: 0
      time: 0<br/>&nbsp;<br/>&nbsp;
      label: Cosmic Egg?
-     details: <p>Prevailing theory suggests that all energy in our known Universe was condensed into a tiny area, possibly smaller than a single atom. It was hot, dense, a singularity. No one knows what surrounded it or came before it. Theories include Infinite Everything; Nothing.</p><p>An alternate theory imagines a Multiverse, millions of Universes-- fabrics or membranes-- vibrating in close proximity. As the membranes of two universes collided, our Universe, was born. It is possible that there was no beginning.</p>
+     description: <p>Prevailing theory suggests that all energy in our known Universe was condensed into a tiny area, possibly smaller than a single atom. It was hot, dense, a singularity. No one knows what surrounded it or came before it. Theories include Infinite Everything; Nothing.</p><p>An alternate theory imagines a Multiverse, millions of Universes-- fabrics or membranes-- vibrating in close proximity. As the membranes of two universes collided, our Universe, was born. It is possible that there was no beginning.</p>
 
    -
      x: 1
      time: 10<sup>-36</sup><br/>of a second
      label: Expansion Burst
+     description: Evidence points to an explosive expansion that grew the Universe grew to the size of a grapefruit.<p>The Force of Gravity, the attraction of matter to matter, emerged. A Force is a way that particles interact with one another; attraction, repulsion, influencing behavior or movement. Energy could thus transform into the most basic forms of matter and anti-matter: quarks and leptons. No one entirely knows what basic particles look like. We infer based on how the particles they make up behave.
+
    -
      x: 2.1
      time: 10<sup>-6</sup><br/>of a second
      label: Infant Matter
+     description: The Four Forces of the Universe came into being. The Strong Force, which operates across tiny distances and holds nuclei together, emerged, growing the number of particles in the Universe. The Electromagnetic force: mediating electrical and magnetic behavior and light; the Weak Force: causing radioactive decay, the result of protons turning into neutrons (or the opposite).<p>Infant Light was born.
+
    -
      x: 3.2
      time: 1 second<br/>&nbsp;
      label: Marriages of Matter
+     description: The Universe cooled to about a trillion degrees, allowing quarks to combine to form hadrons: protons and neutrons. More complex child particles formed. Hydrogen, in its ionized or electrically charged state, is simply a single  positively charged proton.
+
    -
      x: 4.3
      time: 20 minutes<br/>&nbsp;
      label: Merging Matter
+     description: Protons and neutrons merged through fusion, creating the atomic nuclei for more complex elements. Helium and lithium, the lightest, simplest elements, appeared. Neutral Hydrogen formed attracting electrons to their positive proton nucleus.<p>Fusion, which releases energy as a byproduct, is only possible when particles collide. But all atomic nuclei have positive charges and thus repel one another. The lighter the particle, the more likely it can reach the necessary speed to collide with enough force.<p>Fusion powers stars. The energy released is light, heat.   
+
+
    -
      x: 5.4
      time: 300 thousand years
      label: Merging Matter
+     description: The temperature dropped to 3000 degrees. Hydrogen and helium ruled the stretching space of a growing Universe.
+
    -
      x: 6.5
      time: 200 million years
      label: Quiet Expanse
+     description: Time passed in a quiet, expanding Universe. Imagine the Universe as a fabric, stretching, potentially forever. The matter spread throughout, however wants to pull together. In this early period, the stretching of the Universe spread particles so far apart that they were diffusely scattered across space, interspersed by a thin layer of energy that was not dense enough to form matter.
+
+
    -
      x: 7.5
      time: 1 billion years
      label: Simmering
+     description: What we know: Radiation, photons travelling by particle or wave from a source, increased across the Universe. The waves or particles travelled so fast that they knocked electrons off of hydrogen; the amount of positively charged (ionized) hydrogen outnumbered the amount of neutral hydrogen.<p>The causes of this radiation increase are theory. But most begin with Gravity. As matter formed, areas of the Universe became more dense, attracting matter to matter, eventually leading to areas so dense that they collapsed inward. Gravitational collapse results in different things. If the particles being condensed are small enough, nuclear fusion can kick in-- the merging of particles under extreme force. This releases explosive energy, radiation, that fights against the implosive density of matter.<p>This is how solar nebula are born, eventually growing into stars, suns. When the material is too heavy to undergo fusion, all that’s left is dense, imploding matter. A black hole.<p>Quasars, old forms in our Universe, are particle clusters revolving around super massive black holes. Up to the point of a massive black hole’s event horizon, particles are moving fast, breaking up and colliding to releasing huge amounts radiation.  
+
 
    -
      x: 8.5
      time: 8 billion years
      label: Galaxies
+     description: Stars of all kinds formed, blooming across the Universe. They were born, lived, and died, resulting in Supernovas that recycled stardust into more stars as matter clustered.<p>Black holes formed, around which galaxies formed.<p>Stars were born that later become a part of the Milky Way Galaxy,  home to Earth.
  
    -  
      x: 9.5
      time: 9 billion years
      label: Sun
+     description: Our Sun, a young star, was made from the remnants of many other stars that were born and died. It was born from from the gravitational collapse of a dense cloud of matter, 
+
 
    -
      x: 10.5
      time: 9.2 billion years
      label: Earth 
+     description: No one knows exactly how our solar system formed in the way it did, why the perfect conditions for our beautiful blue globe were possible in our neighborhood of the Universe. But when stars are born, they release a spinning disk of gas. This disk can either continuing falling onto the surface of the star or give birth to planets, moons, and asteroids. The beginnings of Earth, along with the moons and other planets in our solar systerm, were  collections of this matter. As they grew in different ways, the planets slowly moved into the stable orbits we have today.
+
      
    -
      x: 11.5
      time: 10 billion years
      label: Tumult
+     description: During this violent time, the Earth was incredibly hot, with no oxygen and a poisonous atmosphere made of helium and hydrogen. Eventually, after thousands of years of bombardment ended, the surface began to cool, free oxygen formed, clouds formed, and massive rains fell, to create our oceans. 
+
 
    -
      x: 12.5

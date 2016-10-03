@@ -79,6 +79,14 @@ function buildTimeline($slate) {
             left: `${rec.x * timeline_x_factor}`
         });
         $timeline.append($newbie);
+        // Setup prose display upon user tap of a timeline marker
+        $newbie.magnificPopup({
+        type: 'inline',
+        mainClass: 'mfp-fade',
+            items: {
+                src: `<div class=timemarker-prose><table><tr><td class=time>${rec.time}</td><td class=label>${rec.label}</td></tr></table><p>${rec.description}</p></div>`
+            }
+        });
     }
 
     if (getQueryParameterByName('showhashmarks', false)) {
@@ -91,14 +99,6 @@ function buildTimeline($slate) {
         }
     }
 
-    // Setup prose display upon user tap of a timeline marker
-    $('.timemarker').magnificPopup({
-        type: 'inline',
-        mainClass: 'mfp-fade',
-        items: {
-            src: '<div class=timemarker-prose><table><tr><td class=time>0</td><td class=label>Cosmic Egg?</td></tr></table><p>DEMO MODE!  CURRENTLY HARDWIRED TO SHOW ONLY THE COSMIC-EGG PROSE!<p>Prevailing theory suggests that all energy in our known Universe was condensed into a tiny area, possibly smaller than a single atom. It was hot, dense, a singularity. No one knows what surrounded it or came before it. Theories include Infinite Everything; Nothing.</p><p>An alternate theory imagines a Multiverse, millions of Universes-- fabrics or membranes-- vibrating in close proximity. As the membranes of two universes collided, our Universe, was born. It is possible that there was no beginning.</p></div>',
-        }
-    });
 
     return $timeline;
 }
@@ -160,7 +160,9 @@ function construct() {
     build_objects($slate, 'hadron', 25, 25,    20,   320, 400, 900,   70, 120);
 
     for (let s of dense_types) {
-        build_objects($slate, s, 25, 40,    20,   600,  1300, 1800,   120, 120);
+        var width_min = 25;
+        var width_max = (s=='hadron') ? 25 : 40;
+        build_objects($slate, s, width_min, width_max,    20,   600,  1300, 1800,   120, 120);
     }
 
     var $egg = build_objects($slate, 'white',  36, 36,     1,     0,    0,    0,     0,   0);
