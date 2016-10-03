@@ -70,7 +70,7 @@ function build_particles(qty) {
 
 
 
-function build_objects(template, qty, Xleft, Xdens, Xright, YmaxL, YmaxR) {
+function build_objects(template, Wmin, Wmax, qty, Xleft, Xdens, Xright, YmaxL, YmaxR) {
     var $slate = $('.slate');
     var Xbase = Xleft;
     for (var i=0; i < qty; i++) {
@@ -78,7 +78,7 @@ function build_objects(template, qty, Xleft, Xdens, Xright, YmaxL, YmaxR) {
         var X = triangular(Xleft, Xright, Xdens);
         var Ymax = YmaxL + (YmaxR-YmaxL)/(X-Xleft);
         var Y = getRandomFloatInclusive(-Ymax, Ymax);
-        var width = 25;  // hardwired for now, must match css spec
+        var width = getRandomFloatInclusive(Wmin, Wmax);
         var height = width;
 
         var $obj = $(window.matter_templates[template]);
@@ -89,6 +89,8 @@ function build_objects(template, qty, Xleft, Xdens, Xright, YmaxL, YmaxR) {
         $obj.css({
             position: 'absolute',
             opacity: 1,
+            width: `${width}px`,
+            height: `${height}px`,
             left: `${X-width/2}px`,
             top: `${Y-height/2}px`,
             animationxxx: `throbinplace${animStyle} ${fullAnimDuration}s infinite ease-in-out alternate`,
