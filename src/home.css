@@ -52,6 +52,9 @@ body, .ui-page {
     opacity: 1;
     transition: opacity 1s ease-in-out;
 }
+.timeline.visible-instant {
+    opacity: 1;
+}
 
 .timemarker,.xmarker {
     cursor: pointer;
@@ -221,6 +224,25 @@ body, .ui-page {
     width: 25px;
     height: 25px;
 }
+
+
+.densematt {
+    position: absolute;
+    background-color: yellow;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+}
+.densematt.dense1 {
+    background-color: #416393;
+}
+.densematt.dense2 {
+    background-color: #203054;
+}
+.densematt.blackhole {
+    background-color: black;
+}
+
 
 
 .quark {

@@ -1,6 +1,13 @@
 "use strict";
 
-window.templ_hadron = `<div class="hadron"><div class="quark upq upleft"></div><div class="quark upq upright"></div><div class="quark downq down"></div></div>`;
+window.matter_templates = {
+    'hadron': `<div class="hadron"><div class="quark upq upleft"></div><div class="quark upq upright"></div><div class="quark downq down"></div></div>`,
+    'dense1': `<div class="densematt dense1"></div>`,
+    'dense2': `<div class="densematt dense2"></div>`,
+    'black':  `<div class="densematt blackhole"></div>`
+};
+
+
 
 var COLORS = [
     '#7c9262',
@@ -51,7 +58,7 @@ function build_particles(qty) {
             height: `${height}px`,
             width: `${width}px`,
             left: `${X-width/2}px`,
-            topfiejow: `${0-height/2}px`,
+            top: `${0-height/2}px`,
             animation: `cycle${animStyle} ${fullAnimDuration}s infinite alternate ease-in-out`,
             animationDelay: `${animDelay+(fullAnimDuration/2)}s`
         });
@@ -63,26 +70,23 @@ function build_particles(qty) {
 
 
 
-// ANIMATION: a simple quiver-in-place, with the duration varying randomly
-// SIZE: hardwired constant, source of truth is CSS
-function build_hadrons(qty, Xleft, Xdens, Xright, YmaxL, YmaxR) {
+function build_objects(template, qty, Xleft, Xdens, Xright, YmaxL, YmaxR) {
     var $slate = $('.slate');
     var Xbase = Xleft;
     for (var i=0; i < qty; i++) {
-        var fullAnimDuration = getRandomFloatInclusive(3,8);
+        var fullAnimDuration = getRandomFloatInclusive(3,6);
         var X = triangular(Xleft, Xright, Xdens);
         var Ymax = YmaxL + (YmaxR-YmaxL)/(X-Xleft);
         var Y = getRandomFloatInclusive(-Ymax, Ymax);
         var width = 25;  // hardwired for now, must match css spec
         var height = width;
 
-        // NO NEED FOR A "HOLDER" DIV
-        var $hadron = $(window.templ_hadron);
+        var $obj = $(window.matter_templates[template]);
 
         var animDelay = getRandomFloatInclusive(0, fullAnimDuration);
         var animStyle = getRandomIntInclusive(0, 9);
 
-        $hadron.css({
+        $obj.css({
             position: 'absolute',
             opacity: 1,
             left: `${X-width/2}px`,
@@ -92,7 +96,7 @@ function build_hadrons(qty, Xleft, Xdens, Xright, YmaxL, YmaxR) {
             zIndex: getRandomIntInclusive(1, 50)
         });
 
-        $hadron.appendTo($slate);
+        $obj.appendTo($slate);
     }
 }
 
@@ -111,7 +115,7 @@ function build_atoms(qty, Xleft, Xdens, Xright, YmaxL, YmaxR) {
 
         var $atom = $(`<div class='atom childcount${child_count}'></div>`);
         for (var childidx = 0; childidx < child_count; childidx++) {
-            var $h = $(window.templ_hadron);
+            var $h = $(window.matter_templates['hadron']);
             $h.addClass(`h${childidx}`);
             $h.appendTo($atom);
         }

@@ -64,7 +64,7 @@ function buildTimeline($slate) {
     var timeline_points = timeline.seq_timeline;
     console.log(timeline);
 
-    var timeline_x_factor = 80;
+    var timeline_x_factor = 88;
     for (var i=0; i < timeline_points.length; i++) {
         var rec = timeline_points[i];
         var $newbie = $(`<div class=timemarker><div class=notch></div><div class=label><div class=time>${rec['time']}</div><div>${rec['label']}</div></div></div>`);
@@ -99,30 +99,7 @@ function buildTimeline($slate) {
 
 
 
-$(document).ready(function() {
-    var updownAmounts = ['10','15','20','50'];
-
-    Math.seedrandom(getQueryParameterByName('seed','helloiofjew.'));
-
-    var $slate = $('.slate');
-
-
-
-    // PARAMS:
-    // 1) how many to build
-    // 2) leftmost X before these start appearing
-    // 3) X value where density should be highest (triangular dist)
-    // 4) rightmost X
-    // 5) maxY at the leftmost point
-    // 6) maxY at the rightmost point
-
-    build_hadrons(12, 300, 500, 900, 30, 80);
-
-    build_atoms(12, 400, 800, 1100, 30, 80);
-
-    build_particles(200);
-
-    function setup_iscroll() {
+function setup_iscroll() {
         window.mySlateScroller = new IScroll('#slatewrapper', {
             scrollX: true,
             zoom: true,
@@ -136,15 +113,46 @@ $(document).ready(function() {
         });
         // For iscroll to work:
         document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
-    }
+}
+
+
+
+$(document).ready(function() {
+
+    Math.seedrandom(getQueryParameterByName('seed','helloiofjew.'));
+
+    var $slate = $('.slate');
+
+
+    // PARAMS:
+    // 1) how many to build
+    // 2) leftmost X before these start appearing
+    // 3) X value where density should be highest (triangular dist)
+    // 4) rightmost X
+    // 5) maxY at the leftmost point
+    // 6) maxY at the rightmost point
+
+    build_objects('hadron', 45, 320,  500, 1800, 50, 130);
+    build_objects('dense1', 20, 320,  500, 1800, 50, 130);
+    build_objects('dense2', 20, 320,  500, 1800, 50, 130);
+    build_objects('black',  20, 320,  500, 1800, 50, 130);
+
+    build_atoms(45,   500,  700, 1800, 50, 130);
+
+    // build_particles(150);
 
     // No need to do this in a timeout!
     setup_iscroll();
 
-    setTimeout(function() {
-        window.mySlateScroller.zoom(1, 0, 0, 8000);
+    if (getQueryParameterByName('instant', false)) {
         var $T = buildTimeline($slate);
-        $T.addClass('visible');
-    }, 3000);
+        $T.addClass('visible-instant');
+    } else {
+        setTimeout(function() {
+            window.mySlateScroller.zoom(1, 0, 0, 8000);
+            var $T = buildTimeline($slate);
+            $T.addClass('visible');
+        }, 3000);
+    }
 
 });
