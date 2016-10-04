@@ -169,7 +169,7 @@ function construct() {
     }
 
     var $egg = build_objects($slate, 'white',  36, 36,     1,     0,    0,    0,     0,   0);
-    $egg.css({zIndex: 33333});
+    $egg.css({zIndex: 3333});
 
     // ATOMS
     for (let att of atom_types) {

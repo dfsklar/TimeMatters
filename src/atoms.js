@@ -44,6 +44,9 @@ var COLORS = [
 // adjacent particles to get slightly larger with each iteration.
 function build_particles($root, Wmin, Wmax, qty, Xleft, Xdens, Xright, YmaxL, YmaxR, opts) {
     opts = opts || {};
+    if (!opts.base_anim_delay) {
+        opts.base_anim_delay = 0;
+    }
     var colors = COLORS;
     var Xcur = Xleft;
     var Xdelta = (Xright-Xleft+1.0) / qty;  // for the non-random uniform-distr
@@ -97,7 +100,7 @@ function build_particles($root, Wmin, Wmax, qty, Xleft, Xdens, Xright, YmaxL, Ym
         }
         var width = 2 * Math.round(getRandomFloatInclusive(Wmin/2.0, Wmax/2.0)); // must be even number to avoid "clipped-circle" look
         var height = width;
-        var animDelay = X * 0.01;
+        var animDelay = opts.base_anim_delay + (X * 0.005);
         var animStyle = Math.min(window.Ymax, Math.round(Y));
 
         var $inner = $(`<div class="circle" id="cc${i}"></div></div>`);
@@ -121,7 +124,11 @@ function build_particles($root, Wmin, Wmax, qty, Xleft, Xdens, Xright, YmaxL, Ym
 
 
 
-function build_objects($root, template, Wmin, Wmax, qty, Xleft, Xdens, Xright, YmaxL, YmaxR) {
+function build_objects($root, template, Wmin, Wmax, qty, Xleft, Xdens, Xright, YmaxL, YmaxR, opts) {
+    opts = opts || {};
+    if (!opts.base_anim_delay) {
+        opts.base_anim_delay = 5;
+    }
     var D = window.Xtimeline_start;
     var $obj = null;
     for (var i=0; i < qty; i++) {
@@ -150,13 +157,13 @@ function build_objects($root, template, Wmin, Wmax, qty, Xleft, Xdens, Xright, Y
             }
         }
 
-        var animDelay = getRandomFloatInclusive(0, fullAnimDuration/2);
+        var animDelay = opts.base_anim_delay + X*0.01;
         var animStyle = Math.min(window.Ymax, Math.round(Yabs));
 
         var css_struct = 
             {
             position: 'absolute',
-            opacity: 1,
+            opacity: 0,
             width: `${width}px`,
             height: `${height}px`,
             left: `${D+X-width/2}px`,
