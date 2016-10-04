@@ -127,7 +127,7 @@ function build_particles($root, Wmin, Wmax, qty, Xleft, Xdens, Xright, YmaxL, Ym
 function build_objects($root, template, Wmin, Wmax, qty, Xleft, Xdens, Xright, YmaxL, YmaxR, opts) {
     opts = opts || {};
     if (!opts.base_anim_delay) {
-        opts.base_anim_delay = 5;
+        opts.base_anim_delay = 3;
     }
     var D = window.Xtimeline_start;
     var $obj = null;
@@ -157,7 +157,7 @@ function build_objects($root, template, Wmin, Wmax, qty, Xleft, Xdens, Xright, Y
             }
         }
 
-        var animDelay = opts.base_anim_delay + X*0.01;
+        var animDelay = opts.base_anim_delay + X*0.005;
         var animStyle = Math.min(window.Ymax, Math.round(Yabs));
 
         var css_struct = 

@@ -244,7 +244,7 @@ $(document).ready(function() {
             window.mySlateScroller.zoom(1, 0, 0, 8000);
             var $T = buildTimeline($slate);
             $T.addClass('visible');
-        }, 3000);
+        }, 15000);
     }
 
 });
