@@ -70,8 +70,25 @@ body, .ui-page {
     cursor: pointer;
     position: absolute;
 }
+
+
+.timemarker-prose {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    width: 400px;
+    color: white;
+    font-family: Arial;
+    font-size: 16pt;
+}
 .timemarker-prose table {
     padding-bottom: 10px;
+    width: 400px;
+}
+.timemarker-prose td {
+    border: 1px solid grey;
+    padding: 8px;
 }
 .timemarker-prose td.time {
     font-weight: bold;
@@ -79,13 +96,14 @@ body, .ui-page {
     color: white;
     font-size: 18pt;
     vertical-align: top;
+    width: 40%;
 }
 .timemarker-prose td.label {
+    width: 60%;
     font-weight: bold;
     color: white;
     font-size: 18pt;
     vertical-align: top;
-    width: auto;
     top: auto;
 }
 
@@ -205,16 +223,6 @@ body, .ui-page {
 }
 
 
-.timemarker-prose {
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 10px;
-    max-width: 300pt;
-    color: white;
-    font-family: Arial;
-    font-size: 16pt;
-}
 
 .hadron {
     position: absolute;

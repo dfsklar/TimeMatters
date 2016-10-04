@@ -3,6 +3,9 @@
 window.Xtimeline_start = 30;
 window.Ymax = 200;  // The furthest from the X axis any object's *CENTER* should be
 
+function strip_html_breaks(s) {
+    return s.replace(/<br.>/g,' ');
+}
 
 // Returns a random number between A and C, where B is the "most likely" outcome
 function triangular(a, b, c) {
@@ -84,7 +87,7 @@ function buildTimeline($slate) {
         type: 'inline',
         mainClass: 'mfp-fade',
             items: {
-                src: `<div class=timemarker-prose><table><tr><td class=time>${rec.time}</td><td class=label>${rec.label}</td></tr></table><p>${rec.description}</p></div>`
+                src: `<div class=timemarker-prose><table><tr><td class=time>${strip_html_breaks(rec.time)}</td><td class=label>${rec.label}</td></tr></table><p>${rec.description}</p></div>`
             }
         });
     }
