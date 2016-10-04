@@ -1,4 +1,4 @@
-export PATH="$PATH:/root/node_modules/.bin"
+export PATH="$PATH:/root/node_modules/.bin:/usr/sbin"
 
 D=../deploy
 mkdir -p $D
