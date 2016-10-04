@@ -165,22 +165,20 @@ body, .ui-page {
 
 
 .leaf {
-    visibility: hidden;
     z-index: 100;
     position: absolute;
     width: 42px;
     height: 42px;
     background-size: 42px 42px;
-    /* animation-name: leafAnim; */
-    animation-duration: 8s;
+    animation-name: stylie-transform-keyframes;
+    animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
 }
 
-.leaf.darkgreen {
-    background: url(leaf-darkgreen.svg);
-    animation-delay: 0.3s;
-    animation-duration: 6.3s;
+.leaf.composite-1 {
+    background: url(leaf-composite-1.svg);
+    animation-duration: 2.5s;
 }
 
 .leaf.green {
