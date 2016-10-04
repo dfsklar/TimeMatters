@@ -39,19 +39,40 @@ var COLORS = [
 
 
 // Special meaning for Xleft/dens/right:
-// If Xdens==null, then the desired qty is to be evenly distributed from Xleft to Xright.
-function build_particles($root, Wmin, Wmax, qty, Xleft, Xdens, Xright, YmaxL, YmaxR) {
+// If Xdens==null, then the desired qty is to be "evenly" distributed from Xleft to Xright.
+// The "even" distribution will actually be done in a way that causes the sapce between
+// adjacent particles to get slightly larger with each iteration.
+function build_particles($root, Wmin, Wmax, qty, Xleft, Xdens, Xright, YmaxL, YmaxR, opts) {
+    opts = opts || {};
     var colors = COLORS;
     var Xcur = Xleft;
     var Xdelta = (Xright-Xleft+1.0) / qty;  // for the non-random uniform-distr
-    var X;
+    var X = Xleft;
+    if (opts.inter_x_init && (Xdens == null)) {
+        // This is a completely different approach: 
+        // The "qty" is basically going to be ignored.  The "delta" rules.
+        // The "even" distribution will actually be done in a way that causes the sapce between
+        // adjacent particles to get slightly larger with each iteration.
+        Xdelta = opts.inter_x_init;
+        X = Xleft - Xdelta;
+        qty = 999999;
+    }
     for (var i=0; i < qty; i++) {
-        if (Xdens!=null) {
+        if (Xdens != null) {
             X = (Xright > Xleft) ? triangular(Xleft, Xright, Xdens) : Xleft;
-        }else{
-            if (i==0) {
+        } else {
+            if (opts.inter_x_init) {
+                X += Xdelta;
+                if (X >= Xright) {
+                    break;
+                }
+                // prepare for the next iteration
+                Xdelta = Math.pow(Xdelta, opts.inter_x_pow_grow);
+                console.log(Xdelta);
+            }
+            else if (i==0) {
                 X = Xleft;
-            }else{
+            } else {
                 X = Xleft + (i*Xdelta);
             }
         }
@@ -59,7 +80,7 @@ function build_particles($root, Wmin, Wmax, qty, Xleft, Xdens, Xright, YmaxL, Ym
         var Y = Ymax;   //(Ymax > 0) ? getRandomFloatInclusive(0, Ymax) : 10;
         var width = getRandomFloatInclusive(Wmin, Wmax);
         var height = width;
-        var fullAnimDuration = Math.max(YmaxR / 55, 0.75) * getRandomFloatInclusive(0.93,1.07);
+        var fullAnimDuration = (opts.full_anim_duration || (Math.max(YmaxR / 100, 0.2))) * getRandomFloatInclusive(0.93,1.07);
         if (false) {
             console.log('------');
             console.log(Xleft);
@@ -76,12 +97,13 @@ function build_particles($root, Wmin, Wmax, qty, Xleft, Xdens, Xright, YmaxL, Ym
         }
         var width = 2 * Math.round(getRandomFloatInclusive(Wmin/2.0, Wmax/2.0)); // must be even number to avoid "clipped-circle" look
         var height = width;
-        var animDelay = 0; //getRandomFloatInclusive(0, fullAnimDuration);
+        var animDelay = X * 0.01;
         var animStyle = Math.min(window.Ymax, Math.round(Y));
 
         var $inner = $(`<div class="circle" id="cc${i}"></div></div>`);
         $inner.css({
             zIndex: getRandomIntInclusive(1, 50),
+            opacity: 0,
             position: 'absolute',
             backgroundColor: getRandomMember(colors),
             height: `${height}px`,
@@ -89,7 +111,7 @@ function build_particles($root, Wmin, Wmax, qty, Xleft, Xdens, Xright, YmaxL, Ym
             left: `${X-width/2}px`,
             top: `${0-height/2}px`,
             animation: `cycle${animStyle} ${fullAnimDuration}s infinite alternate ease-in-out`,
-            animationDelay: `${animDelay}s`
+            animationDelay: `${animDelay}s`,
         });
         $inner.appendTo($root);
     }

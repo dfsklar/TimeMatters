@@ -214,9 +214,14 @@ function construct() {
     //
     // 
     // 1. Cone shape of particles near the origin
-    build_particles($slate, 9, 13,       60,      58, null,  500,     10,  43);
+    build_particles($slate, 9, 13,       60,      58, null,  1500,     10,  148, 
+                   {
+                       full_anim_duration: 0.3,
+                       inter_x_init: 5,
+                       inter_x_pow_grow: 1.015
+                   });
     // 2. Particles once we get past 300K years
-    build_particles($slate, 9, 13,       80,     500,  800, 1900,     43, 120);
+    // build_particles($slate, 9, 13,       80,     500,  800, 1900,     43, 120);
 
 }
 

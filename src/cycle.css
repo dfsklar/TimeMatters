@@ -1,995 +1,995 @@
 @keyframes cycle1 {
-      0% { transform: translateX(0px) translateY(-1px); }
-      100% { transform: translateX(0px) translateY(1px); }
+      0% { opacity: 1; transform: translate3d(0px,-1px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,1px,0px); }
 }
 
 @keyframes cycle2 {
-      0% { transform: translateX(0px) translateY(-2px); }
-      100% { transform: translateX(0px) translateY(2px); }
+      0% { opacity: 1; transform: translate3d(0px,-2px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,2px,0px); }
 }
 
 @keyframes cycle3 {
-      0% { transform: translateX(0px) translateY(-3px); }
-      100% { transform: translateX(0px) translateY(3px); }
+      0% { opacity: 1; transform: translate3d(0px,-3px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,3px,0px); }
 }
 
 @keyframes cycle4 {
-      0% { transform: translateX(0px) translateY(-4px); }
-      100% { transform: translateX(0px) translateY(4px); }
+      0% { opacity: 1; transform: translate3d(0px,-4px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,4px,0px); }
 }
 
 @keyframes cycle5 {
-      0% { transform: translateX(0px) translateY(-5px); }
-      100% { transform: translateX(0px) translateY(5px); }
+      0% { opacity: 1; transform: translate3d(0px,-5px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,5px,0px); }
 }
 
 @keyframes cycle6 {
-      0% { transform: translateX(0px) translateY(-6px); }
-      100% { transform: translateX(0px) translateY(6px); }
+      0% { opacity: 1; transform: translate3d(0px,-6px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,6px,0px); }
 }
 
 @keyframes cycle7 {
-      0% { transform: translateX(0px) translateY(-7px); }
-      100% { transform: translateX(0px) translateY(7px); }
+      0% { opacity: 1; transform: translate3d(0px,-7px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,7px,0px); }
 }
 
 @keyframes cycle8 {
-      0% { transform: translateX(0px) translateY(-8px); }
-      100% { transform: translateX(0px) translateY(8px); }
+      0% { opacity: 1; transform: translate3d(0px,-8px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,8px,0px); }
 }
 
 @keyframes cycle9 {
-      0% { transform: translateX(0px) translateY(-9px); }
-      100% { transform: translateX(0px) translateY(9px); }
+      0% { opacity: 1; transform: translate3d(0px,-9px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,9px,0px); }
 }
 
 @keyframes cycle10 {
-      0% { transform: translateX(0px) translateY(-10px); }
-      100% { transform: translateX(0px) translateY(10px); }
+      0% { opacity: 1; transform: translate3d(0px,-10px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,10px,0px); }
 }
 
 @keyframes cycle11 {
-      0% { transform: translateX(0px) translateY(-11px); }
-      100% { transform: translateX(0px) translateY(11px); }
+      0% { opacity: 1; transform: translate3d(0px,-11px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,11px,0px); }
 }
 
 @keyframes cycle12 {
-      0% { transform: translateX(0px) translateY(-12px); }
-      100% { transform: translateX(0px) translateY(12px); }
+      0% { opacity: 1; transform: translate3d(0px,-12px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,12px,0px); }
 }
 
 @keyframes cycle13 {
-      0% { transform: translateX(0px) translateY(-13px); }
-      100% { transform: translateX(0px) translateY(13px); }
+      0% { opacity: 1; transform: translate3d(0px,-13px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,13px,0px); }
 }
 
 @keyframes cycle14 {
-      0% { transform: translateX(0px) translateY(-14px); }
-      100% { transform: translateX(0px) translateY(14px); }
+      0% { opacity: 1; transform: translate3d(0px,-14px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,14px,0px); }
 }
 
 @keyframes cycle15 {
-      0% { transform: translateX(0px) translateY(-15px); }
-      100% { transform: translateX(0px) translateY(15px); }
+      0% { opacity: 1; transform: translate3d(0px,-15px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,15px,0px); }
 }
 
 @keyframes cycle16 {
-      0% { transform: translateX(0px) translateY(-16px); }
-      100% { transform: translateX(0px) translateY(16px); }
+      0% { opacity: 1; transform: translate3d(0px,-16px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,16px,0px); }
 }
 
 @keyframes cycle17 {
-      0% { transform: translateX(0px) translateY(-17px); }
-      100% { transform: translateX(0px) translateY(17px); }
+      0% { opacity: 1; transform: translate3d(0px,-17px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,17px,0px); }
 }
 
 @keyframes cycle18 {
-      0% { transform: translateX(0px) translateY(-18px); }
-      100% { transform: translateX(0px) translateY(18px); }
+      0% { opacity: 1; transform: translate3d(0px,-18px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,18px,0px); }
 }
 
 @keyframes cycle19 {
-      0% { transform: translateX(0px) translateY(-19px); }
-      100% { transform: translateX(0px) translateY(19px); }
+      0% { opacity: 1; transform: translate3d(0px,-19px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,19px,0px); }
 }
 
 @keyframes cycle20 {
-      0% { transform: translateX(0px) translateY(-20px); }
-      100% { transform: translateX(0px) translateY(20px); }
+      0% { opacity: 1; transform: translate3d(0px,-20px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,20px,0px); }
 }
 
 @keyframes cycle21 {
-      0% { transform: translateX(0px) translateY(-21px); }
-      100% { transform: translateX(0px) translateY(21px); }
+      0% { opacity: 1; transform: translate3d(0px,-21px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,21px,0px); }
 }
 
 @keyframes cycle22 {
-      0% { transform: translateX(0px) translateY(-22px); }
-      100% { transform: translateX(0px) translateY(22px); }
+      0% { opacity: 1; transform: translate3d(0px,-22px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,22px,0px); }
 }
 
 @keyframes cycle23 {
-      0% { transform: translateX(0px) translateY(-23px); }
-      100% { transform: translateX(0px) translateY(23px); }
+      0% { opacity: 1; transform: translate3d(0px,-23px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,23px,0px); }
 }
 
 @keyframes cycle24 {
-      0% { transform: translateX(0px) translateY(-24px); }
-      100% { transform: translateX(0px) translateY(24px); }
+      0% { opacity: 1; transform: translate3d(0px,-24px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,24px,0px); }
 }
 
 @keyframes cycle25 {
-      0% { transform: translateX(0px) translateY(-25px); }
-      100% { transform: translateX(0px) translateY(25px); }
+      0% { opacity: 1; transform: translate3d(0px,-25px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,25px,0px); }
 }
 
 @keyframes cycle26 {
-      0% { transform: translateX(0px) translateY(-26px); }
-      100% { transform: translateX(0px) translateY(26px); }
+      0% { opacity: 1; transform: translate3d(0px,-26px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,26px,0px); }
 }
 
 @keyframes cycle27 {
-      0% { transform: translateX(0px) translateY(-27px); }
-      100% { transform: translateX(0px) translateY(27px); }
+      0% { opacity: 1; transform: translate3d(0px,-27px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,27px,0px); }
 }
 
 @keyframes cycle28 {
-      0% { transform: translateX(0px) translateY(-28px); }
-      100% { transform: translateX(0px) translateY(28px); }
+      0% { opacity: 1; transform: translate3d(0px,-28px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,28px,0px); }
 }
 
 @keyframes cycle29 {
-      0% { transform: translateX(0px) translateY(-29px); }
-      100% { transform: translateX(0px) translateY(29px); }
+      0% { opacity: 1; transform: translate3d(0px,-29px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,29px,0px); }
 }
 
 @keyframes cycle30 {
-      0% { transform: translateX(0px) translateY(-30px); }
-      100% { transform: translateX(0px) translateY(30px); }
+      0% { opacity: 1; transform: translate3d(0px,-30px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,30px,0px); }
 }
 
 @keyframes cycle31 {
-      0% { transform: translateX(0px) translateY(-31px); }
-      100% { transform: translateX(0px) translateY(31px); }
+      0% { opacity: 1; transform: translate3d(0px,-31px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,31px,0px); }
 }
 
 @keyframes cycle32 {
-      0% { transform: translateX(0px) translateY(-32px); }
-      100% { transform: translateX(0px) translateY(32px); }
+      0% { opacity: 1; transform: translate3d(0px,-32px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,32px,0px); }
 }
 
 @keyframes cycle33 {
-      0% { transform: translateX(0px) translateY(-33px); }
-      100% { transform: translateX(0px) translateY(33px); }
+      0% { opacity: 1; transform: translate3d(0px,-33px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,33px,0px); }
 }
 
 @keyframes cycle34 {
-      0% { transform: translateX(0px) translateY(-34px); }
-      100% { transform: translateX(0px) translateY(34px); }
+      0% { opacity: 1; transform: translate3d(0px,-34px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,34px,0px); }
 }
 
 @keyframes cycle35 {
-      0% { transform: translateX(0px) translateY(-35px); }
-      100% { transform: translateX(0px) translateY(35px); }
+      0% { opacity: 1; transform: translate3d(0px,-35px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,35px,0px); }
 }
 
 @keyframes cycle36 {
-      0% { transform: translateX(0px) translateY(-36px); }
-      100% { transform: translateX(0px) translateY(36px); }
+      0% { opacity: 1; transform: translate3d(0px,-36px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,36px,0px); }
 }
 
 @keyframes cycle37 {
-      0% { transform: translateX(0px) translateY(-37px); }
-      100% { transform: translateX(0px) translateY(37px); }
+      0% { opacity: 1; transform: translate3d(0px,-37px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,37px,0px); }
 }
 
 @keyframes cycle38 {
-      0% { transform: translateX(0px) translateY(-38px); }
-      100% { transform: translateX(0px) translateY(38px); }
+      0% { opacity: 1; transform: translate3d(0px,-38px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,38px,0px); }
 }
 
 @keyframes cycle39 {
-      0% { transform: translateX(0px) translateY(-39px); }
-      100% { transform: translateX(0px) translateY(39px); }
+      0% { opacity: 1; transform: translate3d(0px,-39px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,39px,0px); }
 }
 
 @keyframes cycle40 {
-      0% { transform: translateX(0px) translateY(-40px); }
-      100% { transform: translateX(0px) translateY(40px); }
+      0% { opacity: 1; transform: translate3d(0px,-40px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,40px,0px); }
 }
 
 @keyframes cycle41 {
-      0% { transform: translateX(0px) translateY(-41px); }
-      100% { transform: translateX(0px) translateY(41px); }
+      0% { opacity: 1; transform: translate3d(0px,-41px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,41px,0px); }
 }
 
 @keyframes cycle42 {
-      0% { transform: translateX(0px) translateY(-42px); }
-      100% { transform: translateX(0px) translateY(42px); }
+      0% { opacity: 1; transform: translate3d(0px,-42px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,42px,0px); }
 }
 
 @keyframes cycle43 {
-      0% { transform: translateX(0px) translateY(-43px); }
-      100% { transform: translateX(0px) translateY(43px); }
+      0% { opacity: 1; transform: translate3d(0px,-43px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,43px,0px); }
 }
 
 @keyframes cycle44 {
-      0% { transform: translateX(0px) translateY(-44px); }
-      100% { transform: translateX(0px) translateY(44px); }
+      0% { opacity: 1; transform: translate3d(0px,-44px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,44px,0px); }
 }
 
 @keyframes cycle45 {
-      0% { transform: translateX(0px) translateY(-45px); }
-      100% { transform: translateX(0px) translateY(45px); }
+      0% { opacity: 1; transform: translate3d(0px,-45px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,45px,0px); }
 }
 
 @keyframes cycle46 {
-      0% { transform: translateX(0px) translateY(-46px); }
-      100% { transform: translateX(0px) translateY(46px); }
+      0% { opacity: 1; transform: translate3d(0px,-46px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,46px,0px); }
 }
 
 @keyframes cycle47 {
-      0% { transform: translateX(0px) translateY(-47px); }
-      100% { transform: translateX(0px) translateY(47px); }
+      0% { opacity: 1; transform: translate3d(0px,-47px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,47px,0px); }
 }
 
 @keyframes cycle48 {
-      0% { transform: translateX(0px) translateY(-48px); }
-      100% { transform: translateX(0px) translateY(48px); }
+      0% { opacity: 1; transform: translate3d(0px,-48px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,48px,0px); }
 }
 
 @keyframes cycle49 {
-      0% { transform: translateX(0px) translateY(-49px); }
-      100% { transform: translateX(0px) translateY(49px); }
+      0% { opacity: 1; transform: translate3d(0px,-49px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,49px,0px); }
 }
 
 @keyframes cycle50 {
-      0% { transform: translateX(0px) translateY(-50px); }
-      100% { transform: translateX(0px) translateY(50px); }
+      0% { opacity: 1; transform: translate3d(0px,-50px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,50px,0px); }
 }
 
 @keyframes cycle51 {
-      0% { transform: translateX(0px) translateY(-51px); }
-      100% { transform: translateX(0px) translateY(51px); }
+      0% { opacity: 1; transform: translate3d(0px,-51px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,51px,0px); }
 }
 
 @keyframes cycle52 {
-      0% { transform: translateX(0px) translateY(-52px); }
-      100% { transform: translateX(0px) translateY(52px); }
+      0% { opacity: 1; transform: translate3d(0px,-52px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,52px,0px); }
 }
 
 @keyframes cycle53 {
-      0% { transform: translateX(0px) translateY(-53px); }
-      100% { transform: translateX(0px) translateY(53px); }
+      0% { opacity: 1; transform: translate3d(0px,-53px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,53px,0px); }
 }
 
 @keyframes cycle54 {
-      0% { transform: translateX(0px) translateY(-54px); }
-      100% { transform: translateX(0px) translateY(54px); }
+      0% { opacity: 1; transform: translate3d(0px,-54px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,54px,0px); }
 }
 
 @keyframes cycle55 {
-      0% { transform: translateX(0px) translateY(-55px); }
-      100% { transform: translateX(0px) translateY(55px); }
+      0% { opacity: 1; transform: translate3d(0px,-55px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,55px,0px); }
 }
 
 @keyframes cycle56 {
-      0% { transform: translateX(0px) translateY(-56px); }
-      100% { transform: translateX(0px) translateY(56px); }
+      0% { opacity: 1; transform: translate3d(0px,-56px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,56px,0px); }
 }
 
 @keyframes cycle57 {
-      0% { transform: translateX(0px) translateY(-57px); }
-      100% { transform: translateX(0px) translateY(57px); }
+      0% { opacity: 1; transform: translate3d(0px,-57px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,57px,0px); }
 }
 
 @keyframes cycle58 {
-      0% { transform: translateX(0px) translateY(-58px); }
-      100% { transform: translateX(0px) translateY(58px); }
+      0% { opacity: 1; transform: translate3d(0px,-58px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,58px,0px); }
 }
 
 @keyframes cycle59 {
-      0% { transform: translateX(0px) translateY(-59px); }
-      100% { transform: translateX(0px) translateY(59px); }
+      0% { opacity: 1; transform: translate3d(0px,-59px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,59px,0px); }
 }
 
 @keyframes cycle60 {
-      0% { transform: translateX(0px) translateY(-60px); }
-      100% { transform: translateX(0px) translateY(60px); }
+      0% { opacity: 1; transform: translate3d(0px,-60px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,60px,0px); }
 }
 
 @keyframes cycle61 {
-      0% { transform: translateX(0px) translateY(-61px); }
-      100% { transform: translateX(0px) translateY(61px); }
+      0% { opacity: 1; transform: translate3d(0px,-61px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,61px,0px); }
 }
 
 @keyframes cycle62 {
-      0% { transform: translateX(0px) translateY(-62px); }
-      100% { transform: translateX(0px) translateY(62px); }
+      0% { opacity: 1; transform: translate3d(0px,-62px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,62px,0px); }
 }
 
 @keyframes cycle63 {
-      0% { transform: translateX(0px) translateY(-63px); }
-      100% { transform: translateX(0px) translateY(63px); }
+      0% { opacity: 1; transform: translate3d(0px,-63px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,63px,0px); }
 }
 
 @keyframes cycle64 {
-      0% { transform: translateX(0px) translateY(-64px); }
-      100% { transform: translateX(0px) translateY(64px); }
+      0% { opacity: 1; transform: translate3d(0px,-64px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,64px,0px); }
 }
 
 @keyframes cycle65 {
-      0% { transform: translateX(0px) translateY(-65px); }
-      100% { transform: translateX(0px) translateY(65px); }
+      0% { opacity: 1; transform: translate3d(0px,-65px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,65px,0px); }
 }
 
 @keyframes cycle66 {
-      0% { transform: translateX(0px) translateY(-66px); }
-      100% { transform: translateX(0px) translateY(66px); }
+      0% { opacity: 1; transform: translate3d(0px,-66px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,66px,0px); }
 }
 
 @keyframes cycle67 {
-      0% { transform: translateX(0px) translateY(-67px); }
-      100% { transform: translateX(0px) translateY(67px); }
+      0% { opacity: 1; transform: translate3d(0px,-67px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,67px,0px); }
 }
 
 @keyframes cycle68 {
-      0% { transform: translateX(0px) translateY(-68px); }
-      100% { transform: translateX(0px) translateY(68px); }
+      0% { opacity: 1; transform: translate3d(0px,-68px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,68px,0px); }
 }
 
 @keyframes cycle69 {
-      0% { transform: translateX(0px) translateY(-69px); }
-      100% { transform: translateX(0px) translateY(69px); }
+      0% { opacity: 1; transform: translate3d(0px,-69px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,69px,0px); }
 }
 
 @keyframes cycle70 {
-      0% { transform: translateX(0px) translateY(-70px); }
-      100% { transform: translateX(0px) translateY(70px); }
+      0% { opacity: 1; transform: translate3d(0px,-70px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,70px,0px); }
 }
 
 @keyframes cycle71 {
-      0% { transform: translateX(0px) translateY(-71px); }
-      100% { transform: translateX(0px) translateY(71px); }
+      0% { opacity: 1; transform: translate3d(0px,-71px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,71px,0px); }
 }
 
 @keyframes cycle72 {
-      0% { transform: translateX(0px) translateY(-72px); }
-      100% { transform: translateX(0px) translateY(72px); }
+      0% { opacity: 1; transform: translate3d(0px,-72px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,72px,0px); }
 }
 
 @keyframes cycle73 {
-      0% { transform: translateX(0px) translateY(-73px); }
-      100% { transform: translateX(0px) translateY(73px); }
+      0% { opacity: 1; transform: translate3d(0px,-73px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,73px,0px); }
 }
 
 @keyframes cycle74 {
-      0% { transform: translateX(0px) translateY(-74px); }
-      100% { transform: translateX(0px) translateY(74px); }
+      0% { opacity: 1; transform: translate3d(0px,-74px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,74px,0px); }
 }
 
 @keyframes cycle75 {
-      0% { transform: translateX(0px) translateY(-75px); }
-      100% { transform: translateX(0px) translateY(75px); }
+      0% { opacity: 1; transform: translate3d(0px,-75px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,75px,0px); }
 }
 
 @keyframes cycle76 {
-      0% { transform: translateX(0px) translateY(-76px); }
-      100% { transform: translateX(0px) translateY(76px); }
+      0% { opacity: 1; transform: translate3d(0px,-76px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,76px,0px); }
 }
 
 @keyframes cycle77 {
-      0% { transform: translateX(0px) translateY(-77px); }
-      100% { transform: translateX(0px) translateY(77px); }
+      0% { opacity: 1; transform: translate3d(0px,-77px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,77px,0px); }
 }
 
 @keyframes cycle78 {
-      0% { transform: translateX(0px) translateY(-78px); }
-      100% { transform: translateX(0px) translateY(78px); }
+      0% { opacity: 1; transform: translate3d(0px,-78px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,78px,0px); }
 }
 
 @keyframes cycle79 {
-      0% { transform: translateX(0px) translateY(-79px); }
-      100% { transform: translateX(0px) translateY(79px); }
+      0% { opacity: 1; transform: translate3d(0px,-79px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,79px,0px); }
 }
 
 @keyframes cycle80 {
-      0% { transform: translateX(0px) translateY(-80px); }
-      100% { transform: translateX(0px) translateY(80px); }
+      0% { opacity: 1; transform: translate3d(0px,-80px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,80px,0px); }
 }
 
 @keyframes cycle81 {
-      0% { transform: translateX(0px) translateY(-81px); }
-      100% { transform: translateX(0px) translateY(81px); }
+      0% { opacity: 1; transform: translate3d(0px,-81px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,81px,0px); }
 }
 
 @keyframes cycle82 {
-      0% { transform: translateX(0px) translateY(-82px); }
-      100% { transform: translateX(0px) translateY(82px); }
+      0% { opacity: 1; transform: translate3d(0px,-82px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,82px,0px); }
 }
 
 @keyframes cycle83 {
-      0% { transform: translateX(0px) translateY(-83px); }
-      100% { transform: translateX(0px) translateY(83px); }
+      0% { opacity: 1; transform: translate3d(0px,-83px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,83px,0px); }
 }
 
 @keyframes cycle84 {
-      0% { transform: translateX(0px) translateY(-84px); }
-      100% { transform: translateX(0px) translateY(84px); }
+      0% { opacity: 1; transform: translate3d(0px,-84px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,84px,0px); }
 }
 
 @keyframes cycle85 {
-      0% { transform: translateX(0px) translateY(-85px); }
-      100% { transform: translateX(0px) translateY(85px); }
+      0% { opacity: 1; transform: translate3d(0px,-85px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,85px,0px); }
 }
 
 @keyframes cycle86 {
-      0% { transform: translateX(0px) translateY(-86px); }
-      100% { transform: translateX(0px) translateY(86px); }
+      0% { opacity: 1; transform: translate3d(0px,-86px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,86px,0px); }
 }
 
 @keyframes cycle87 {
-      0% { transform: translateX(0px) translateY(-87px); }
-      100% { transform: translateX(0px) translateY(87px); }
+      0% { opacity: 1; transform: translate3d(0px,-87px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,87px,0px); }
 }
 
 @keyframes cycle88 {
-      0% { transform: translateX(0px) translateY(-88px); }
-      100% { transform: translateX(0px) translateY(88px); }
+      0% { opacity: 1; transform: translate3d(0px,-88px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,88px,0px); }
 }
 
 @keyframes cycle89 {
-      0% { transform: translateX(0px) translateY(-89px); }
-      100% { transform: translateX(0px) translateY(89px); }
+      0% { opacity: 1; transform: translate3d(0px,-89px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,89px,0px); }
 }
 
 @keyframes cycle90 {
-      0% { transform: translateX(0px) translateY(-90px); }
-      100% { transform: translateX(0px) translateY(90px); }
+      0% { opacity: 1; transform: translate3d(0px,-90px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,90px,0px); }
 }
 
 @keyframes cycle91 {
-      0% { transform: translateX(0px) translateY(-91px); }
-      100% { transform: translateX(0px) translateY(91px); }
+      0% { opacity: 1; transform: translate3d(0px,-91px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,91px,0px); }
 }
 
 @keyframes cycle92 {
-      0% { transform: translateX(0px) translateY(-92px); }
-      100% { transform: translateX(0px) translateY(92px); }
+      0% { opacity: 1; transform: translate3d(0px,-92px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,92px,0px); }
 }
 
 @keyframes cycle93 {
-      0% { transform: translateX(0px) translateY(-93px); }
-      100% { transform: translateX(0px) translateY(93px); }
+      0% { opacity: 1; transform: translate3d(0px,-93px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,93px,0px); }
 }
 
 @keyframes cycle94 {
-      0% { transform: translateX(0px) translateY(-94px); }
-      100% { transform: translateX(0px) translateY(94px); }
+      0% { opacity: 1; transform: translate3d(0px,-94px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,94px,0px); }
 }
 
 @keyframes cycle95 {
-      0% { transform: translateX(0px) translateY(-95px); }
-      100% { transform: translateX(0px) translateY(95px); }
+      0% { opacity: 1; transform: translate3d(0px,-95px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,95px,0px); }
 }
 
 @keyframes cycle96 {
-      0% { transform: translateX(0px) translateY(-96px); }
-      100% { transform: translateX(0px) translateY(96px); }
+      0% { opacity: 1; transform: translate3d(0px,-96px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,96px,0px); }
 }
 
 @keyframes cycle97 {
-      0% { transform: translateX(0px) translateY(-97px); }
-      100% { transform: translateX(0px) translateY(97px); }
+      0% { opacity: 1; transform: translate3d(0px,-97px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,97px,0px); }
 }
 
 @keyframes cycle98 {
-      0% { transform: translateX(0px) translateY(-98px); }
-      100% { transform: translateX(0px) translateY(98px); }
+      0% { opacity: 1; transform: translate3d(0px,-98px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,98px,0px); }
 }
 
 @keyframes cycle99 {
-      0% { transform: translateX(0px) translateY(-99px); }
-      100% { transform: translateX(0px) translateY(99px); }
+      0% { opacity: 1; transform: translate3d(0px,-99px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,99px,0px); }
 }
 
 @keyframes cycle100 {
-      0% { transform: translateX(0px) translateY(-100px); }
-      100% { transform: translateX(0px) translateY(100px); }
+      0% { opacity: 1; transform: translate3d(0px,-100px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,100px,0px); }
 }
 
 @keyframes cycle101 {
-      0% { transform: translateX(0px) translateY(-101px); }
-      100% { transform: translateX(0px) translateY(101px); }
+      0% { opacity: 1; transform: translate3d(0px,-101px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,101px,0px); }
 }
 
 @keyframes cycle102 {
-      0% { transform: translateX(0px) translateY(-102px); }
-      100% { transform: translateX(0px) translateY(102px); }
+      0% { opacity: 1; transform: translate3d(0px,-102px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,102px,0px); }
 }
 
 @keyframes cycle103 {
-      0% { transform: translateX(0px) translateY(-103px); }
-      100% { transform: translateX(0px) translateY(103px); }
+      0% { opacity: 1; transform: translate3d(0px,-103px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,103px,0px); }
 }
 
 @keyframes cycle104 {
-      0% { transform: translateX(0px) translateY(-104px); }
-      100% { transform: translateX(0px) translateY(104px); }
+      0% { opacity: 1; transform: translate3d(0px,-104px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,104px,0px); }
 }
 
 @keyframes cycle105 {
-      0% { transform: translateX(0px) translateY(-105px); }
-      100% { transform: translateX(0px) translateY(105px); }
+      0% { opacity: 1; transform: translate3d(0px,-105px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,105px,0px); }
 }
 
 @keyframes cycle106 {
-      0% { transform: translateX(0px) translateY(-106px); }
-      100% { transform: translateX(0px) translateY(106px); }
+      0% { opacity: 1; transform: translate3d(0px,-106px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,106px,0px); }
 }
 
 @keyframes cycle107 {
-      0% { transform: translateX(0px) translateY(-107px); }
-      100% { transform: translateX(0px) translateY(107px); }
+      0% { opacity: 1; transform: translate3d(0px,-107px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,107px,0px); }
 }
 
 @keyframes cycle108 {
-      0% { transform: translateX(0px) translateY(-108px); }
-      100% { transform: translateX(0px) translateY(108px); }
+      0% { opacity: 1; transform: translate3d(0px,-108px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,108px,0px); }
 }
 
 @keyframes cycle109 {
-      0% { transform: translateX(0px) translateY(-109px); }
-      100% { transform: translateX(0px) translateY(109px); }
+      0% { opacity: 1; transform: translate3d(0px,-109px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,109px,0px); }
 }
 
 @keyframes cycle110 {
-      0% { transform: translateX(0px) translateY(-110px); }
-      100% { transform: translateX(0px) translateY(110px); }
+      0% { opacity: 1; transform: translate3d(0px,-110px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,110px,0px); }
 }
 
 @keyframes cycle111 {
-      0% { transform: translateX(0px) translateY(-111px); }
-      100% { transform: translateX(0px) translateY(111px); }
+      0% { opacity: 1; transform: translate3d(0px,-111px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,111px,0px); }
 }
 
 @keyframes cycle112 {
-      0% { transform: translateX(0px) translateY(-112px); }
-      100% { transform: translateX(0px) translateY(112px); }
+      0% { opacity: 1; transform: translate3d(0px,-112px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,112px,0px); }
 }
 
 @keyframes cycle113 {
-      0% { transform: translateX(0px) translateY(-113px); }
-      100% { transform: translateX(0px) translateY(113px); }
+      0% { opacity: 1; transform: translate3d(0px,-113px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,113px,0px); }
 }
 
 @keyframes cycle114 {
-      0% { transform: translateX(0px) translateY(-114px); }
-      100% { transform: translateX(0px) translateY(114px); }
+      0% { opacity: 1; transform: translate3d(0px,-114px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,114px,0px); }
 }
 
 @keyframes cycle115 {
-      0% { transform: translateX(0px) translateY(-115px); }
-      100% { transform: translateX(0px) translateY(115px); }
+      0% { opacity: 1; transform: translate3d(0px,-115px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,115px,0px); }
 }
 
 @keyframes cycle116 {
-      0% { transform: translateX(0px) translateY(-116px); }
-      100% { transform: translateX(0px) translateY(116px); }
+      0% { opacity: 1; transform: translate3d(0px,-116px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,116px,0px); }
 }
 
 @keyframes cycle117 {
-      0% { transform: translateX(0px) translateY(-117px); }
-      100% { transform: translateX(0px) translateY(117px); }
+      0% { opacity: 1; transform: translate3d(0px,-117px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,117px,0px); }
 }
 
 @keyframes cycle118 {
-      0% { transform: translateX(0px) translateY(-118px); }
-      100% { transform: translateX(0px) translateY(118px); }
+      0% { opacity: 1; transform: translate3d(0px,-118px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,118px,0px); }
 }
 
 @keyframes cycle119 {
-      0% { transform: translateX(0px) translateY(-119px); }
-      100% { transform: translateX(0px) translateY(119px); }
+      0% { opacity: 1; transform: translate3d(0px,-119px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,119px,0px); }
 }
 
 @keyframes cycle120 {
-      0% { transform: translateX(0px) translateY(-120px); }
-      100% { transform: translateX(0px) translateY(120px); }
+      0% { opacity: 1; transform: translate3d(0px,-120px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,120px,0px); }
 }
 
 @keyframes cycle121 {
-      0% { transform: translateX(0px) translateY(-121px); }
-      100% { transform: translateX(0px) translateY(121px); }
+      0% { opacity: 1; transform: translate3d(0px,-121px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,121px,0px); }
 }
 
 @keyframes cycle122 {
-      0% { transform: translateX(0px) translateY(-122px); }
-      100% { transform: translateX(0px) translateY(122px); }
+      0% { opacity: 1; transform: translate3d(0px,-122px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,122px,0px); }
 }
 
 @keyframes cycle123 {
-      0% { transform: translateX(0px) translateY(-123px); }
-      100% { transform: translateX(0px) translateY(123px); }
+      0% { opacity: 1; transform: translate3d(0px,-123px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,123px,0px); }
 }
 
 @keyframes cycle124 {
-      0% { transform: translateX(0px) translateY(-124px); }
-      100% { transform: translateX(0px) translateY(124px); }
+      0% { opacity: 1; transform: translate3d(0px,-124px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,124px,0px); }
 }
 
 @keyframes cycle125 {
-      0% { transform: translateX(0px) translateY(-125px); }
-      100% { transform: translateX(0px) translateY(125px); }
+      0% { opacity: 1; transform: translate3d(0px,-125px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,125px,0px); }
 }
 
 @keyframes cycle126 {
-      0% { transform: translateX(0px) translateY(-126px); }
-      100% { transform: translateX(0px) translateY(126px); }
+      0% { opacity: 1; transform: translate3d(0px,-126px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,126px,0px); }
 }
 
 @keyframes cycle127 {
-      0% { transform: translateX(0px) translateY(-127px); }
-      100% { transform: translateX(0px) translateY(127px); }
+      0% { opacity: 1; transform: translate3d(0px,-127px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,127px,0px); }
 }
 
 @keyframes cycle128 {
-      0% { transform: translateX(0px) translateY(-128px); }
-      100% { transform: translateX(0px) translateY(128px); }
+      0% { opacity: 1; transform: translate3d(0px,-128px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,128px,0px); }
 }
 
 @keyframes cycle129 {
-      0% { transform: translateX(0px) translateY(-129px); }
-      100% { transform: translateX(0px) translateY(129px); }
+      0% { opacity: 1; transform: translate3d(0px,-129px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,129px,0px); }
 }
 
 @keyframes cycle130 {
-      0% { transform: translateX(0px) translateY(-130px); }
-      100% { transform: translateX(0px) translateY(130px); }
+      0% { opacity: 1; transform: translate3d(0px,-130px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,130px,0px); }
 }
 
 @keyframes cycle131 {
-      0% { transform: translateX(0px) translateY(-131px); }
-      100% { transform: translateX(0px) translateY(131px); }
+      0% { opacity: 1; transform: translate3d(0px,-131px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,131px,0px); }
 }
 
 @keyframes cycle132 {
-      0% { transform: translateX(0px) translateY(-132px); }
-      100% { transform: translateX(0px) translateY(132px); }
+      0% { opacity: 1; transform: translate3d(0px,-132px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,132px,0px); }
 }
 
 @keyframes cycle133 {
-      0% { transform: translateX(0px) translateY(-133px); }
-      100% { transform: translateX(0px) translateY(133px); }
+      0% { opacity: 1; transform: translate3d(0px,-133px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,133px,0px); }
 }
 
 @keyframes cycle134 {
-      0% { transform: translateX(0px) translateY(-134px); }
-      100% { transform: translateX(0px) translateY(134px); }
+      0% { opacity: 1; transform: translate3d(0px,-134px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,134px,0px); }
 }
 
 @keyframes cycle135 {
-      0% { transform: translateX(0px) translateY(-135px); }
-      100% { transform: translateX(0px) translateY(135px); }
+      0% { opacity: 1; transform: translate3d(0px,-135px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,135px,0px); }
 }
 
 @keyframes cycle136 {
-      0% { transform: translateX(0px) translateY(-136px); }
-      100% { transform: translateX(0px) translateY(136px); }
+      0% { opacity: 1; transform: translate3d(0px,-136px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,136px,0px); }
 }
 
 @keyframes cycle137 {
-      0% { transform: translateX(0px) translateY(-137px); }
-      100% { transform: translateX(0px) translateY(137px); }
+      0% { opacity: 1; transform: translate3d(0px,-137px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,137px,0px); }
 }
 
 @keyframes cycle138 {
-      0% { transform: translateX(0px) translateY(-138px); }
-      100% { transform: translateX(0px) translateY(138px); }
+      0% { opacity: 1; transform: translate3d(0px,-138px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,138px,0px); }
 }
 
 @keyframes cycle139 {
-      0% { transform: translateX(0px) translateY(-139px); }
-      100% { transform: translateX(0px) translateY(139px); }
+      0% { opacity: 1; transform: translate3d(0px,-139px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,139px,0px); }
 }
 
 @keyframes cycle140 {
-      0% { transform: translateX(0px) translateY(-140px); }
-      100% { transform: translateX(0px) translateY(140px); }
+      0% { opacity: 1; transform: translate3d(0px,-140px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,140px,0px); }
 }
 
 @keyframes cycle141 {
-      0% { transform: translateX(0px) translateY(-141px); }
-      100% { transform: translateX(0px) translateY(141px); }
+      0% { opacity: 1; transform: translate3d(0px,-141px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,141px,0px); }
 }
 
 @keyframes cycle142 {
-      0% { transform: translateX(0px) translateY(-142px); }
-      100% { transform: translateX(0px) translateY(142px); }
+      0% { opacity: 1; transform: translate3d(0px,-142px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,142px,0px); }
 }
 
 @keyframes cycle143 {
-      0% { transform: translateX(0px) translateY(-143px); }
-      100% { transform: translateX(0px) translateY(143px); }
+      0% { opacity: 1; transform: translate3d(0px,-143px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,143px,0px); }
 }
 
 @keyframes cycle144 {
-      0% { transform: translateX(0px) translateY(-144px); }
-      100% { transform: translateX(0px) translateY(144px); }
+      0% { opacity: 1; transform: translate3d(0px,-144px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,144px,0px); }
 }
 
 @keyframes cycle145 {
-      0% { transform: translateX(0px) translateY(-145px); }
-      100% { transform: translateX(0px) translateY(145px); }
+      0% { opacity: 1; transform: translate3d(0px,-145px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,145px,0px); }
 }
 
 @keyframes cycle146 {
-      0% { transform: translateX(0px) translateY(-146px); }
-      100% { transform: translateX(0px) translateY(146px); }
+      0% { opacity: 1; transform: translate3d(0px,-146px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,146px,0px); }
 }
 
 @keyframes cycle147 {
-      0% { transform: translateX(0px) translateY(-147px); }
-      100% { transform: translateX(0px) translateY(147px); }
+      0% { opacity: 1; transform: translate3d(0px,-147px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,147px,0px); }
 }
 
 @keyframes cycle148 {
-      0% { transform: translateX(0px) translateY(-148px); }
-      100% { transform: translateX(0px) translateY(148px); }
+      0% { opacity: 1; transform: translate3d(0px,-148px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,148px,0px); }
 }
 
 @keyframes cycle149 {
-      0% { transform: translateX(0px) translateY(-149px); }
-      100% { transform: translateX(0px) translateY(149px); }
+      0% { opacity: 1; transform: translate3d(0px,-149px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,149px,0px); }
 }
 
 @keyframes cycle150 {
-      0% { transform: translateX(0px) translateY(-150px); }
-      100% { transform: translateX(0px) translateY(150px); }
+      0% { opacity: 1; transform: translate3d(0px,-150px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,150px,0px); }
 }
 
 @keyframes cycle151 {
-      0% { transform: translateX(0px) translateY(-151px); }
-      100% { transform: translateX(0px) translateY(151px); }
+      0% { opacity: 1; transform: translate3d(0px,-151px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,151px,0px); }
 }
 
 @keyframes cycle152 {
-      0% { transform: translateX(0px) translateY(-152px); }
-      100% { transform: translateX(0px) translateY(152px); }
+      0% { opacity: 1; transform: translate3d(0px,-152px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,152px,0px); }
 }
 
 @keyframes cycle153 {
-      0% { transform: translateX(0px) translateY(-153px); }
-      100% { transform: translateX(0px) translateY(153px); }
+      0% { opacity: 1; transform: translate3d(0px,-153px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,153px,0px); }
 }
 
 @keyframes cycle154 {
-      0% { transform: translateX(0px) translateY(-154px); }
-      100% { transform: translateX(0px) translateY(154px); }
+      0% { opacity: 1; transform: translate3d(0px,-154px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,154px,0px); }
 }
 
 @keyframes cycle155 {
-      0% { transform: translateX(0px) translateY(-155px); }
-      100% { transform: translateX(0px) translateY(155px); }
+      0% { opacity: 1; transform: translate3d(0px,-155px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,155px,0px); }
 }
 
 @keyframes cycle156 {
-      0% { transform: translateX(0px) translateY(-156px); }
-      100% { transform: translateX(0px) translateY(156px); }
+      0% { opacity: 1; transform: translate3d(0px,-156px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,156px,0px); }
 }
 
 @keyframes cycle157 {
-      0% { transform: translateX(0px) translateY(-157px); }
-      100% { transform: translateX(0px) translateY(157px); }
+      0% { opacity: 1; transform: translate3d(0px,-157px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,157px,0px); }
 }
 
 @keyframes cycle158 {
-      0% { transform: translateX(0px) translateY(-158px); }
-      100% { transform: translateX(0px) translateY(158px); }
+      0% { opacity: 1; transform: translate3d(0px,-158px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,158px,0px); }
 }
 
 @keyframes cycle159 {
-      0% { transform: translateX(0px) translateY(-159px); }
-      100% { transform: translateX(0px) translateY(159px); }
+      0% { opacity: 1; transform: translate3d(0px,-159px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,159px,0px); }
 }
 
 @keyframes cycle160 {
-      0% { transform: translateX(0px) translateY(-160px); }
-      100% { transform: translateX(0px) translateY(160px); }
+      0% { opacity: 1; transform: translate3d(0px,-160px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,160px,0px); }
 }
 
 @keyframes cycle161 {
-      0% { transform: translateX(0px) translateY(-161px); }
-      100% { transform: translateX(0px) translateY(161px); }
+      0% { opacity: 1; transform: translate3d(0px,-161px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,161px,0px); }
 }
 
 @keyframes cycle162 {
-      0% { transform: translateX(0px) translateY(-162px); }
-      100% { transform: translateX(0px) translateY(162px); }
+      0% { opacity: 1; transform: translate3d(0px,-162px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,162px,0px); }
 }
 
 @keyframes cycle163 {
-      0% { transform: translateX(0px) translateY(-163px); }
-      100% { transform: translateX(0px) translateY(163px); }
+      0% { opacity: 1; transform: translate3d(0px,-163px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,163px,0px); }
 }
 
 @keyframes cycle164 {
-      0% { transform: translateX(0px) translateY(-164px); }
-      100% { transform: translateX(0px) translateY(164px); }
+      0% { opacity: 1; transform: translate3d(0px,-164px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,164px,0px); }
 }
 
 @keyframes cycle165 {
-      0% { transform: translateX(0px) translateY(-165px); }
-      100% { transform: translateX(0px) translateY(165px); }
+      0% { opacity: 1; transform: translate3d(0px,-165px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,165px,0px); }
 }
 
 @keyframes cycle166 {
-      0% { transform: translateX(0px) translateY(-166px); }
-      100% { transform: translateX(0px) translateY(166px); }
+      0% { opacity: 1; transform: translate3d(0px,-166px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,166px,0px); }
 }
 
 @keyframes cycle167 {
-      0% { transform: translateX(0px) translateY(-167px); }
-      100% { transform: translateX(0px) translateY(167px); }
+      0% { opacity: 1; transform: translate3d(0px,-167px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,167px,0px); }
 }
 
 @keyframes cycle168 {
-      0% { transform: translateX(0px) translateY(-168px); }
-      100% { transform: translateX(0px) translateY(168px); }
+      0% { opacity: 1; transform: translate3d(0px,-168px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,168px,0px); }
 }
 
 @keyframes cycle169 {
-      0% { transform: translateX(0px) translateY(-169px); }
-      100% { transform: translateX(0px) translateY(169px); }
+      0% { opacity: 1; transform: translate3d(0px,-169px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,169px,0px); }
 }
 
 @keyframes cycle170 {
-      0% { transform: translateX(0px) translateY(-170px); }
-      100% { transform: translateX(0px) translateY(170px); }
+      0% { opacity: 1; transform: translate3d(0px,-170px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,170px,0px); }
 }
 
 @keyframes cycle171 {
-      0% { transform: translateX(0px) translateY(-171px); }
-      100% { transform: translateX(0px) translateY(171px); }
+      0% { opacity: 1; transform: translate3d(0px,-171px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,171px,0px); }
 }
 
 @keyframes cycle172 {
-      0% { transform: translateX(0px) translateY(-172px); }
-      100% { transform: translateX(0px) translateY(172px); }
+      0% { opacity: 1; transform: translate3d(0px,-172px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,172px,0px); }
 }
 
 @keyframes cycle173 {
-      0% { transform: translateX(0px) translateY(-173px); }
-      100% { transform: translateX(0px) translateY(173px); }
+      0% { opacity: 1; transform: translate3d(0px,-173px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,173px,0px); }
 }
 
 @keyframes cycle174 {
-      0% { transform: translateX(0px) translateY(-174px); }
-      100% { transform: translateX(0px) translateY(174px); }
+      0% { opacity: 1; transform: translate3d(0px,-174px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,174px,0px); }
 }
 
 @keyframes cycle175 {
-      0% { transform: translateX(0px) translateY(-175px); }
-      100% { transform: translateX(0px) translateY(175px); }
+      0% { opacity: 1; transform: translate3d(0px,-175px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,175px,0px); }
 }
 
 @keyframes cycle176 {
-      0% { transform: translateX(0px) translateY(-176px); }
-      100% { transform: translateX(0px) translateY(176px); }
+      0% { opacity: 1; transform: translate3d(0px,-176px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,176px,0px); }
 }
 
 @keyframes cycle177 {
-      0% { transform: translateX(0px) translateY(-177px); }
-      100% { transform: translateX(0px) translateY(177px); }
+      0% { opacity: 1; transform: translate3d(0px,-177px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,177px,0px); }
 }
 
 @keyframes cycle178 {
-      0% { transform: translateX(0px) translateY(-178px); }
-      100% { transform: translateX(0px) translateY(178px); }
+      0% { opacity: 1; transform: translate3d(0px,-178px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,178px,0px); }
 }
 
 @keyframes cycle179 {
-      0% { transform: translateX(0px) translateY(-179px); }
-      100% { transform: translateX(0px) translateY(179px); }
+      0% { opacity: 1; transform: translate3d(0px,-179px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,179px,0px); }
 }
 
 @keyframes cycle180 {
-      0% { transform: translateX(0px) translateY(-180px); }
-      100% { transform: translateX(0px) translateY(180px); }
+      0% { opacity: 1; transform: translate3d(0px,-180px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,180px,0px); }
 }
 
 @keyframes cycle181 {
-      0% { transform: translateX(0px) translateY(-181px); }
-      100% { transform: translateX(0px) translateY(181px); }
+      0% { opacity: 1; transform: translate3d(0px,-181px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,181px,0px); }
 }
 
 @keyframes cycle182 {
-      0% { transform: translateX(0px) translateY(-182px); }
-      100% { transform: translateX(0px) translateY(182px); }
+      0% { opacity: 1; transform: translate3d(0px,-182px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,182px,0px); }
 }
 
 @keyframes cycle183 {
-      0% { transform: translateX(0px) translateY(-183px); }
-      100% { transform: translateX(0px) translateY(183px); }
+      0% { opacity: 1; transform: translate3d(0px,-183px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,183px,0px); }
 }
 
 @keyframes cycle184 {
-      0% { transform: translateX(0px) translateY(-184px); }
-      100% { transform: translateX(0px) translateY(184px); }
+      0% { opacity: 1; transform: translate3d(0px,-184px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,184px,0px); }
 }
 
 @keyframes cycle185 {
-      0% { transform: translateX(0px) translateY(-185px); }
-      100% { transform: translateX(0px) translateY(185px); }
+      0% { opacity: 1; transform: translate3d(0px,-185px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,185px,0px); }
 }
 
 @keyframes cycle186 {
-      0% { transform: translateX(0px) translateY(-186px); }
-      100% { transform: translateX(0px) translateY(186px); }
+      0% { opacity: 1; transform: translate3d(0px,-186px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,186px,0px); }
 }
 
 @keyframes cycle187 {
-      0% { transform: translateX(0px) translateY(-187px); }
-      100% { transform: translateX(0px) translateY(187px); }
+      0% { opacity: 1; transform: translate3d(0px,-187px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,187px,0px); }
 }
 
 @keyframes cycle188 {
-      0% { transform: translateX(0px) translateY(-188px); }
-      100% { transform: translateX(0px) translateY(188px); }
+      0% { opacity: 1; transform: translate3d(0px,-188px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,188px,0px); }
 }
 
 @keyframes cycle189 {
-      0% { transform: translateX(0px) translateY(-189px); }
-      100% { transform: translateX(0px) translateY(189px); }
+      0% { opacity: 1; transform: translate3d(0px,-189px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,189px,0px); }
 }
 
 @keyframes cycle190 {
-      0% { transform: translateX(0px) translateY(-190px); }
-      100% { transform: translateX(0px) translateY(190px); }
+      0% { opacity: 1; transform: translate3d(0px,-190px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,190px,0px); }
 }
 
 @keyframes cycle191 {
-      0% { transform: translateX(0px) translateY(-191px); }
-      100% { transform: translateX(0px) translateY(191px); }
+      0% { opacity: 1; transform: translate3d(0px,-191px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,191px,0px); }
 }
 
 @keyframes cycle192 {
-      0% { transform: translateX(0px) translateY(-192px); }
-      100% { transform: translateX(0px) translateY(192px); }
+      0% { opacity: 1; transform: translate3d(0px,-192px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,192px,0px); }
 }
 
 @keyframes cycle193 {
-      0% { transform: translateX(0px) translateY(-193px); }
-      100% { transform: translateX(0px) translateY(193px); }
+      0% { opacity: 1; transform: translate3d(0px,-193px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,193px,0px); }
 }
 
 @keyframes cycle194 {
-      0% { transform: translateX(0px) translateY(-194px); }
-      100% { transform: translateX(0px) translateY(194px); }
+      0% { opacity: 1; transform: translate3d(0px,-194px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,194px,0px); }
 }
 
 @keyframes cycle195 {
-      0% { transform: translateX(0px) translateY(-195px); }
-      100% { transform: translateX(0px) translateY(195px); }
+      0% { opacity: 1; transform: translate3d(0px,-195px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,195px,0px); }
 }
 
 @keyframes cycle196 {
-      0% { transform: translateX(0px) translateY(-196px); }
-      100% { transform: translateX(0px) translateY(196px); }
+      0% { opacity: 1; transform: translate3d(0px,-196px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,196px,0px); }
 }
 
 @keyframes cycle197 {
-      0% { transform: translateX(0px) translateY(-197px); }
-      100% { transform: translateX(0px) translateY(197px); }
+      0% { opacity: 1; transform: translate3d(0px,-197px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,197px,0px); }
 }
 
 @keyframes cycle198 {
-      0% { transform: translateX(0px) translateY(-198px); }
-      100% { transform: translateX(0px) translateY(198px); }
+      0% { opacity: 1; transform: translate3d(0px,-198px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,198px,0px); }
 }
 
 @keyframes cycle199 {
-      0% { transform: translateX(0px) translateY(-199px); }
-      100% { transform: translateX(0px) translateY(199px); }
+      0% { opacity: 1; transform: translate3d(0px,-199px,0px); }
+      100% { opacity: 1; transform: translate3d(0px,199px,0px); }
 }
 

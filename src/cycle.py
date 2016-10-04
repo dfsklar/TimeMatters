@@ -13,8 +13,8 @@ for yradius in range(1,200):
     xradius = (yradius*1.0) / M
     xradius = 0
     print '''@keyframes cycle%d {
-      %s%% { transform: translate3d(%spx,%spx,0px); }
-      %s%% { transform: translate3d(%spx,%spx,0px); }
+      %s%% { opacity: 1; transform: translate3d(%spx,%spx,0px); }
+      %s%% { opacity: 1; transform: translate3d(%spx,%spx,0px); }
 }
 ''' % (yradius,
     0,   -xradius, -yradius,
