@@ -1,0 +1,8 @@
+@keyframes stylie-transform-keyframes-2 {
+  0% {transform:translate(102px, 120px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);animation-timing-function: cubic-bezier(.25,.25,.75,.75);}
+  20% {transform:translate(270px, 149px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(-28deg) translate(-50%, -50%);animation-timing-function: cubic-bezier(.25,.25,.75,.75);}
+  40% {transform:translate(436px, 243px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(46deg) translate(-50%, -50%);animation-timing-function: cubic-bezier(.25,.25,.75,.75);}
+  60% {transform:translate(594px, 250px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(112deg) translate(-50%, -50%);animation-timing-function: cubic-bezier(.25,.25,.75,.75);}
+  80% {transform:translate(746px, 290px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(37deg) translate(-50%, -50%);animation-timing-function: cubic-bezier(.25,.25,.75,.75);}
+  100% {transform:translate(861px, 272px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(37deg) translate(-50%, -50%);}
+}html::after { content: url(https://ga-beacon.appspot.com/UA-42910121-1/stylie?pixel); position: absolute; left: -999em; }

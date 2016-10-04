@@ -157,7 +157,7 @@ body, .ui-page {
     width: 28px;
     height: 28px;
     background-color: yellow;
-    animation-name: stylie-transform-keyframes;
+    animation-name: stylie-transform-keyframes-1;
     animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
@@ -170,7 +170,7 @@ body, .ui-page {
     width: 42px;
     height: 42px;
     background-size: 42px 42px;
-    animation-name: stylie-transform-keyframes;
+    animation-name: stylie-transform-keyframes-2;
     animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
