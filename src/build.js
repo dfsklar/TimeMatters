@@ -138,6 +138,10 @@ function construct() {
     var $slate = $('.slate');
 
 
+    var $egg = build_objects($slate, 'white',  36, 36,     1,     0,    0,    0,     0,   0);
+    $egg.css({zIndex: 3333});
+
+
     // UPPER BRANCH
     build_particles($('.upper_branch'), 9, 13,      40,      1500, 2000, 2100,    20, 20);
     for (let s of dense_types) {
@@ -167,9 +171,6 @@ function construct() {
         var width_max = (s=='hadron') ? 25 : 40;
         build_objects($slate, s, width_min, width_max,    20,   600,  1300, 1800,   120, 120);
     }
-
-    var $egg = build_objects($slate, 'white',  36, 36,     1,     0,    0,    0,     0,   0);
-    $egg.css({zIndex: 3333});
 
     // ATOMS
     for (let att of atom_types) {

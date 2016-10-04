@@ -163,7 +163,7 @@ function build_objects($root, template, Wmin, Wmax, qty, Xleft, Xdens, Xright, Y
         var css_struct = 
             {
             position: 'absolute',
-            opacity: 0,
+            opacity: `${(animStyle==0) ? 1 : 0}`,
             width: `${width}px`,
             height: `${height}px`,
             left: `${D+X-width/2}px`,
