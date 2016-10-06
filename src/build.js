@@ -138,6 +138,8 @@ function construct() {
     var $slate = $('.slate');
 
 
+    build_leaves($slate, 'leaf', 3, 100);
+
     var $egg = build_objects($slate, 'white',  36, 36,     1,     0,    0,    0,     0,   0);
     $egg.css({zIndex: 3333});
 

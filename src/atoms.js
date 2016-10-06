@@ -38,6 +38,29 @@ var COLORS = [
 
 
 
+function build_leaves($root, klass, num_of_variants, qty) {
+    for (var i=0; i < qty; i++) {
+        var variant = getRandomIntInclusive(0, num_of_variants-1);
+        var $leaf = $(`<div class='${klass} ${variant}'</div>`);
+        $leaf.css({
+            position: 'absolute',
+            zIndex: 100,
+            opacity: 0,
+            width: '50px',
+            height: '50px',
+            backgroundSize: 'contain',
+            animationName: 'stylie-transform-keyframes-2',
+            animationDuration: '2s',
+            animationIterationCount: 'infinite',
+            animationTimingFunction: 'ease-in-out'
+        });
+        $leaf.appendTo($root);
+    }
+}
+
+
+
+
 // Special meaning for Xleft/dens/right:
 // If Xdens==null, then the desired qty is to be "evenly" distributed from Xleft to Xright.
 // The "even" distribution will actually be done in a way that causes the sapce between
@@ -116,6 +139,11 @@ function build_particles($root, Wmin, Wmax, qty, Xleft, Xdens, Xright, YmaxL, Ym
             animation: `cycle${animStyle} ${fullAnimDuration}s infinite alternate ease-in-out`,
             animationDelay: `${animDelay}s`,
         });
+        var f = function() {
+            console.log($inner);
+            $inner.css('animation-duration', '8s');
+        };
+        setTimeout(f, `${animDelay + 3000}`);
         $inner.appendTo($root);
     }
 }
