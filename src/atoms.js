@@ -41,18 +41,17 @@ var COLORS = [
 function build_leaves($root, klass, num_of_variants, qty) {
     for (var i=0; i < qty; i++) {
         var variant = getRandomIntInclusive(1, num_of_variants);
+        var keyframes_variant = getRandomIntInclusive(1, 3);
         var $leaf = $(`<div class='${klass} composite-${variant}'</div>`);
+        var animDuration = getRandomFloat(3,3.8);
+        var animDelay = getRandomFloat(0,2);
         $leaf.css({
-            position: 'absolute',
-            zIndex: 100,
             opacity: 0,
-            width: '50px',
-            height: '50px',
-            backgroundSize: 'contain',
-            animationName: 'stylie-transform-keyframes-2',
-            animationDuration: '2s',
+            animationName: `stylie-transform-keyframes-${keyframes_variant}`,
+            animationDuration: `${animDuration}s`,
             animationIterationCount: 'infinite',
-            animationTimingFunction: 'ease-in-out'
+            animationTimingFunction: 'ease-in-out',
+            animationDelay: `${animDelay}s`,
         });
         $leaf.appendTo($root);
     }

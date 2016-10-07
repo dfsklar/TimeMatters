@@ -58,6 +58,7 @@ function getRandomIntInclusive(min, max) {
 function getRandomFloatInclusive(min, max) {
     return min + (Math.random() * (max - min));
 }
+var getRandomFloat = getRandomFloatInclusive;
 
 function getRandomMember(items) {
     return items[Math.floor(Math.random()*items.length)];

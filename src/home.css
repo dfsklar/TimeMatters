@@ -164,20 +164,29 @@ body, .ui-page {
 }
 
 
-.leaf.xxxxxxx {
+.leaf {
     z-index: 100;
     position: absolute;
-    width: 50px;
-    height: 50px;
     background-size: contain;
-    animation-name: stylie-transform-keyframes-2;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
+    background-repeat: no-repeat;
 }
 
 .leaf.composite-1 {
     background-image: url(leaf-1.svg);
+    width: 30px;
+    height: 30px;
+}
+
+.leaf.composite-2 {
+    background-image: url(leaf-2.svg);
+    width: 30px;
+    height: 30px;
+}
+
+.leaf.composite-3 {
+    background-image: url(leaf-3.svg);
+    width: 30px;
+    height: 30px;
 }
 
 .leaf.green {
