@@ -72,7 +72,7 @@ function buildTimeline($slate) {
 
     var timeline = YAML.parse(window.TIMELINE_IN_YAML);
     var timeline_points = timeline.seq_timeline;
-    console.log(timeline);
+    // console.log(timeline);
 
     var timeline_x_factor = 88;
     for (var i=0; i < timeline_points.length; i++) {

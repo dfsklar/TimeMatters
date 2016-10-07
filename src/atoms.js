@@ -83,6 +83,9 @@ function build_particles($root, Wmin, Wmax, qty, Xleft, Xdens, Xright, YmaxL, Ym
         X = Xleft - Xdelta;
         qty = 999999;
     }
+
+    console.log(qty);
+    console.log('----');
     for (var i=0; i < qty; i++) {
         if (Xdens != null) {
             X = (Xright > Xleft) ? triangular(Xleft, Xright, Xdens) : Xleft;
@@ -94,7 +97,7 @@ function build_particles($root, Wmin, Wmax, qty, Xleft, Xdens, Xright, YmaxL, Ym
                 }
                 // prepare for the next iteration
                 Xdelta = Math.pow(Xdelta, opts.inter_x_pow_grow);
-                console.log(Xdelta);
+                // console.log(Xdelta);
             }
             else if (i==0) {
                 X = Xleft;
@@ -139,11 +142,17 @@ function build_particles($root, Wmin, Wmax, qty, Xleft, Xdens, Xright, YmaxL, Ym
             animation: `cycle${animStyle} ${fullAnimDuration}s infinite alternate ease-in-out`,
             animationDelay: `${animDelay}s`,
         });
-        var f = function() {
-            console.log($inner);
-            $inner.css('animation-duration', '8s');
+        var target_speed = Math.pow(0.7, (X-120)/8) + getRandomFloatInclusive(80, 120);
+        var target_duration = (2*animStyle) / target_speed;
+        console.log('=.=.=.=.=.=.=.=.=.=.=.=.=.=.=.=.=.=.=.=.=.');
+        console.log(X);
+        console.log(target_speed);
+        console.log(target_duration);
+        var f = function($_inner, duration) {
+            console.log($_inner);
+            $_inner.css('animation-duration', `${duration}s`);
         };
-        setTimeout(f, `${animDelay + 3000}`);
+        setTimeout(f.bind(null, $inner, target_duration), parseInt(animDelay*1000 + 1000));
         $inner.appendTo($root);
     }
 }
@@ -200,7 +209,6 @@ function build_objects($root, template, Wmin, Wmax, qty, Xleft, Xdens, Xright, Y
             animationDelay: `${animDelay}s`,
             zIndex: getRandomIntInclusive(1, 50)
             };
-        console.log(css_struct);
 
         $obj.css(css_struct);
 
