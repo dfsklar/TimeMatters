@@ -152,7 +152,7 @@ function build_particles($root, Wmin, Wmax, qty, Xleft, Xdens, Xright, YmaxL, Ym
             console.log($_inner);
             $_inner.css('animation-duration', `${duration}s`);
         };
-        setTimeout(f.bind(null, $inner, target_duration), parseInt(animDelay*1000 + 1000));
+        setTimeout(f.bind(null, $inner, target_duration), parseInt(animDelay*1000 + 2500));
         $inner.appendTo($root);
     }
 }
