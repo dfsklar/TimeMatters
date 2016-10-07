@@ -145,7 +145,7 @@ function construct() {
 
 
     // UPPER BRANCH
-    build_particles($('.upper_branch'), 9, 13,      40,      1500, 2000, 2100,    20, 20);
+    build_particles($('.upper_branch'), 7, 9,      40,      1500, 2000, 2100,    20, 20);
     for (let s of dense_types) {
         build_objects($('.upper_branch'), s, 20, 30,    3,   1500, 1600, 2100,    30, 15);
     }
@@ -217,7 +217,7 @@ function construct() {
     //
     // 
     // 1. Cone shape of particles near the origin
-    build_particles($slate, 9, 13,       60,      58, null,  1500,     10,  148, 
+    build_particles($slate, 7, 9,       60,      58, null,  1500,     10,  148, 
                    {
                        full_anim_duration: 0.3,
                        inter_x_init: 5,
