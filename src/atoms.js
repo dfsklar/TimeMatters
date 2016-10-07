@@ -40,8 +40,8 @@ var COLORS = [
 
 function build_leaves($root, klass, num_of_variants, qty) {
     for (var i=0; i < qty; i++) {
-        var variant = getRandomIntInclusive(0, num_of_variants-1);
-        var $leaf = $(`<div class='${klass} ${variant}'</div>`);
+        var variant = getRandomIntInclusive(1, num_of_variants);
+        var $leaf = $(`<div class='${klass} composite-${variant}'</div>`);
         $leaf.css({
             position: 'absolute',
             zIndex: 100,

@@ -164,7 +164,7 @@ body, .ui-page {
 }
 
 
-.leaf {
+.leaf.xxxxxxx {
     z-index: 100;
     position: absolute;
     width: 50px;
@@ -177,8 +177,7 @@ body, .ui-page {
 }
 
 .leaf.composite-1 {
-    background-image: url(leaf-composite-1.svg);
-    animation-duration: 2.5s;
+    background-image: url(leaf-1.svg);
 }
 
 .leaf.green {
