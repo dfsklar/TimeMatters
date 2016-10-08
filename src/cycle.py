@@ -9,15 +9,22 @@ import random
 
 M = 3
 
+
+
 for yradius in range(1,200):
     xradius = (yradius*1.0) / M
     xradius = 0
+    tuple = (yradius,
+                0,   -xradius, -yradius,
+              100,    xradius,  yradius
+        )
     print '''@keyframes cycle%d {
       %s%% { opacity: 1; transform: translate3d(%spx,%spx,0px); }
       %s%% { opacity: 1; transform: translate3d(%spx,%spx,0px); }
 }
-''' % (yradius,
-    0,   -xradius, -yradius,
-   100,   xradius,  yradius
-   )
-    
+''' % tuple
+    print '''@-webkit-keyframes cycle%d {
+      %s%% { opacity: 1; -webkit-transform: translate3d(%spx,%spx,0px); }
+      %s%% { opacity: 1; -webkit-transform: translate3d(%spx,%spx,0px); }
+}
+''' % tuple
