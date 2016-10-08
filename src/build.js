@@ -155,7 +155,7 @@ function construct() {
 
 
     // UPPER BRANCH
-    build_particles($('.upper_branch'), 7, 9,      90,       1300, 2100, 2250,     8, 75, 
+    build_particles($('.upper_branch'), 7, 9,      90,       1300, 2100, 2250,     8, 50, 
                     {function_y_variation: bend_branch_upward});
     for (let s of dense_types) {
         build_objects($('.upper_branch'), s, 20, 30,    8,   1300, 1500, 2100,    30, 15,
