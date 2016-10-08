@@ -236,14 +236,17 @@ body, .ui-page {
 }
 
 .atom.childcount1 .hadron {
-    transform: scale3d(0.6,0.6,1) translate3d(8px,8px,0px);
+    transform:         scale3d(0.6,0.6,1) translate3d(8px,8px,0px);
+    -webkit-transform: scale3d(0.6,0.6,1) translate3d(8px,8px,0px);
 }
 
 .atom.childcount2 .h0 {
-    transform: scale3d(0.6,0.6,1) translate3d(-2px,-2px,0px);
+    transform:         scale3d(0.6,0.6,1) translate3d(-2px,-2px,0px);
+    -webkit-transform: scale3d(0.6,0.6,1) translate3d(-2px,-2px,0px);
 }
 .atom.childcount2 .h1 {
-    transform: scale3d(0.6,0.6,1) translate3d(18px, 18px, 18px);
+    transform:         scale3d(0.6,0.6,1) translate3d(18px, 18px, 18px);
+    -webkit-transform: scale3d(0.6,0.6,1) translate3d(18px, 18px, 18px);
 }
 
 
@@ -330,8 +333,3 @@ body, .ui-page {
 .circle-outer {
 }
 
-
-@keyframes animcircle { 
-    from { transform: translate3d(-10px, 0px, -30px); } 
-    to { transform: translate3d(10px, 0px, 30px); } 
-}
