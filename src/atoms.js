@@ -159,6 +159,9 @@ function build_particles($root, Wmin, Wmax, qty, Xleft, Xdens, Xright, YmaxL, Ym
         //console.log(target_duration);
 
         var f = function($_inner, duration) {
+            console.log("FFFFFFFFF");
+            console.log($_inner);
+            console.log(duration);
             $_inner.css('animation-duration', `${duration}s`);
         };
         

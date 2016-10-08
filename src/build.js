@@ -5,7 +5,8 @@ window.Ymax = 200;  // The furthest from the X axis any object's *CENTER* should
 
 window.delay_settings = {
     branch_construct: 12000,
-    leaf_construct:    9000
+    leaf_construct:    9000,
+    timeline:         15000
 };
 
 window.dense_types = ['dense1', 'dense2', 'black', 'hadron'];
@@ -285,7 +286,6 @@ $(document).ready(function() {
 
     setup_iscroll();
 
-
     if (window.instant) {
         var $T = buildTimeline($slate);
         window.instant = true;
@@ -297,7 +297,7 @@ $(document).ready(function() {
             window.mySlateScroller.zoom(1, 0, 0, 8000);
             var $T = buildTimeline($slate);
             $T.addClass('visible');
-        }, 15000);
+        }, window.delay_settings.timeline);
     }
 
 });
