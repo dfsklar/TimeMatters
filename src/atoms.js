@@ -162,7 +162,7 @@ function build_particles($root, Wmin, Wmax, qty, Xleft, Xdens, Xright, YmaxL, Ym
             console.log("FFFFFFFFF");
             console.log($_inner);
             console.log(duration);
-            $_inner.css('animation-duration', `${duration}s`);
+            $_inner.css({animationDuration: `${duration}s`});
         };
         
         if (window.instant) {
