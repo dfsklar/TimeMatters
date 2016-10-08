@@ -235,7 +235,6 @@ $(document).ready(function() {
     var $slate = $('.slate');
 
     window.instant = ('true' == getQueryParameterByName('instant', 'false'));
-    alert(window.instant ? 'T' : 'F');
 
     construct();
 
