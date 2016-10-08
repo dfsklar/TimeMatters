@@ -148,7 +148,11 @@ function build_particles($root, Wmin, Wmax, qty, Xleft, Xdens, Xright, YmaxL, Ym
             width: `${width}px`,
             left: `${X-width/2}px`,
             top: `${Ydelta-height/2}px`,
-            animation: `cycle${animStyle} ${fullAnimDuration}s infinite alternate ease-in-out`,
+            animationName: `cycle${animStyle}`,
+            animationDuration: `${fullAnimDuration}s`,
+            animationDirection: 'alternate',
+            animationTimingFunction: 'ease-in-out',
+            animationIterationCount: 'infinite',
             animationDelay: `${animDelay}s`,
         });
         var target_speed = Math.pow(0.7, (X-120)/8) + getRandomFloatInclusive(80, 120);
@@ -225,19 +229,23 @@ function build_objects($root, template, Wmin, Wmax, qty, Xleft, Xdens, Xright, Y
 
         var css_struct = 
             {
-            position: 'absolute',
-            opacity: `${(animStyle==0) ? 1 : 0}`,
-            width: `${width}px`,
-            height: `${height}px`,
-            left: `${D+X-width/2}px`,
-            top: `${Ydelta-height/2}px`,
-            animation: `cycle${animStyle} ${fullAnimDuration}s infinite alternate ease-in-out`,
-            animationDelay: `${animDelay}s`,
-            zIndex: getRandomIntInclusive(1, 50)
+                position: 'absolute',
+                opacity: `${(animStyle==0) ? 1 : 0}`,
+                width: `${width}px`,
+                height: `${height}px`,
+                left: `${D+X-width/2}px`,
+                top: `${Ydelta-height/2}px`,
+                animationName: `cycle${animStyle}`,
+                animationDuration: `${fullAnimDuration}s`,
+                animationDirection: 'alternate',
+                animationTimingFunction: 'ease-in-out',
+                animationIterationCount: 'infinite',
+                animationDelay: `${animDelay}s`,
+                zIndex: getRandomIntInclusive(1, 50)
             };
-
+        
         $obj.css(css_struct);
-
+        
         $obj.appendTo($root);
     }
     return $obj;  // Returns the most-recent object built

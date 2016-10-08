@@ -4,7 +4,7 @@ window.Xtimeline_start = 30;
 window.Ymax = 200;  // The furthest from the X axis any object's *CENTER* should be
 
 window.delay_settings = {
-    branch_construct: 12000,
+    branch_construct:  5000,
     leaf_construct:    9000,
     timeline:         15000
 };
@@ -186,9 +186,6 @@ function construct() {
     $egg.css({zIndex: 3333});
 
 
-    setTimeout(build_branch_upper, window.delay_settings.branch_construct);
-
-
     // BUILD-OBJECTS PARAMS:
     //
     // template name
@@ -292,7 +289,9 @@ $(document).ready(function() {
         $T.addClass('visible-instant');
     } else {
         window.instant = false;
-        var t = setTimeout(timer, 1000);
+        if (getQueryParameterByName('showhashmarks', false)) {
+            var t = setTimeout(timer, 1000);
+        }
         setTimeout(function() {
             window.mySlateScroller.zoom(1, 0, 0, 8000);
             var $T = buildTimeline($slate);
