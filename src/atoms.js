@@ -40,8 +40,9 @@ var COLORS = [
 
 function build_leaves($root, klass, num_of_variants, qty) {
     for (var i=0; i < qty; i++) {
+        // 5 seems problematic
         var variant = getRandomIntInclusive(1, num_of_variants);
-        var keyframes_variant = getRandomIntInclusive(1, 3);
+        var keyframes_variant = getRandomIntInclusive(1, 2);
         var $leaf = $(`<div class='${klass} composite-${variant}'</div>`);
         var animDuration = getRandomFloat(3,3.8);
         var animDelay = getRandomFloat(0,2);

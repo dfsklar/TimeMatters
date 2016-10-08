@@ -185,25 +185,38 @@ body, .ui-page {
 
 .leaf.composite-3 {
     background-image: url(leaf-3.svg);
+    width: 58px;
+    height: 58px;
+}
+
+.leaf.composite-4 {
+    background-image: url(leaf-4.svg);
+    width: 55px;
+    height: 55px;
+}
+
+.leaf.composite-5 {
+    background-image: url(leaf-5.svg);
+    width: 86px;
+    height: 86px;
+}
+
+.leaf.composite-6 {
+    background-image: url(leaf-6.svg);
+    width: 38px;
+    height: 38px;
+}
+
+.leaf.composite-7 {
+    background-image: url(leaf-7.svg);
     width: 30px;
     height: 30px;
 }
 
-.leaf.green {
-    background: url(leaf-lightgreen-1.svg);
-    animation-delay: 0.8s;
-    animation-duration: 7.5s;
-}
-
-.leaf.yellow {
-    background: url(leaf-yello-1.svg);
-    animation-delay: 1.1s;
-    animation-duration: 8.4s;
-}
-
-.leaf.red {
-    background: url(leaf-umber-1.svg);
-    animation-delay: 1.3s;
+.leaf.composite-8 {
+    background-image: url(leaf-8.svg);
+    width: 30px;
+    height: 30px;
 }
 
 
