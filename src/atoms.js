@@ -44,8 +44,8 @@ function build_leaves($root, klass, num_of_variants, qty) {
         var variant = getRandomIntInclusive(1, num_of_variants);
         var keyframes_variant = getRandomIntInclusive(1, 2);
         var $leaf = $(`<div class='${klass} composite-${variant}'</div>`);
-        var animDuration = getRandomFloat(3,3.8);
-        var animDelay = getRandomFloat(0,2);
+        var animDuration = getRandomFloat(4,4.2);
+        var animDelay = i * 0.04;
         $leaf.css({
             opacity: 0,
             animationName: `stylie-transform-keyframes-${keyframes_variant}`,
@@ -84,8 +84,8 @@ function build_particles($root, Wmin, Wmax, qty, Xleft, Xdens, Xright, YmaxL, Ym
         qty = 999999;
     }
 
-    console.log(qty);
-    console.log('----');
+    //console.log(qty);
+    //console.log('----');
     for (var i=0; i < qty; i++) {
         if (Xdens != null) {
             X = (Xright > Xleft) ? triangular(Xleft, Xright, Xdens) : Xleft;
@@ -126,7 +126,7 @@ function build_particles($root, Wmin, Wmax, qty, Xleft, Xdens, Xright, YmaxL, Ym
         }
         var width = 2 * Math.round(getRandomFloatInclusive(Wmin/2.0, Wmax/2.0)); // must be even number to avoid "clipped-circle" look
         var height = width;
-        var animDelay = opts.base_anim_delay + (X * 0.005);
+        var animDelay = (window.instant ? 0 : (opts.base_anim_delay + (X * 0.005)));
         var animStyle = Math.min(window.Ymax, Math.round(Y));
 
         var $inner = $(`<div class="circle" id="cc${i}"></div></div>`);
@@ -144,15 +144,20 @@ function build_particles($root, Wmin, Wmax, qty, Xleft, Xdens, Xright, YmaxL, Ym
         });
         var target_speed = Math.pow(0.7, (X-120)/8) + getRandomFloatInclusive(80, 120);
         var target_duration = (2*animStyle) / target_speed;
-        console.log('=.=.=.=.=.=.=.=.=.=.=.=.=.=.=.=.=.=.=.=.=.');
-        console.log(X);
-        console.log(target_speed);
-        console.log(target_duration);
+        //console.log('=.=.=.=.=.=.=.=.=.=.=.=.=.=.=.=.=.=.=.=.=.');
+        //console.log(X);
+        //console.log(target_speed);
+        //console.log(target_duration);
+
         var f = function($_inner, duration) {
-            console.log($_inner);
             $_inner.css('animation-duration', `${duration}s`);
         };
-        setTimeout(f.bind(null, $inner, target_duration), parseInt(animDelay*1000 + 2500));
+        
+        if (window.instant) {
+            f($inner, target_duration);
+        }else{
+            setTimeout(f.bind(null, $inner, target_duration), parseInt(animDelay*1000 + 2500));
+        }
         $inner.appendTo($root);
     }
 }
@@ -168,6 +173,12 @@ function build_objects($root, template, Wmin, Wmax, qty, Xleft, Xdens, Xright, Y
     }
     var D = window.Xtimeline_start;
     var $obj = null;
+
+    if (window.instant) {
+        console.log("INSTANT");
+        opts.base_anim_delay = 0;
+    }
+
     for (var i=0; i < qty; i++) {
         var fullAnimDuration = getRandomFloatInclusive(2.5,4);
         var X = (Xright > Xleft) ? triangular(Xleft, Xright, Xdens) : Xleft;

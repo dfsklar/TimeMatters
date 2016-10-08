@@ -234,15 +234,19 @@ $(document).ready(function() {
 
     var $slate = $('.slate');
 
+    window.instant = ('true' == getQueryParameterByName('instant', 'false'));
+    alert(window.instant ? 'T' : 'F');
+
     construct();
 
-    // No need to do this in a timeout!
     setup_iscroll();
 
-    if (getQueryParameterByName('instant', false)) {
+    if (window.instant) {
         var $T = buildTimeline($slate);
+        window.instant = true;
         $T.addClass('visible-instant');
     } else {
+        window.instant = false;
         setTimeout(function() {
             window.mySlateScroller.zoom(1, 0, 0, 8000);
             var $T = buildTimeline($slate);
