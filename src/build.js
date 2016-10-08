@@ -157,10 +157,10 @@ function construct() {
     // UPPER BRANCH
     build_particles($('.upper_branch'), 7, 9,      90,       1300, 2100, 2250,     8, 50, 
                     {function_y_variation: bend_branch_upward});
-    for (let s of dense_types) {
+    $.each(dense_types, function(k,s) {
         build_objects($('.upper_branch'), s, 20, 30,    8,   1300, 1500, 2100,    30, 15,
                       {function_y_variation: bend_branch_upward});
-    }
+    });
 
 
     // BUILD-OBJECTS PARAMS:
@@ -181,37 +181,37 @@ function construct() {
     if ( ! getQueryParameterByName('hidecore', null)) {
         build_objects($slate, 'hadron', 25, 25,    20,   320, 400, 900,   45, 140);
 
-        for (let s of dense_types) {
+        $.each(dense_types, function(k,s) {
             var width_min = 25;
             var width_max = (s=='hadron') ? 25 : 40;
             build_objects($slate, s, width_min, width_max,    20,   600,  1300, 1800,   120, 140);
-        }
+        });
 
         // ATOMS
-        for (let att of atom_types) {
+        $.each(atom_types, function(k, att) {
             build_objects($slate, att,   35, 35,   20,   500,  700, 1800,    80, 140);
-        }
+        });
     }
 
 
 
     // ***************
     // MIDDLE BRANCH
-    for (let s of dense_types) {
+    $.each(dense_types, function(k,s) {
         build_objects($slate, s, 20, 30,    4,   1500,  1900, 2100,   30, 15);
-    }
+    });
 
 
 
     // ***************
     // LOWER BRANCH
     var $low = $('.lower_branch');
-    for (let s of dense_types) {
+    $.each(dense_types, function(k,s) {
         build_objects($low, s, 20, 30,    4,   1500,  1900, 2100,   30, 15);
-    }
-    for (let s of atom_types) {
+    });
+    $.each(atom_types, function(k, s) {
         build_objects($low, s, 35, 35,    4,   1500,  1900, 2100,   30, 15);
-    }
+    });
 
 
 
