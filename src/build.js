@@ -176,11 +176,11 @@ function construct() {
 
     var $slate = $('.slate');
 
-    setTimeout(build_branch_upper, window.delay_settings.branch_construct);
+    setTimeout(build_branch_upper, window.instant ? 5 : window.delay_settings.branch_construct);
 
     setTimeout(function(){
         build_leaves($('.leaf-holder'), 'leaf', 8, 100);
-    }, window.delay_settings.leaf_construct);
+    }, window.instant ? 5 : window.delay_settings.leaf_construct);
 
     var $egg = build_objects($slate, 'white',  36, 36,     1,     0,    0,    0,     0,   0);
     $egg.css({zIndex: 3333});
