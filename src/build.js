@@ -128,6 +128,15 @@ function setup_iscroll() {
 
 
 
+/*
+            ***      <--  return -1
+         ***   ***   <--  return  0
+         ^ Xlocal=0
+          ^ Xlocal=1
+*/
+function bend_branch_upward(Xlocal) {
+    return 0 + Math.sin(Xlocal/120) * 40;
+}
 
 function construct() {
 
@@ -146,9 +155,11 @@ function construct() {
 
 
     // UPPER BRANCH
-    build_particles($('.upper_branch'), 7, 9,      40,      1500, 2000, 2100,    20, 20);
+    build_particles($('.upper_branch'), 7, 9,      60,      1500, 2000, 2250,    20, 20, 
+                    {function_y_variation: bend_branch_upward});
     for (let s of dense_types) {
-        build_objects($('.upper_branch'), s, 20, 30,    3,   1500, 1600, 2100,    30, 15);
+        build_objects($('.upper_branch'), s, 20, 30,    3,   1500, 1600, 2100,    30, 15,
+                      {function_y_variation: bend_branch_upward});
     }
 
 

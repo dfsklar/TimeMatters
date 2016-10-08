@@ -65,11 +65,20 @@ function build_leaves($root, klass, num_of_variants, qty) {
 // If Xdens==null, then the desired qty is to be "evenly" distributed from Xleft to Xright.
 // The "even" distribution will actually be done in a way that causes the sapce between
 // adjacent particles to get slightly larger with each iteration.
+//
+// Wmin == minimum width
 function build_particles($root, Wmin, Wmax, qty, Xleft, Xdens, Xright, YmaxL, YmaxR, opts) {
     opts = opts || {};
+
     if (!opts.base_anim_delay) {
         opts.base_anim_delay = 0;
     }
+
+    if (!opts.function_y_variation) {
+        opts.function_y_variation = null;
+    }
+
+
     var colors = COLORS;
     var Xcur = Xleft;
     var Xdelta = (Xright-Xleft+1.0) / qty;  // for the non-random uniform-distr
@@ -129,6 +138,8 @@ function build_particles($root, Wmin, Wmax, qty, Xleft, Xdens, Xright, YmaxL, Ym
         var animDelay = (window.instant ? 0 : (opts.base_anim_delay + (X * 0.005)));
         var animStyle = Math.min(window.Ymax, Math.round(Y));
 
+        var Ydelta = (opts.function_y_variation ? opts.function_y_variation(X-Xleft): 0);
+
         var $inner = $(`<div class="circle" id="cc${i}"></div></div>`);
         $inner.css({
             zIndex: getRandomIntInclusive(1, 50),
@@ -138,7 +149,7 @@ function build_particles($root, Wmin, Wmax, qty, Xleft, Xdens, Xright, YmaxL, Ym
             height: `${height}px`,
             width: `${width}px`,
             left: `${X-width/2}px`,
-            top: `${0-height/2}px`,
+            top: `${Ydelta-height/2}px`,
             animation: `cycle${animStyle} ${fullAnimDuration}s infinite alternate ease-in-out`,
             animationDelay: `${animDelay}s`,
         });
