@@ -313,12 +313,13 @@ body, .ui-page {
 #slatewrapper {
     width: 100%;
     height: 100%;
-    padding-top: 200px;
     overflow: hidden;
 }
 
 .slate {
+    position: relative;
   width: 2180px;
+  top: 200px;
 }
 
 
