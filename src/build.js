@@ -111,19 +111,20 @@ function buildTimeline($slate) {
 
 
 function setup_iscroll() {
-        window.mySlateScroller = new IScroll('#slatewrapper', {
-            scrollX: true,
-            zoom: true,
-            zoomMax: 2,
-            zoomMin: 0.2,
-            startZoom: getQueryParameterByName('zoom', 0.6),
-            momentum: false,
-            tap: true,
-            desktopCompatibility: true,
-            preventDefault: false
-        });
-        // For iscroll to work:
-        document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+    var zoomFactorJustFill = $('#slatewrapper').width() / $('.slate').width();
+    window.mySlateScroller = new IScroll('#slatewrapper', {
+        scrollX: true,
+        zoom: true,
+        zoomMax: 2,
+        zoomMin: 0.2,
+        startZoom: getQueryParameterByName('zoom', zoomFactorJustFill),
+        momentum: false,
+        tap: true,
+        desktopCompatibility: true,
+        preventDefault: false
+    });
+    // For iscroll to work:
+    document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
 }
 
 
