@@ -18,6 +18,7 @@ body, .ui-page {
     position: relative;
     z-index: 1000;
     transform: scale(1.35,1);
+    -webkit-transform: scale(1.35,1);
 }
 
 
@@ -152,11 +153,6 @@ body, .ui-page {
 
 
 
-
-@keyframes spin {
-    from {transform: translate3d(200px, 0px, 0px)   rotate3d(0, 0, 1, 0deg);}
-    to {transform:   translate3d(300px, 0px, 0px)   rotate3d(0, 0, 1, -50deg);}
-}
 
 .sentient-being {
     z-index: 100;
