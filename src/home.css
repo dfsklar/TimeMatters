@@ -6,12 +6,12 @@ body, .ui-page {
 
 .upper_branch {
     position: absolute;
-    margin-top: -213px;
+    margin-top: -180px;
 }
 
 .lower_branch {
     position: absolute;
-    margin-top: 125px;
+    margin-top: 135px;
 }
 
 .leaf-holder {

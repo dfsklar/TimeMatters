@@ -135,7 +135,7 @@ function setup_iscroll() {
           ^ Xlocal=1
 */
 function bend_branch_upward(Xlocal) {
-    return 0 + Math.sin(Xlocal/180) * 40;
+    return 0 + Math.sin(Xlocal/200 + 390) * 35;
 }
 
 function construct() {
