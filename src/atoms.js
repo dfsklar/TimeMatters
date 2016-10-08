@@ -43,8 +43,8 @@ function build_leaves($root, klass, num_of_variants, qty) {
         var variant = getRandomIntInclusive(1, num_of_variants);
         var keyframes_variant = getRandomIntInclusive(1, 2);
         var $leaf = $(`<div class='${klass} composite-${variant}'</div>`);
-        var animDuration = getRandomFloat(4,4.2);
-        var animDelay = i * 0.04;
+        var animDuration = getRandomFloat(6,7);
+        var animDelay = i * 0.1;
         $leaf.css({
             opacity: 0,
             animationName: `stylie-transform-keyframes-${keyframes_variant}`,

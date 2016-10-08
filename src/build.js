@@ -156,10 +156,14 @@ function bend_branch_upward(Xlocal) {
     return 0 + Math.sin(Xlocal/200 + 390) * 35;
 }
 
+function bend_branch_downward(Xlocal) {
+    return 30 - Math.sin(Xlocal/200 + 390) * 35;
+}
+
 
 
 function build_branch_upper() {
-    build_particles($('.upper_branch'), 7, 9,      90,       1300, 2100, 2250,     8, 50, 
+    build_particles($('.upper_branch'), 7, 9,      90,       1300, 2100, 2100,     8, 50, 
                     {function_y_variation: bend_branch_upward});
     $.each(window.dense_types, function(k,s) {
         build_objects($('.upper_branch'), s, 20, 30,    8,   1300, 1500, 2100,    30, 15,
@@ -179,7 +183,7 @@ function construct() {
     setTimeout(build_branch_upper, window.instant ? 5 : window.delay_settings.branch_construct);
 
     setTimeout(function(){
-        build_leaves($('.leaf-holder'), 'leaf', 8, 100);
+        build_leaves($('.leaf-holder'), 'leaf', 8, 70);
     }, window.instant ? 5 : window.delay_settings.leaf_construct);
 
     var $egg = build_objects($slate, 'white',  36, 36,     1,     0,    0,    0,     0,   0);
@@ -207,12 +211,12 @@ function construct() {
         $.each(window.dense_types, function(k,s) {
             var width_min = 25;
             var width_max = (s=='hadron') ? 25 : 40;
-            build_objects($slate, s, width_min, width_max,    20,   600,  1300, 1800,   120, 140);
+            build_objects($slate, s, width_min, width_max,    20,   600,  1300, 1600,   120, 140);
         });
 
         // ATOMS
         $.each(window.atom_types, function(k, att) {
-            build_objects($slate, att,   35, 35,   20,   500,  700, 1800,    80, 140);
+            build_objects($slate, att,   35, 35,       13,          500,   900, 1600,    80, 140);
         });
     }
 
@@ -221,7 +225,7 @@ function construct() {
     // ***************
     // MIDDLE BRANCH
     $.each(window.dense_types, function(k,s) {
-        build_objects($slate, s, 20, 30,    4,   1500,  1900, 2100,   30, 15);
+        build_objects($slate, s, 20, 30,    8,   1500, 1800, 2000,   30, 15);
     });
 
 
@@ -230,10 +234,12 @@ function construct() {
     // LOWER BRANCH
     var $low = $('.lower_branch');
     $.each(window.dense_types, function(k,s) {
-        build_objects($low, s, 20, 30,    4,   1500,  1900, 2100,   30, 15);
+        build_objects($low, s, 20, 30,    4,   1500,  1900, 2100,   30, 15,
+                      {function_y_variation: bend_branch_downward});
     });
     $.each(window.atom_types, function(k, s) {
-        build_objects($low, s, 35, 35,    4,   1500,  1900, 2100,   30, 15);
+        build_objects($low, s, 35, 35,    4,   1500,  1900, 2100,   30, 15,
+                      {function_y_variation: bend_branch_downward});
     });
 
 
