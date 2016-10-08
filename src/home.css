@@ -154,6 +154,7 @@ body, .ui-page {
 .sentient-being {
     z-index: 100;
     position: absolute;
+    left: -600px;
     width: 28px;
     height: 28px;
     background-color: yellow;
@@ -166,6 +167,7 @@ body, .ui-page {
 
 .leaf {
     z-index: 100;
+    left: -300px;
     position: absolute;
     background-size: contain;
     background-repeat: no-repeat;
