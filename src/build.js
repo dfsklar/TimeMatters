@@ -62,6 +62,9 @@ function getRandomIntInclusive(min, max) {
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+var getRandomInt = getRandomIntInclusive;
+
+
 
 // Returns a random integer between min (included) and max (probably not exactly included)
 // Using Math.round() will give you a non-uniform distribution!
@@ -70,9 +73,13 @@ function getRandomFloatInclusive(min, max) {
 }
 var getRandomFloat = getRandomFloatInclusive;
 
+
+
 function getRandomMember(items) {
     return items[Math.floor(Math.random()*items.length)];
 }
+
+
 
 
 function buildTimeline($slate) {
@@ -170,13 +177,15 @@ function construct() {
 
     setTimeout(build_branch_upper, window.delay_settings.branch_construct);
 
-    build_leaves($('.leaf-holder'), 'leaf', 8, 100);
+    setTimeout(function(){
+        build_leaves($('.leaf-holder'), 'leaf', 8, 100);
+    }, window.delay_settings.leaf_construct);
 
     var $egg = build_objects($slate, 'white',  36, 36,     1,     0,    0,    0,     0,   0);
     $egg.css({zIndex: 3333});
 
 
-    setTimeout(build_branch_upper, 20000);
+    setTimeout(build_branch_upper, window.delay_settings.branch_construct);
 
 
     // BUILD-OBJECTS PARAMS:
