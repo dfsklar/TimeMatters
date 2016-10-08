@@ -78,7 +78,6 @@ function build_particles($root, Wmin, Wmax, qty, Xleft, Xdens, Xright, YmaxL, Ym
         opts.function_y_variation = null;
     }
 
-
     var colors = COLORS;
     var Xcur = Xleft;
     var Xdelta = (Xright-Xleft+1.0) / qty;  // for the non-random uniform-distr
@@ -192,7 +191,7 @@ function build_objects($root, template, Wmin, Wmax, qty, Xleft, Xdens, Xright, Y
     var $obj = null;
 
     for (var i=0; i < qty; i++) {
-        var fullAnimDuration = getRandomFloatInclusive(2.5,4);
+        var fullAnimDuration = getRandomFloatInclusive(2.5, 4);
         var X = (Xright > Xleft) ? triangular(Xleft, Xright, Xdens) : Xleft;
         var Ymax = (X > Xleft) ? (YmaxL + (YmaxR-YmaxL)*(X-Xleft)/(Xright-Xleft)) : YmaxL;
         var Yabs = (Ymax > 0) ? getRandomFloatInclusive(2*Ymax/3, Ymax) : 0;

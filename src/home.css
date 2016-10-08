@@ -14,6 +14,13 @@ body, .ui-page {
     margin-top: 125px;
 }
 
+.leaf-holder {
+    position: relative;
+    z-index: 1000;
+    transform: scale(1.35,1);
+}
+
+
 .mfp-fade.mfp-bg {
   opacity: 0;
   transition: all 0.3s ease-out;
@@ -51,7 +58,7 @@ body, .ui-page {
 .timeline {
     opacity: 0;
     position: absolute;
-    top: 215px;
+    top: 270px;
     left: 30px;
     height: 1px;
     width: 1800px;

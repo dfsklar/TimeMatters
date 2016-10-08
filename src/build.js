@@ -135,7 +135,7 @@ function setup_iscroll() {
           ^ Xlocal=1
 */
 function bend_branch_upward(Xlocal) {
-    return 0 + Math.sin(Xlocal/120) * 40;
+    return 0 + Math.sin(Xlocal/180) * 40;
 }
 
 function construct() {
@@ -148,17 +148,17 @@ function construct() {
     var $slate = $('.slate');
 
 
-    build_leaves($slate, 'leaf', 8, 100);
+    build_leaves($('.leaf-holder'), 'leaf', 8, 100);
 
     var $egg = build_objects($slate, 'white',  36, 36,     1,     0,    0,    0,     0,   0);
     $egg.css({zIndex: 3333});
 
 
     // UPPER BRANCH
-    build_particles($('.upper_branch'), 7, 9,      90,       1500, 2100, 2250,    28, 28, 
+    build_particles($('.upper_branch'), 7, 9,      90,       1300, 2100, 2250,     8, 75, 
                     {function_y_variation: bend_branch_upward});
     for (let s of dense_types) {
-        build_objects($('.upper_branch'), s, 20, 30,    5,   1500, 1900, 2250,    30, 15,
+        build_objects($('.upper_branch'), s, 20, 30,    8,   1300, 1500, 2100,    30, 15,
                       {function_y_variation: bend_branch_upward});
     }
 
@@ -179,17 +179,17 @@ function construct() {
     // maxY at the rightmost point
 
     if ( ! getQueryParameterByName('hidecore', null)) {
-        build_objects($slate, 'hadron', 25, 25,    20,   320, 400, 900,   45, 120);
+        build_objects($slate, 'hadron', 25, 25,    20,   320, 400, 900,   45, 140);
 
         for (let s of dense_types) {
             var width_min = 25;
             var width_max = (s=='hadron') ? 25 : 40;
-            build_objects($slate, s, width_min, width_max,    20,   600,  1300, 1800,   120, 120);
+            build_objects($slate, s, width_min, width_max,    20,   600,  1300, 1800,   120, 140);
         }
 
         // ATOMS
         for (let att of atom_types) {
-            build_objects($slate, att,   35, 35,   20,   500,  700, 1800,    80, 120);
+            build_objects($slate, att,   35, 35,   20,   500,  700, 1800,    80, 140);
         }
     }
 
