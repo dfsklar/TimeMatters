@@ -155,10 +155,10 @@ function construct() {
 
 
     // UPPER BRANCH
-    build_particles($('.upper_branch'), 7, 9,      60,      1500, 2000, 2250,    20, 20, 
+    build_particles($('.upper_branch'), 7, 9,      90,       1500, 2100, 2250,    28, 28, 
                     {function_y_variation: bend_branch_upward});
     for (let s of dense_types) {
-        build_objects($('.upper_branch'), s, 20, 30,    3,   1500, 1600, 2100,    30, 15,
+        build_objects($('.upper_branch'), s, 20, 30,    5,   1500, 1900, 2250,    30, 15,
                       {function_y_variation: bend_branch_upward});
     }
 
@@ -178,17 +178,19 @@ function construct() {
     // maxY at the leftmost point
     // maxY at the rightmost point
 
-    build_objects($slate, 'hadron', 25, 25,    20,   320, 400, 900,   45, 120);
+    if ( ! getQueryParameterByName('hidecore', null)) {
+        build_objects($slate, 'hadron', 25, 25,    20,   320, 400, 900,   45, 120);
 
-    for (let s of dense_types) {
-        var width_min = 25;
-        var width_max = (s=='hadron') ? 25 : 40;
-        build_objects($slate, s, width_min, width_max,    20,   600,  1300, 1800,   120, 120);
-    }
+        for (let s of dense_types) {
+            var width_min = 25;
+            var width_max = (s=='hadron') ? 25 : 40;
+            build_objects($slate, s, width_min, width_max,    20,   600,  1300, 1800,   120, 120);
+        }
 
-    // ATOMS
-    for (let att of atom_types) {
-        build_objects($slate, att,   35, 35,   20,   500,  700, 1800,    80, 120);
+        // ATOMS
+        for (let att of atom_types) {
+            build_objects($slate, att,   35, 35,   20,   500,  700, 1800,    80, 120);
+        }
     }
 
 

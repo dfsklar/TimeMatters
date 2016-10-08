@@ -179,16 +179,17 @@ function build_particles($root, Wmin, Wmax, qty, Xleft, Xdens, Xright, YmaxL, Ym
 
 function build_objects($root, template, Wmin, Wmax, qty, Xleft, Xdens, Xright, YmaxL, YmaxR, opts) {
     opts = opts || {};
+
     if (!opts.base_anim_delay) {
         opts.base_anim_delay = 3;
     }
+
+    if (!opts.function_y_variation) {
+        opts.function_y_variation = null;
+    }
+
     var D = window.Xtimeline_start;
     var $obj = null;
-
-    if (window.instant) {
-        console.log("INSTANT");
-        opts.base_anim_delay = 0;
-    }
 
     for (var i=0; i < qty; i++) {
         var fullAnimDuration = getRandomFloatInclusive(2.5,4);
@@ -216,8 +217,10 @@ function build_objects($root, template, Wmin, Wmax, qty, Xleft, Xdens, Xright, Y
             }
         }
 
-        var animDelay = opts.base_anim_delay + X*0.005;
+        var animDelay = opts.base_anim_delay + (window.instant ? 0 : (X*0.005));
         var animStyle = Math.min(window.Ymax, Math.round(Yabs));
+
+        var Ydelta = (opts.function_y_variation ? opts.function_y_variation(X-Xleft): 0);
 
         var css_struct = 
             {
@@ -226,7 +229,7 @@ function build_objects($root, template, Wmin, Wmax, qty, Xleft, Xdens, Xright, Y
             width: `${width}px`,
             height: `${height}px`,
             left: `${D+X-width/2}px`,
-            top: `${0-height/2}px`,
+            top: `${Ydelta-height/2}px`,
             animation: `cycle${animStyle} ${fullAnimDuration}s infinite alternate ease-in-out`,
             animationDelay: `${animDelay}s`,
             zIndex: getRandomIntInclusive(1, 50)
