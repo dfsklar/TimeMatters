@@ -177,26 +177,32 @@ function build_particles($root, Wmin, Wmax, qty, Xleft, Xdens, Xright, YmaxL, Ym
             animationDirection: 'alternate',
             animationTimingFunction: 'ease-in-out',
             animationIterationCount: 'infinite',
-            animationDelay: `${animDelay}s`,
+            animationDelay: `${animDelay}s`
         });
         var target_speed = Math.pow(0.7, (X-120)/8) + getRandomFloatInclusive(80, 120);
         var target_duration = (2*animStyle) / target_speed;
-        //console.log('=.=.=.=.=.=.=.=.=.=.=.=.=.=.=.=.=.=.=.=.=.');
-        //console.log(X);
-        //console.log(target_speed);
-        //console.log(target_duration);
 
-        var f = function($_inner, duration) {
+        
+
+        var f = function($_inner, duration, animStyle) {
             console.log("FFFFFFFFF");
             console.log($_inner);
             console.log(duration);
-            $_inner.css({animationDuration: `${duration}s`});
+            duration = 10;  // ********* TESTING **********
+            $_inner.css({
+                animationName: `cycle${animStyle}`,
+                animationDuration: `${duration}s`,
+                animationDirection: 'alternate',
+                animationTimingFunction: 'ease-in-out',
+                animationIterationCount: 'infinite',
+                animationDelay: `0s`
+            });
         };
         
         if (window.instant) {
-            f($inner, target_duration);
+            f($inner, target_duration, animStyle);
         }else{
-            setTimeout(f.bind(null, $inner, target_duration), parseInt(animDelay*1000 + 2500));
+            setTimeout(f.bind(null, $inner, target_duration, animStyle), parseInt(animDelay*1000 + 2500));
         }
         $inner.appendTo($root);
     }
