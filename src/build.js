@@ -130,7 +130,7 @@ function buildTimeline($slate) {
         });
     }
 
-    if (getQueryParameterByName('showhashmarks', false)) {
+    if (getQueryParameterByName('showhashmarks', true)) {
         for (i=0; i < 2400; i = i+100) {
             $newbie = $(`<div class=xmarker><div class=notch></div><div class=label>${i}</div></div>`);
             $newbie.css({
@@ -390,6 +390,19 @@ function timer() {
     var t = setTimeout(timer, 1000);
 }
 
+
+function build_highlight_vizzes()
+{
+    var d = window.diameters.hadron;
+    build_objects($('.highlight.marriages .viz'), 'hadron',  d, d,     1,     0,    0,    0,     0,   0);
+
+    var d = window.diameters.atom;
+    build_objects($('.highlight.merging .viz'), 'atom2',      d, d,     1,     0,    0,    0,     0,   0);
+}
+
+
+
+
 $(document).ready(function() {
 
     var $slate = $('.slate');
@@ -397,6 +410,8 @@ $(document).ready(function() {
     window.instant = ('true' == getQueryParameterByName('instant', 'false'));
 
     setup_iscroll();
+
+    build_highlight_vizzes();
 
     construct();
 
@@ -406,7 +421,7 @@ $(document).ready(function() {
         $T.addClass('visible-instant');
     } else {
         window.instant = false;
-        if (getQueryParameterByName('showhashmarks', false)) {
+        if (getQueryParameterByName('showhashmarks', true)) {
             var t = setTimeout(timer, 1000);
         }
 

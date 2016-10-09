@@ -1,0 +1,58 @@
+.highlights {
+    position: absolute;
+    top: 300px;
+    width: 100%;
+    height: 30px;
+}
+
+
+.highlight {
+    position: absolute;
+    top: 0px;
+}
+
+
+.highlight.marriages {
+    left: 360px;
+}
+.highlight.egg {
+    left: 22px;
+}
+.highlight.merging {
+    left: 600px;
+}
+
+.highlight.egg .arrow {
+    height: 600px;
+}
+.highlight.marriages .arrow {
+    height: 450px;
+}
+.highlight.merging .arrow {
+    height: 300px;
+}
+
+
+
+.highlight .arrow {
+    border-left: 2px white solid;
+    height: 300px;
+}
+
+.highlight .highlabel {
+    border-left: 2px white solid;
+    padding-left: 8px;
+    color: white;
+    font-family: arial;
+    font-size: 44px;
+}
+    
+.highlight.marriages .viz {
+    transform: scale(3,3) translate(47px, -53px) ;
+    transform-origin: 50% 50% 0;
+}
+    
+.highlight.merging .viz {
+    transform: scale(2.7,2.7) translate(39px, -63px) ;
+    transform-origin: 50% 50% 0;
+}
