@@ -6,10 +6,9 @@ window.Ymax = 200;  // The furthest from the X axis any object's *CENTER* should
 window.delay_settings = {
     core: {
         'hadron':       8000,
-        'atom':        15000,
-        'dense1':      30000,
-        'dense2':      30000,
-        'black':       30000
+        'atom':        14000,
+        'dense':       20000,
+        'black':       26000
     },
     branch_construct:  25000,
     leaf_construct:    19000,
@@ -19,6 +18,12 @@ window.delay_settings = {
 window.dense_types = ['dense1', 'dense2', 'black', 'hadron'];
 window.pure_dense_types = ['dense1', 'dense2', 'black'];
 window.atom_types = ['atom1', 'atom2'];
+
+$.each(window.pure_dense_types, function(k,s) {
+    window.delay_settings.core[s] = window.delay_settings.core['dense'];
+});
+
+
 
 window.diameters = {
     atom: 35,
@@ -199,6 +204,7 @@ function introduce_obj_type(template, label, delay_before_start_in_ms, duration_
         var $label = $('.obj_type_introducer > .label');
         var diam = window.diameters[template];
         $label.text(label);
+        $viz.empty();
         build_objects($viz, template,  diam, diam,     1,     0,    0,    0,     0,   0);
         $root.css({
             opacity: 1
@@ -218,8 +224,12 @@ function introduce_obj_type(template, label, delay_before_start_in_ms, duration_
 
 function construct() {
 
-    introduce_obj_type('hadron', 'Hadrons', window.delay_settings.core['hadron'], 3000);
-    introduce_obj_type('atom1', 'Atoms', window.delay_settings.core['atom'], 3000);
+    // Set up the introduce-object-type presentations in the lower-right corner
+    var introduceobjtype_hold_duration = 4000;
+    introduce_obj_type('hadron', 'Hadrons', window.delay_settings.core['hadron'], introduceobjtype_hold_duration);
+    introduce_obj_type('atom1', 'Atoms', window.delay_settings.core['atom'], introduceobjtype_hold_duration);
+    introduce_obj_type('dense1', 'Dense Matter', window.delay_settings.core['dense'], introduceobjtype_hold_duration);
+    introduce_obj_type('black', 'Black Holes', window.delay_settings.core['black'], introduceobjtype_hold_duration);
 
     if ('false' == getQueryParameterByName('construct',true)) {
         return;
