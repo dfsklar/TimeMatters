@@ -188,7 +188,6 @@ function build_particles($root, Wmin, Wmax, qty, Xleft, Xdens, Xright, YmaxL, Ym
             console.log("FFFFFFFFF");
             console.log($_inner);
             console.log(duration);
-            duration = 10;  // ********* TESTING **********
             $_inner.css({
                 animationName: `cycle${animStyle}`,
                 animationDuration: `${duration}s`,
