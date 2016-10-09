@@ -10,7 +10,13 @@ window.delay_settings = {
 };
 
 window.dense_types = ['dense1', 'dense2', 'black', 'hadron'];
+window.pure_dense_types = ['dense1', 'dense2', 'black'];
 window.atom_types = ['atom1', 'atom2'];
+
+window.diameters = {
+    atom: 35,
+    hadron: 25
+};
 
 
 
@@ -153,7 +159,9 @@ function setup_iscroll() {
           ^ Xlocal=1
 */
 function bend_branch_upward(Xlocal) {
-    return 0 + Math.sin(Xlocal/200 + 390) * 35;
+    var length_crest_to_crest = 180;
+    var offset = -10;
+    return 0 + Math.sin(Xlocal/length_crest_to_crest + offset) * 35;
 }
 
 function bend_branch_downward(Xlocal) {
@@ -163,10 +171,10 @@ function bend_branch_downward(Xlocal) {
 
 
 function build_branch_upper() {
-    build_particles($('.upper_branch'), 7, 9,      90,       1300, 2100, 2100,     8, 50, 
+    build_particles($('.upper_branch'), 7, 9,      90,       1500, 2000, 2100,     8, 40, 
                     {function_y_variation: bend_branch_upward});
     $.each(window.dense_types, function(k,s) {
-        build_objects($('.upper_branch'), s, 20, 30,    8,   1300, 1500, 2100,    30, 15,
+        build_objects($('.upper_branch'), s, 20, 30,    8,   1500, 1800, 2000,    30, 15,
                       {function_y_variation: bend_branch_upward});
     });
 }
@@ -212,15 +220,24 @@ function construct() {
     if ( ! getQueryParameterByName('hidecore', null)) {
         build_objects($slate, 'hadron', 25, 25,    20,   320, 400, 900,   45, 140);
 
+        // TIL PRESENT 
         $.each(window.dense_types, function(k,s) {
             var width_min = 25;
             var width_max = (s=='hadron') ? 25 : 40;
-            build_objects($slate, s, width_min, width_max,    20,   600,  1300, 1600,   120, 140);
+            build_objects($slate, s, width_min, width_max,    20,   600,  1300, 1400,   120, 140);
+        });
+        $.each(window.atom_types, function(k, att) {
+            build_objects($slate, att,   35, 35,       13,          500,   900, 1400,    80, 140);
         });
 
-        // ATOMS
+        // SLIGHT FADE
+        $.each(window.dense_types, function(k,s) {
+            var width_min = 25;
+            var width_max = (s=='hadron') ? 25 : 40;
+            build_objects($slate, s, width_min, width_max,    10,  1300, 1600, 1700,   130, 115);
+        });
         $.each(window.atom_types, function(k, att) {
-            build_objects($slate, att,   35, 35,       13,          500,   900, 1600,    80, 140);
+            build_objects($slate, att,   35, 35,              10,  1300, 1600, 1700,   130, 115);
         });
     }
 
@@ -228,9 +245,10 @@ function construct() {
 
     // ***************
     // MIDDLE BRANCH
-    $.each(window.dense_types, function(k,s) {
+    $.each(window.pure_dense_types, function(k,s) {
         build_objects($slate, s, 20, 30,    8,   1500, 1800, 2000,   30, 15);
     });
+    build_objects($slate, 'hadron', 25, 25,    3,   1500, 1600, 1750,   30, 15);
 
 
 
