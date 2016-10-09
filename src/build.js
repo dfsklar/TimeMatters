@@ -102,8 +102,8 @@ function buildTimeline($slate) {
         $timeline.append($newbie);
         // Setup prose display upon user tap of a timeline marker
         $newbie.magnificPopup({
-        type: 'inline',
-        mainClass: 'mfp-fade',
+            type: 'inline',
+            mainClass: 'mfp-fade',
             items: {
                 src: `<div class=timemarker-prose><table><tr><td class=time>${strip_html_breaks(rec.time)}</td><td class=label>${rec.label}</td></tr></table><p>${rec.description}</p></div>`
             }
