@@ -140,7 +140,7 @@ function build_particles($root, Wmin, Wmax, qty, Xleft, Xdens, Xright, YmaxL, Ym
         var Y = Ymax;   //(Ymax > 0) ? getRandomFloatInclusive(0, Ymax) : 10;
         var width = getRandomFloatInclusive(Wmin, Wmax);
         var height = width;
-        var fullAnimDuration = (opts.full_anim_duration || (Math.max(YmaxR / 100, 0.2))) * getRandomFloatInclusive(0.93,1.07);
+        var fullAnimDuration = (opts.full_anim_duration || (Math.max(YmaxR / 100, 0.2))) * getRandomFloatInclusive(0.99,1.01);
         if (false) {
             console.log('------');
             console.log(Xleft);
@@ -165,7 +165,7 @@ function build_particles($root, Wmin, Wmax, qty, Xleft, Xdens, Xright, YmaxL, Ym
         var $inner = $(`<div class="circle" id="cc${i}"></div></div>`);
         $inner.css({
             zIndex: getRandomIntInclusive(1, 50),
-            opacity: 0,
+            opacity: window.instant ? 1 : 0,
             position: 'absolute',
             backgroundColor: getRandomMember(colors),
             height: `${height}px`,
@@ -177,14 +177,22 @@ function build_particles($root, Wmin, Wmax, qty, Xleft, Xdens, Xright, YmaxL, Ym
             animationDirection: 'alternate',
             animationTimingFunction: 'ease-in-out',
             animationIterationCount: 'infinite',
-            animationDelay: `${animDelay}s`
+            animationDelay: `${1+animDelay}s`,
+            transitionProperty: 'opacity',
+            transitionDuration: '0.2s',
+            transitionDelay: `${animDelay}s`
         });
+        $inner.appendTo($root);
         var target_speed = Math.pow(0.7, (X-120)/8) + getRandomFloatInclusive(80, 120);
         var target_duration = (2*animStyle) / target_speed;
 
-        
+        var func_makeVis = function($particle, delay_in_sec) {
+            $particle.css({
+                opacity: 0.3,
+            });
+        };
 
-        var f = function($_inner, duration, animStyle) {
+        var func_slowDownParticles = function($_inner, duration, animStyle) {
             console.log("FFFFFFFFF");
             console.log($_inner);
             console.log(duration);
@@ -197,13 +205,24 @@ function build_particles($root, Wmin, Wmax, qty, Xleft, Xdens, Xright, YmaxL, Ym
                 animationDelay: `0s`
             });
         };
-        
+        var f = func_slowDownParticles;
+
         if (window.instant) {
             f($inner, target_duration, animStyle);
         }else{
-            setTimeout(f.bind(null, $inner, target_duration, animStyle), parseInt(animDelay*1000 + 2500));
+            // This timer is purely for the "slow-down" of the core particles' motions.
+            // Note that the slowdown is currently NOT working on any iPhones.
+            // ******** setTimeout(f.bind(null, $inner, target_duration, animStyle), parseInt(animDelay*1000 + 2500));
         }
-        $inner.appendTo($root);
+    }
+
+    if (!window.instant) {
+        // BRING IN THE VISIBILITY OF THE PARTICLES IN A PHASED WAY
+        setTimeout(function() {
+            $('.circle').css({
+                opacity: 1
+            });
+        }, 1000);
     }
 }
 
@@ -214,8 +233,12 @@ function build_particles($root, Wmin, Wmax, qty, Xleft, Xdens, Xright, YmaxL, Ym
 function build_objects($root, template, Wmin, Wmax, qty, Xleft, Xdens, Xright, YmaxL, YmaxR, opts) {
     opts = opts || {};
 
+    if (!opts.visibility_delay_base) {
+        opts.visibility_delay_base = 0;
+    }
+
     if (!opts.base_anim_delay) {
-        opts.base_anim_delay = 3;
+        opts.base_anim_delay = 0;
     }
 
     if (!opts.function_y_variation) {
@@ -224,6 +247,9 @@ function build_objects($root, template, Wmin, Wmax, qty, Xleft, Xdens, Xright, Y
 
     var D = window.Xtimeline_start;
     var $obj = null;
+
+    var class_this_group = `${template}-basedelay-${opts.visibility_delay_base}`;
+
 
     for (var i=0; i < qty; i++) {
         var fullAnimDuration = getRandomFloatInclusive(2.5, 4);
@@ -234,6 +260,8 @@ function build_objects($root, template, Wmin, Wmax, qty, Xleft, Xdens, Xright, Y
         var height = width;
 
         $obj = $(window.matter_templates[template]);
+        
+        $obj.addClass(class_this_group);
 
         var child_count = 0;
 
@@ -251,7 +279,7 @@ function build_objects($root, template, Wmin, Wmax, qty, Xleft, Xdens, Xright, Y
             }
         }
 
-        var animDelay = opts.base_anim_delay + (window.instant ? 0 : (X*0.005));
+        var animDelay = opts.base_anim_delay + (window.instant ? 0 : (X*0.002));
         var animStyle = Math.min(window.Ymax, Math.round(Yabs));
 
         var Ydelta = (opts.function_y_variation ? opts.function_y_variation(X-Xleft): 0);
@@ -270,13 +298,27 @@ function build_objects($root, template, Wmin, Wmax, qty, Xleft, Xdens, Xright, Y
                 animationTimingFunction: 'ease-in-out',
                 animationIterationCount: 'infinite',
                 animationDelay: `${animDelay}s`,
-                zIndex: getRandomIntInclusive(1, 50)
+                zIndex: getRandomIntInclusive(1, 50),
+                transitionProperty: 'opacity',
+                transitionDuration: '0.3s',
+                transitionDelay: `${animDelay}s`
             };
         
         $obj.css(css_struct);
         
         $obj.appendTo($root);
     }
+
+    if (!window.instant) {
+        // BRING IN THE VISIBILITY OF THE OBJECTS.
+        setTimeout(function() {
+            $(`.${class_this_group}`).css({
+                opacity: 1
+            });
+        }, opts.visibility_delay_base);
+    }
+    
+
     return $obj;  // Returns the most-recent object built
 }
 

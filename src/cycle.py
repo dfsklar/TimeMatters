@@ -19,12 +19,12 @@ for yradius in range(1,200):
               100,    xradius,  yradius
         )
     print '''@keyframes cycle%d {
-      %s%% { opacity: 1; transform: translate3d(%spx,%spx,0px); }
-      %s%% { opacity: 1; transform: translate3d(%spx,%spx,0px); }
+      %s%% { transform: translate3d(%spx,%spx,0px); }
+      %s%% { transform: translate3d(%spx,%spx,0px); }
 }
 ''' % tuple
     print '''@-webkit-keyframes cycle%d {
-      %s%% { opacity: 1; -webkit-transform: translate3d(%spx,%spx,0px); }
-      %s%% { opacity: 1; -webkit-transform: translate3d(%spx,%spx,0px); }
+      %s%% { -webkit-transform: translate3d(%spx,%spx,0px); }
+      %s%% { -webkit-transform: translate3d(%spx,%spx,0px); }
 }
 ''' % tuple

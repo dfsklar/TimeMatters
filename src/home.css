@@ -180,10 +180,16 @@ body, .ui-page {
 
 .atom {
     position: absolute;
+    opacity: 0;
     background-color: #89b4dd;
     border-radius: 50%;
     width: 35px;
     height: 35px;
+}
+.atom.visible {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+    -webkit-transition: opacity 1s ease-in-out;
 }
 
 .atom.childcount1 .hadron {

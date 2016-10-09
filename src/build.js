@@ -4,9 +4,16 @@ window.Xtimeline_start = 30;
 window.Ymax = 200;  // The furthest from the X axis any object's *CENTER* should be
 
 window.delay_settings = {
-    branch_construct:  5000,
-    leaf_construct:    9000,
-    timeline:         15000
+    core: {
+        'hadron':       8000,
+        'atom':        15000,
+        'dense1':      30000,
+        'dense2':      30000,
+        'black':       30000
+    },
+    branch_construct:  25000,
+    leaf_construct:    19000,
+    timeline:         388888
 };
 
 window.dense_types = ['dense1', 'dense2', 'black', 'hadron'];
@@ -187,6 +194,7 @@ function construct() {
     Math.seedrandom(getQueryParameterByName('seed','helloiofjew.'));
 
     var $slate = $('.slate');
+    var $core = $('.core');
 
     setTimeout(build_branch_upper, window.instant ? 5 : window.delay_settings.branch_construct);
 
@@ -202,67 +210,7 @@ function construct() {
     $egg.css({zIndex: 3333});
 
 
-    // BUILD-OBJECTS PARAMS:
-    //
-    // template name
-    // min width
-    // max width
-    //
-    // how many to build
-    //
-    // leftmost X before these start appearing
-    // X value where density should be highest (triangular dist)
-    // rightmost X
-    //
-    // maxY at the leftmost point
-    // maxY at the rightmost point
 
-    if ( ! getQueryParameterByName('hidecore', null)) {
-        build_objects($slate, 'hadron', 25, 25,    20,   320, 400, 900,   45, 140);
-
-        // TIL PRESENT 
-        $.each(window.dense_types, function(k,s) {
-            var width_min = 25;
-            var width_max = (s=='hadron') ? 25 : 40;
-            build_objects($slate, s, width_min, width_max,    20,   600,  1300, 1400,   120, 140);
-        });
-        $.each(window.atom_types, function(k, att) {
-            build_objects($slate, att,   35, 35,       13,          500,   900, 1400,    80, 140);
-        });
-
-        // SLIGHT FADE
-        $.each(window.dense_types, function(k,s) {
-            var width_min = 25;
-            var width_max = (s=='hadron') ? 25 : 40;
-            build_objects($slate, s, width_min, width_max,    10,  1300, 1600, 1700,   130, 115);
-        });
-        $.each(window.atom_types, function(k, att) {
-            build_objects($slate, att,   35, 35,              10,  1300, 1600, 1700,   130, 115);
-        });
-    }
-
-
-
-    // ***************
-    // MIDDLE BRANCH
-    $.each(window.pure_dense_types, function(k,s) {
-        build_objects($slate, s, 30, 45,    8,   1500, 1800, 2000,   30, 15);
-    });
-    build_objects($slate, 'hadron', 25, 25,    3,   1500, 1600, 2000,   30, 15);
-
-
-
-    // ***************
-    // LOWER BRANCH
-    var $low = $('.lower_branch');
-    $.each(window.dense_types, function(k,s) {
-        build_objects($low, s, 20, 30,    4,   1500,  1900, 2100,   30, 15,
-                      {function_y_variation: bend_branch_downward});
-    });
-    $.each(window.atom_types, function(k, s) {
-        build_objects($low, s, 35, 35,    4,   1500,  1900, 2100,   30, 15,
-                      {function_y_variation: bend_branch_downward});
-    });
 
 
 
@@ -281,20 +229,117 @@ function construct() {
     // maxY at the rightmost point
     //
     // 
-    // 1. Cone shape of particles near the origin
+    // 1. Cone shape of particles near the origin, initially all being given the
+    //    very same duration so they can form the "wave" formation.
     build_particles($slate, 7, 9,       60,      58, null,  1500,     10,  148, 
                    {
                        full_anim_duration: 0.3,
                        inter_x_init: 5,
-                       inter_x_pow_grow: 1.015
+                       inter_x_pow_grow: 1.015,
+                       start_visible: true
                    });
     // 2. Particles once we get past 300K years
     // build_particles($slate, 9, 13,       80,     500,  800, 1900,     43, 120);
+
+
+
+
+
+    // BUILD-OBJECTS PARAMS:
+    //
+    // template name
+    // min width
+    // max width
+    //
+    // how many to build
+    //
+    // leftmost X before these start appearing
+    // X value where density should be highest (triangular dist)
+    // rightmost X
+    //
+    // maxY at the leftmost point
+    // maxY at the rightmost point
+
+    if ( ! getQueryParameterByName('hidecore', null)) {
+
+        // HADRONS CLOSEST TO THE EGG
+        build_objects($core, 'hadron', 25, 25,    20,   320, 400, 900,   45, 140, 
+                     {
+                         visibility_delay_base: window.delay_settings.core['hadron']
+                     }
+                     );
+
+        // ATOMS CLOSEST TO THE EGG
+        $.each(window.atom_types, function(k, att) {
+            build_objects($core, att,   35, 35,       13,          500,   900, 1400,    80, 140,
+                          {
+                              visibility_delay_base: window.delay_settings.core['atom']
+                          }
+                         );
+        });
+
+
+        // TIL PRESENT 
+        $.each(window.dense_types, function(k,s) {
+            var width_min = 25;
+            var width_max = (s=='hadron') ? 25 : 40;
+            build_objects($core, s, width_min, width_max,    20,   600,  1300, 1400,   120, 140,
+                          {
+                              visibility_delay_base: window.delay_settings.core[s]
+                          }
+                         );
+        });
+
+
+        // SLIGHT DOWNGRADING OF RIVER THICKNESS DURING TIMELINE "1st death" PORTION
+        $.each(window.dense_types, function(k,s) {
+            var width_min = 25;
+            var width_max = (s=='hadron') ? 25 : 40;
+            build_objects($core, s, width_min, width_max,    10,  1300, 1600, 1700,   130, 115,
+                          {
+                              visibility_delay_base: window.delay_settings.core[s]
+                          }
+                         );
+        });
+
+        $.each(window.atom_types, function(k, att) {
+            build_objects($core, att,   35, 35,              10,  1300, 1600, 1700,   130, 115,
+                          {
+                              visibility_delay_base: window.delay_settings.core['atom']
+                          }
+                         );
+        });
+    }
+
+    return;
+
+    // ***************
+    // MIDDLE BRANCH
+    var $midbranch = $('.middle_branch');
+    $.each(window.pure_dense_types, function(k,s) {
+        build_objects($midbranch, s, 30, 45,    8,   1500, 1920, 2000,   30, 15);
+    });
+    build_objects($midbranch, 'hadron', 25, 25,    3,   1500, 1600, 2000,   30, 15);
+
+
+
+    // ***************
+    // LOWER BRANCH
+    var $low = $('.lower_branch');
+    $.each(window.dense_types, function(k,s) {
+        build_objects($low, s, 20, 30,    4,   1500,  1900, 2100,   30, 15,
+                      {function_y_variation: bend_branch_downward});
+    });
+    $.each(window.atom_types, function(k, s) {
+        build_objects($low, s, 35, 35,    4,   1500,  1900, 2100,   30, 15,
+                      {function_y_variation: bend_branch_downward});
+    });
 
 }
 
 window.current_time = 0;
 
+// Display of a timer in the upper-left corner
 function timer() {
     window.current_time++;
     document.getElementById('timer').innerHTML = window.current_time;
@@ -307,9 +352,9 @@ $(document).ready(function() {
 
     window.instant = ('true' == getQueryParameterByName('instant', 'false'));
 
-    construct();
-
     setup_iscroll();
+
+    construct();
 
     if (window.instant) {
         var $T = buildTimeline($slate);
@@ -320,6 +365,8 @@ $(document).ready(function() {
         if (getQueryParameterByName('showhashmarks', false)) {
             var t = setTimeout(timer, 1000);
         }
+
+        // DELAYED SHOW OF TIMELINE
         setTimeout(function() {
             window.mySlateScroller.zoom(1, 0, 0, 8000);
             var $T = buildTimeline($slate);
