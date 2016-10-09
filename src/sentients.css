@@ -1,0 +1,51 @@
+.sentient-holder {
+    position: relative;
+    z-index: 1000;
+    transform: scale(1.35,1);
+    -webkit-transform: scale(1.35,1);
+}
+
+
+.sentient {
+    z-index: 100;
+    left: -300px;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.sentient.composite-1 {
+    background-image: url(sentient-1.svg);
+    width: 30px;
+    height: 30px;
+}
+
+.sentient.composite-2 {
+    background-image: url(sentient-2.svg);
+    width: 30px;
+    height: 30px;
+}
+
+.sentient.composite-3 {
+    background-image: url(sentient-3.svg);
+    width: 58px;
+    height: 58px;
+}
+
+.sentient.composite-4 {
+    background-image: url(sentient-4.svg);
+    width: 55px;
+    height: 55px;
+}
+
+.sentient.composite-5 {
+    background-image: url(sentient-5.svg);
+    width: 86px;
+    height: 86px;
+}
+
+.sentient.composite-6 {
+    background-image: url(sentient-6.svg);
+    width: 38px;
+    height: 38px;
+}

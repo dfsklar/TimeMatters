@@ -21,12 +21,6 @@ body, .ui-page {
     margin-top: 135px;
 }
 
-.leaf-holder {
-    position: relative;
-    z-index: 1000;
-    transform: scale(1.35,1);
-    -webkit-transform: scale(1.35,1);
-}
 
 
 .mfp-fade.mfp-bg {
@@ -178,61 +172,8 @@ body, .ui-page {
 }
 
 
-.leaf {
-    z-index: 100;
-    left: -300px;
-    position: absolute;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
 
-.leaf.composite-1 {
-    background-image: url(leaf-1.svg);
-    width: 30px;
-    height: 30px;
-}
 
-.leaf.composite-2 {
-    background-image: url(leaf-2.svg);
-    width: 30px;
-    height: 30px;
-}
-
-.leaf.composite-3 {
-    background-image: url(leaf-3.svg);
-    width: 58px;
-    height: 58px;
-}
-
-.leaf.composite-4 {
-    background-image: url(leaf-4.svg);
-    width: 55px;
-    height: 55px;
-}
-
-.leaf.composite-5 {
-    background-image: url(leaf-5.svg);
-    width: 86px;
-    height: 86px;
-}
-
-.leaf.composite-6 {
-    background-image: url(leaf-6.svg);
-    width: 38px;
-    height: 38px;
-}
-
-.leaf.composite-7 {
-    background-image: url(leaf-7.svg);
-    width: 30px;
-    height: 30px;
-}
-
-.leaf.composite-8 {
-    background-image: url(leaf-8.svg);
-    width: 30px;
-    height: 30px;
-}
 
 
 
