@@ -24,6 +24,8 @@ window.diameters = {
     atom: 35,
     hadron: 25
 };
+window.diameters.atom1 = window.diameters.atom;
+window.diameters.atom2 = window.diameters.atom;
 
 
 
@@ -188,8 +190,40 @@ function build_branch_upper() {
 
 
 
+// Fades in the stuff, holds for just 3 seconds, then fades out.
+function introduce_obj_type(template, label, delay_before_start_in_ms, duration_to_hold_in_ms) {
+
+    setTimeout(function() {
+        var $root = $('.obj_type_introducer');
+        var $viz = $('.obj_type_introducer > .viz');
+        var $label = $('.obj_type_introducer > .label');
+        var diam = window.diameters[template];
+        $label.text(label);
+        build_objects($viz, template,  diam, diam,     1,     0,    0,    0,     0,   0);
+        $root.css({
+            opacity: 1
+        });
+    }, delay_before_start_in_ms);
+
+    setTimeout(function() {
+        var $root = $('.obj_type_introducer');
+        $root.css({
+            opacity: 0
+        });
+    }, delay_before_start_in_ms + duration_to_hold_in_ms);
+}
+
+
+
 
 function construct() {
+
+    introduce_obj_type('hadron', 'Hadrons', window.delay_settings.core['hadron'], 3000);
+    introduce_obj_type('atom1', 'Atoms', window.delay_settings.core['atom'], 3000);
+
+    if ('false' == getQueryParameterByName('construct',true)) {
+        return;
+    }
 
     Math.seedrandom(getQueryParameterByName('seed','helloiofjew.'));
 
