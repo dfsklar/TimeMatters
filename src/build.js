@@ -397,7 +397,11 @@ function build_highlight_vizzes()
     build_objects($('.highlight.marriages .viz'), 'hadron',  d, d,     1,     0,    0,    0,     0,   0);
 
     var d = window.diameters.atom;
-    build_objects($('.highlight.merging .viz'), 'atom2',      d, d,     1,     0,    0,    0,     0,   0);
+    build_objects($('.highlight.merging .viz'), 'atom2',        d, d,     1,     0,    0,    0,     0,   0);
+
+    build_objects($('.highlight.simmering .viz'), 'dense1',     d, d,     1,     0,    0,    0,     0,   0, {zindex: 1000});
+    build_objects($('.highlight.simmering .viz'), 'dense2',     d*0.7, d*0.7,     1,     0,    0,    0,     0,   0, {zindex: 1001});
+    build_objects($('.highlight.simmering .viz'), 'black',     d*0.3, d*0.3,     1,     0,    0,    0,     0,   0,  {zindex: 1002});
 }
 
 

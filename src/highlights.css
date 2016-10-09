@@ -1,6 +1,6 @@
 .highlights {
     position: absolute;
-    top: 300px;
+    top: 240px;
     width: 100%;
     height: 30px;
 }
@@ -12,14 +12,17 @@
 }
 
 
-.highlight.marriages {
-    left: 360px;
-}
 .highlight.egg {
-    left: 22px;
+    left: 30px;
+}
+.highlight.marriages {
+    left: 290px;
 }
 .highlight.merging {
-    left: 600px;
+    left: 490px;
+}
+.highlight.simmering {
+    left: 670px;
 }
 
 .highlight.egg .arrow {
@@ -30,6 +33,9 @@
 }
 .highlight.merging .arrow {
     height: 300px;
+}
+.highlight.simmering .arrow {
+    height: 150px;
 }
 
 
@@ -52,7 +58,12 @@
     transform-origin: 50% 50% 0;
 }
     
-.highlight.merging .viz {
+.highlight.simmering .viz {
+    transform: scale(3,3) translate(88px, -57px) ;
+    transform-origin: 50% 50% 0;
+}
+    
+.highlight .viz {
     transform: scale(2.7,2.7) translate(39px, -63px) ;
     transform-origin: 50% 50% 0;
 }

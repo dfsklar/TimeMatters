@@ -298,7 +298,7 @@ function build_objects($root, template, Wmin, Wmax, qty, Xleft, Xdens, Xright, Y
                 animationTimingFunction: 'ease-in-out',
                 animationIterationCount: 'infinite',
                 animationDelay: `${animDelay}s`,
-                zIndex: getRandomIntInclusive(1, 50),
+                zIndex: (opts.zindex || getRandomIntInclusive(1, 50)),
                 transitionProperty: 'opacity',
                 transitionDuration: '0.3s',
                 transitionDelay: `${animDelay}s`
