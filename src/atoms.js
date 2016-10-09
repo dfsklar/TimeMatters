@@ -60,6 +60,30 @@ function build_leaves($root, klass, num_of_variants, qty) {
 
 
 
+
+
+function build_sentients($root, klass, num_of_variants, qty) {
+    for (var i=0; i < qty; i++) {
+        var variant = getRandomIntInclusive(1, num_of_variants);
+        var keyframes_variant = getRandomIntInclusive(1, 2);
+        var $obj = $(`<div class='${klass} composite-${variant}'</div>`);
+        var animDuration = getRandomFloat(6,7);
+        var animDelay = i * 0.1;
+        $obj.css({
+            opacity: 0,
+            animationName: `stylie-transform-keyframes-${keyframes_variant}`,
+            animationDuration: `${animDuration}s`,
+            animationIterationCount: 'infinite',
+            animationTimingFunction: 'ease-in-out',
+            animationDelay: `${animDelay}s`,
+        });
+        $obj.appendTo($root);
+    }
+}
+
+
+
+
 // Special meaning for Xleft/dens/right:
 // If Xdens==null, then the desired qty is to be "evenly" distributed from Xleft to Xright.
 // The "even" distribution will actually be done in a way that causes the sapce between
