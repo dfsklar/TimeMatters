@@ -246,9 +246,9 @@ function construct() {
     // ***************
     // MIDDLE BRANCH
     $.each(window.pure_dense_types, function(k,s) {
-        build_objects($slate, s, 20, 30,    8,   1500, 1800, 2000,   30, 15);
+        build_objects($slate, s, 30, 45,    8,   1500, 1800, 2000,   30, 15);
     });
-    build_objects($slate, 'hadron', 25, 25,    3,   1500, 1600, 1750,   30, 15);
+    build_objects($slate, 'hadron', 25, 25,    3,   1500, 1600, 2000,   30, 15);
 
 
 
