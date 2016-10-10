@@ -1,3 +1,27 @@
+.project-header {
+    font-family: Arial;
+    position: absolute;
+    color: #DDDDDD;
+    width: 100%;
+    padding: 12px;
+}
+
+.project-credits {
+    padding: 12px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    font-size: 18px;
+    text-align: right;
+}
+
+.project-title {
+    font-size: 24px;
+}
+
+
+
+
 .obj_type_introducer {
     position: fixed;
     right: 0px;
