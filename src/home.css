@@ -3,7 +3,6 @@
     position: absolute;
     color: #DDDDDD;
     width: 100%;
-    padding: 12px;
 }
 
 .project-credits {
@@ -16,6 +15,7 @@
 }
 
 .project-title {
+    padding: 12px;
     font-size: 24px;
 }
 
