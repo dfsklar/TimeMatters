@@ -14,7 +14,7 @@ window.delay_settings = {
     branch:            15000,
     leaf:              19000,
     sentient:          24000,
-    invite_to_proceed: 10000,
+    invite_to_proceed:   100, //10000,
     timeline:        9999999
 };
 
