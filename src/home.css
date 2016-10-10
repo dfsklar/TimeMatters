@@ -41,6 +41,11 @@ body, .ui-page {
     margin-top: -160px;
 }
 
+.middle_branch {
+    position: absolute;
+    margin-top: -18px;
+}
+
 .lower_branch {
     position: absolute;
     margin-top: 135px;

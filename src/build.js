@@ -9,10 +9,10 @@ window.delay_settings = {
         'hadron':       8000,
         'atom':        14000,
         'dense':       20000,
-        'black':       26000
+        'black':       20000
     },
-    branch_construct:  25000,
-    leaf_construct:    19000,
+    branch:            26000,
+    leaf_construct:    30000,
     timeline:        9999999
 };
 
@@ -185,12 +185,22 @@ function bend_branch_downward(Xlocal) {
 
 
 
+
+
 function build_branch_upper() {
     build_particles($('.upper_branch'), 7, 9,      90,       1500, 2000, 2100,     8, 40, 
-                    {function_y_variation: bend_branch_upward});
+                    {function_y_variation: bend_branch_upward,
+                     randomize_y: true,
+                     full_anim_duration: 0.4,
+                     visibility_delay_base: window.delay_settings.branch
+                    });
+
     $.each(window.dense_types, function(k,s) {
         build_objects($('.upper_branch'), s, 20, 30,    8,   1500, 1800, 2000,    30, 15,
-                      {function_y_variation: bend_branch_upward});
+                     {
+                         function_y_variation: bend_branch_upward,
+                         visibility_delay_base: window.delay_settings.branch
+                     });
     });
 }
 
@@ -368,12 +378,44 @@ function construct() {
 
     }
 
-    return;
+
+    build_branch_upper();
+
+
+    // ***************
+    // MIDDLE BRANCH
+    var $midbranch = $('.middle_branch');
+    $.each(window.pure_dense_types, function(k,s) {
+        build_objects($midbranch, s, 30, 45,    8,   1500, 1920, 2000,   30, 15,
+                      {randomize_y: true,
+                       full_anim_duration: 0.4,
+                       visibility_delay_base: window.delay_settings.branch});
+    });
+    build_objects($midbranch, 'hadron', 25, 25,    3,   1500, 1600, 2000,   30, 15,
+                  {randomize_y: true,
+                   full_anim_duration: 0.4,
+                   visibility_delay_base: window.delay_settings.branch});
 
 
 
+    // ***************
+    // LOWER BRANCH
+    var $low = $('.lower_branch');
+    $.each(window.dense_types, function(k,s) {
+        build_objects($low, s, 20, 30,    4,   1500,  1900, 2100,   30, 15,
+                      {function_y_variation: bend_branch_downward,
+                       randomize_y: true,
+                       full_anim_duration: 0.4,
+                       visibility_delay_base: window.delay_settings.branch});
+    });
+    $.each(window.atom_types, function(k, s) {
+        build_objects($low, s, 35, 35,    4,   1500,  1900, 2100,   30, 15,
+                      {function_y_variation: bend_branch_downward,
+                       randomize_y: true,
+                       full_anim_duration: 0.4,
+                       visibility_delay_base: window.delay_settings.branch});
+    });
 
-    setTimeout(build_branch_upper, window.instant ? 5 : window.delay_settings.branch_construct);
 
     setTimeout(function(){
             build_leaves($('.leaf-holder'), 'leaf', 8, 40);
@@ -385,29 +427,10 @@ function construct() {
 
 
 
-    // ***************
-    // MIDDLE BRANCH
-    var $midbranch = $('.middle_branch');
-    $.each(window.pure_dense_types, function(k,s) {
-        build_objects($midbranch, s, 30, 45,    8,   1500, 1920, 2000,   30, 15);
-    });
-    build_objects($midbranch, 'hadron', 25, 25,    3,   1500, 1600, 2000,   30, 15);
-
-
-
-    // ***************
-    // LOWER BRANCH
-    var $low = $('.lower_branch');
-    $.each(window.dense_types, function(k,s) {
-        build_objects($low, s, 20, 30,    4,   1500,  1900, 2100,   30, 15,
-                      {function_y_variation: bend_branch_downward});
-    });
-    $.each(window.atom_types, function(k, s) {
-        build_objects($low, s, 35, 35,    4,   1500,  1900, 2100,   30, 15,
-                      {function_y_variation: bend_branch_downward});
-    });
-
 }
+
+
+
 
 window.current_time = 0;
 
@@ -419,6 +442,8 @@ function timer() {
 }
 
 
+
+
 function build_highlight_vizzes()
 {
     var d = window.diameters.hadron;
@@ -427,9 +452,9 @@ function build_highlight_vizzes()
     var d = window.diameters.atom;
     build_objects($('.highlight.merging .viz'), 'atom2',        d, d,     1,     0,    0,    0,     0,   0);
 
-    build_objects($('.highlight.simmering .viz'), 'dense1',     d, d,     1,     0,    0,    0,     0,   0, {zindex: 1000});
-    build_objects($('.highlight.simmering .viz'), 'dense2',     d*0.7, d*0.7,     1,     0,    0,    0,     0,   0, {zindex: 1001});
-    build_objects($('.highlight.simmering .viz'), 'black',     d*0.3, d*0.3,     1,     0,    0,    0,     0,   0,  {zindex: 1002});
+    build_objects($('.highlight.simmering .viz'), 'dense1',     d, d,            1,     0,    0,    0,     0,   0, {zindex: 1000});
+    build_objects($('.highlight.simmering .viz'), 'dense2',     d*0.7, d*0.7,    1,     0,    0,    0,     0,   0, {zindex: 1001});
+    build_objects($('.highlight.simmering .viz'), 'black',     d*0.3, d*0.3,     1,     0,    0,    0,     0,   0, {zindex: 1002});
 }
 
 
