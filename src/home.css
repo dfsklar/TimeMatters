@@ -38,9 +38,9 @@ sub {
 .invitation-to-poke {
     opacity: 0;
     position: absolute;
-    bottom: 20px;
-    left: 20px;
-    font-size: 20px;
+    bottom: 80px;
+    left: 30px;
+    font-size: 28px;
 }
 
 .invitation {

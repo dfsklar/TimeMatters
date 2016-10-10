@@ -529,20 +529,27 @@ $(document).ready(function() {
             visibility: 'visible',
             transform: 'translate(0px,0px)'
         });
+
         // TAP HANDLER FOR THE INVITE-to-proceed
-        $root.on('tap', function() {
+        var handler = function() {
             var $slate = $('.slate');
             $('.highlights').addClass('invisible');
             setTimeout(function(){
                 $('.highlights').css({visibility:'hidden'});
-                $('.invitation-to-poke').css({opacity: 0.7});
+                $('.invitation-to-poke').css({
+                    opacity: 0.7,
+                    animation: 'pulsate 2s ease-out infinite'
+                });
             }, 1000);
             window.mySlateScroller.zoom(1, 0, 0, 8000);
             var $T = buildTimeline($slate);
             $T.addClass('visible');
             $root.css({visibility: 'hidden'});
             ga('send', 'event', 'IntroMovie', 'tap-to-proceed', '0');  // 0 means we don't know if they escaped-early or finished
-        });
+        };
+               
+        $root.on('tap', handler);
+        $root.on('click', handler);
                  
     }, (window.instant ? 5 : window.delay_settings.invite_to_proceed));
 
