@@ -5,6 +5,10 @@
     height: 30px;
 }
 
+.highlights.invisible {
+    opacity: 0;
+}
+
 
 .highlight {
     position: absolute;

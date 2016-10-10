@@ -1,3 +1,24 @@
+.visiflux {
+    transition:         all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+}
+
+.invitation-to-proceed {
+    transform: translate(0px,100px);
+    -webkit-transform: translate(0px,100px);
+    font-family: arial;
+    color: #bfe2f7;
+    width: 100%;
+    padding-top: 1000px;
+    font-size: 50px;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    cursor: pointer;
+}
+
+
+
 .project-header {
     font-family: Arial;
     position: absolute;

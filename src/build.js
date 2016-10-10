@@ -11,9 +11,10 @@ window.delay_settings = {
         'dense':       20000,
         'black':       20000
     },
-    branch:            26000,
-    leaf:              31000,
-    sentient:          37000,
+    branch:            20000,
+    leaf:              26000,
+    sentient:          32000,
+    invite_to_proceed:  3000,
     timeline:        9999999
 };
 
@@ -132,7 +133,7 @@ function buildTimeline($slate) {
         });
     }
 
-    if (getQueryParameterByName('showhashmarks', true)) {
+    if (getQueryParameterByName('showhashmarks', false)) {
         for (i=0; i < 2400; i = i+100) {
             $newbie = $(`<div class=xmarker><div class=notch></div><div class=label>${i}</div></div>`);
             $newbie.css({
@@ -165,6 +166,8 @@ function setup_iscroll() {
     // For iscroll to work:
     document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
 }
+
+
 
 
 
@@ -471,7 +474,9 @@ $(document).ready(function() {
 
     window.instant = ('true' == getQueryParameterByName('instant', 'false'));
 
-    setup_iscroll();
+    setTimeout(function(){
+        setup_iscroll();
+    }, 300);
 
     build_highlight_vizzes();
 
@@ -483,16 +488,34 @@ $(document).ready(function() {
         $T.addClass('visible-instant');
     } else {
         window.instant = false;
-        if (getQueryParameterByName('showhashmarks', true)) {
+        if (getQueryParameterByName('showhashmarks', false)) {
             var t = setTimeout(timer, 1000);
         }
 
         // DELAYED SHOW OF TIMELINE
         setTimeout(function() {
+        }, window.delay_settings.timeline);
+    }
+
+    
+    // DELAYED SHOW OF THE INVITE
+    setTimeout(function() {
+        var $root = $('.invitation-to-proceed');
+        $root.css({
+            opacity: 1,
+            visibility: 'visible',
+            transform: 'translate(0px,0px)'
+        });
+        // TAP HANDLER FOR THE INVITE-to-proceed
+        $root.on('tap', function() {
+            var $slate = $('.slate');
+            $('.highlights').addClass('invisible');
             window.mySlateScroller.zoom(1, 0, 0, 8000);
             var $T = buildTimeline($slate);
             $T.addClass('visible');
-        }, window.delay_settings.timeline);
-    }
+            $root.css({visibility: 'hidden'});
+        });
+                 
+    }, (window.instant ? 5 : window.delay_settings.invite_to_proceed));
 
 });

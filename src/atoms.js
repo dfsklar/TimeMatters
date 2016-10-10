@@ -196,9 +196,9 @@ function build_particles($root, Wmin, Wmax, qty, Xleft, Xdens, Xright, YmaxL, Ym
         var target_duration = (2*animStyle) / target_speed;
 
         var func_slowDownParticles = function($_inner, duration, animStyle) {
-            console.log("FFFFFFFFF");
-            console.log($_inner);
-            console.log(duration);
+            //console.log("FFFFFFFFF");
+            //console.log($_inner);
+            //console.log(duration);
             $_inner.css({
                 animationName: `cycle${animStyle}`,
                 animationDuration: `${duration}s`,
