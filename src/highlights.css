@@ -48,19 +48,20 @@
 .highlight.merging .arrow {
     height: 300px;
 }
-.highlight.simmering .arrow {
-    height: 150px;
+.highlight.life .arrow {
+    height: 450px;
 }
-.highlight .arrow {
-    height: 150px;
-}
-
-
-
-.highlight .arrow {
-    border-left: 2px white solid;
+.highlight.sentient .arrow {
     height: 300px;
 }
+.highlight .arrow {
+    border-left: 2px white solid;
+    height: 150px;
+}
+
+
+
+
 
 .highlight .highlabel {
     border-left: 2px white solid;
@@ -69,6 +70,7 @@
     font-family: arial;
     font-size: 44px;
 }
+
     
 .highlight.marriages .viz {
     transform: scale(3,3) translate(47px, -53px) ;

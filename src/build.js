@@ -209,7 +209,9 @@ function build_branch_upper() {
 
 // Fades in the stuff, holds for just 3 seconds, then fades out.
 function introduce_obj_type(template, label, delay_before_start_in_ms, duration_to_hold_in_ms) {
-
+    if (window.instant) {
+        delay_before_start_in_ms = 5;
+    }
     setTimeout(function() {
         var $root = $(`.highlight.objtype-${template}`);
         $root.css({
