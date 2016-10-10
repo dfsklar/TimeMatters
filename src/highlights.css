@@ -29,6 +29,15 @@
 .highlight.simmering {
     left: 670px;
 }
+.highlight.life {
+    left: 1100px;
+}
+.highlight.sentient {
+    left: 1360px;
+}
+
+
+
 
 .highlight.objtype-egg .arrow {
     height: 600px;
@@ -40,6 +49,9 @@
     height: 300px;
 }
 .highlight.simmering .arrow {
+    height: 150px;
+}
+.highlight .arrow {
     height: 150px;
 }
 

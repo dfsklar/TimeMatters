@@ -12,7 +12,8 @@ window.delay_settings = {
         'black':       20000
     },
     branch:            26000,
-    leaf_construct:    30000,
+    leaf:              31000,
+    sentient:          37000,
     timeline:        9999999
 };
 
@@ -217,6 +218,7 @@ function introduce_obj_type(template, label, delay_before_start_in_ms, duration_
         });
     }, delay_before_start_in_ms);
 
+/*
     setTimeout(function() {
         var $root = $('.obj_type_introducer');
         var $viz = $('.obj_type_introducer > .viz');
@@ -236,6 +238,7 @@ function introduce_obj_type(template, label, delay_before_start_in_ms, duration_
             opacity: 0
         });
     }, delay_before_start_in_ms + duration_to_hold_in_ms);
+*/
 }
 
 
@@ -269,6 +272,8 @@ function construct() {
     introduce_obj_type('atom1', 'Atoms', window.delay_settings.core['atom'], introduceobjtype_hold_duration);
     introduce_obj_type('dense1', 'Dense Matter', window.delay_settings.core['dense'], introduceobjtype_hold_duration);
     introduce_obj_type('black', 'Black Holes', window.delay_settings.core['black'], introduceobjtype_hold_duration);
+    introduce_obj_type('leaf', 'Life on Earth', window.delay_settings.leaf, introduceobjtype_hold_duration);
+    introduce_obj_type('sentient', 'Human Intelligence', window.delay_settings.sentient, introduceobjtype_hold_duration);
 
     if ('false' == getQueryParameterByName('construct',true)) {
         return;
@@ -418,14 +423,12 @@ function construct() {
 
 
     setTimeout(function(){
-            build_leaves($('.leaf-holder'), 'leaf', 8, 40);
-        }, window.instant ? 5 : window.delay_settings.leaf_construct);
+        build_leaves($('.leaf-holder'), 'leaf', 8, 40);
+    }, window.instant ? 5 : window.delay_settings.leaf);
 
     setTimeout(function(){
-            build_sentients($('.leaf-holder'), 'sentient', 8, 40);
-        }, window.instant ? 5 : window.delay_settings.leaf_construct);
-
-
+        build_sentients($('.leaf-holder'), 'sentient', 8, 40);
+    }, window.instant ? 5 : window.delay_settings.sentient);
 
 }
 
