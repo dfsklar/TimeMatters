@@ -6,10 +6,10 @@ window.Ymax = 200;  // The furthest from the X axis any object's *CENTER* should
 window.delay_settings = {
     core: {
         'egg':           100,
-        'hadron':       8000,
-        'atom':        14000,
-        'dense':       20000,
-        'black':       20000
+        'hadron':       3500,
+        'atom':         8500,
+        'dense':       13000,
+        'black':       13000
     },
     branch:            20000,
     leaf:              26000,
@@ -339,7 +339,7 @@ function construct() {
     if ( ! getQueryParameterByName('hidecore', null)) {
 
         // HADRONS CLOSEST TO THE EGG
-        build_objects($core, 'hadron', 25, 25,    20,   320, 400, 900,   45, 140, 
+        build_objects($core, 'hadron', 25, 25,    20,   250, 400, 900,   45, 140, 
                      {
                          visibility_delay_base: window.delay_settings.core['hadron']
                      }
