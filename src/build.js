@@ -510,6 +510,9 @@ $(document).ready(function() {
         $root.on('tap', function() {
             var $slate = $('.slate');
             $('.highlights').addClass('invisible');
+            setTimeout(function(){
+                $('.highlights').css({visibility:'hidden'});
+            }, 1000);
             window.mySlateScroller.zoom(1, 0, 0, 8000);
             var $T = buildTimeline($slate);
             $T.addClass('visible');
