@@ -535,6 +535,7 @@ $(document).ready(function() {
             $('.highlights').addClass('invisible');
             setTimeout(function(){
                 $('.highlights').css({visibility:'hidden'});
+                $('.invitation-to-poke').css({opacity: 0.7});
             }, 1000);
             window.mySlateScroller.zoom(1, 0, 0, 8000);
             var $T = buildTimeline($slate);
