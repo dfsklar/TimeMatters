@@ -14,7 +14,7 @@ window.delay_settings = {
     branch:            15000,
     leaf:              19000,
     sentient:          24000,
-    invite_to_proceed:   100, //10000,
+    invite_to_proceed: 25000,
     timeline:        9999999
 };
 
@@ -492,9 +492,9 @@ $(document).ready(function() {
     }
 
     //////////////
-    
-    var $slate = $('.slate');
 
+    var $slate = $('.slate');
+ 
     window.instant = ('true' == getQueryParameterByName('instant', 'false'));
 
     setTimeout(function(){
@@ -502,6 +502,14 @@ $(document).ready(function() {
     }, 300);
 
     build_highlight_vizzes();
+
+    // COOKIE WILL DETERMINE whether or not the invite to proceed comes in early so user can "escape"
+    var cname = 'intro_movie_seen';
+    if ($.cookie(cname) == "Y") {
+        window.delay_settings.invite_to_proceed = 3000;
+    } else {
+        $.cookie(cname, "Y");
+    }
 
     construct();
 
