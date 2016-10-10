@@ -11,10 +11,10 @@ window.delay_settings = {
         'dense':       13000,
         'black':       13000
     },
-    branch:            20000,
-    leaf:              26000,
-    sentient:          32000,
-    invite_to_proceed:  3000,
+    branch:            15000,
+    leaf:              19000,
+    sentient:          24000,
+    invite_to_proceed: 10000,
     timeline:        9999999
 };
 
