@@ -68,21 +68,21 @@
     padding-left: 8px;
     color: white;
     font-family: arial;
-    font-size: 44px;
+    font-size: 50px;
 }
 
     
 .highlight.marriages .viz {
-    transform: scale(3,3) translate(47px, -53px) ;
+    transform: scale(3,3) translate(55px, -53px) ;
     transform-origin: 50% 50% 0;
 }
     
 .highlight.simmering .viz {
-    transform: scale(3,3) translate(88px, -57px) ;
+    transform: scale(3,3) translate(100px, -57px) ;
     transform-origin: 50% 50% 0;
 }
     
 .highlight .viz {
-    transform: scale(2.7,2.7) translate(39px, -63px) ;
+    transform: scale(2.7,2.7) translate(46px, -63px) ;
     transform-origin: 50% 50% 0;
 }
