@@ -5,6 +5,7 @@ window.Ymax = 200;  // The furthest from the X axis any object's *CENTER* should
 
 window.delay_settings = {
     core: {
+        'egg':           100,
         'hadron':       8000,
         'atom':        14000,
         'dense':       20000,
@@ -12,7 +13,7 @@ window.delay_settings = {
     },
     branch_construct:  25000,
     leaf_construct:    19000,
-    timeline:         388888
+    timeline:        9999999
 };
 
 window.dense_types = ['dense1', 'dense2', 'black', 'hadron'];
@@ -199,6 +200,14 @@ function build_branch_upper() {
 function introduce_obj_type(template, label, delay_before_start_in_ms, duration_to_hold_in_ms) {
 
     setTimeout(function() {
+        var $root = $(`.highlight.objtype-${template}`);
+        $root.css({
+            opacity: 1,
+            transform: 'translate(0px,0px)'
+        });
+    }, delay_before_start_in_ms);
+
+    setTimeout(function() {
         var $root = $('.obj_type_introducer');
         var $viz = $('.obj_type_introducer > .viz');
         var $label = $('.obj_type_introducer > .label');
@@ -222,10 +231,30 @@ function introduce_obj_type(template, label, delay_before_start_in_ms, duration_
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 function construct() {
+
+    var $slate = $('.slate');
+    var $core = $('.core');
+
+    var $egg = build_objects($slate, 'white',  36, 36,     1,     0,    0,    0,     0,   0);
+    $egg.css({zIndex: 3333});
 
     // Set up the introduce-object-type presentations in the lower-right corner
     var introduceobjtype_hold_duration = 4000;
+    introduce_obj_type('egg', 'Cosmic Egg', window.delay_settings.core['egg'], introduceobjtype_hold_duration);
     introduce_obj_type('hadron', 'Hadrons', window.delay_settings.core['hadron'], introduceobjtype_hold_duration);
     introduce_obj_type('atom1', 'Atoms', window.delay_settings.core['atom'], introduceobjtype_hold_duration);
     introduce_obj_type('dense1', 'Dense Matter', window.delay_settings.core['dense'], introduceobjtype_hold_duration);
@@ -236,23 +265,6 @@ function construct() {
     }
 
     Math.seedrandom(getQueryParameterByName('seed','helloiofjew.'));
-
-    var $slate = $('.slate');
-    var $core = $('.core');
-
-    setTimeout(build_branch_upper, window.instant ? 5 : window.delay_settings.branch_construct);
-
-    setTimeout(function(){
-        build_leaves($('.leaf-holder'), 'leaf', 8, 40);
-    }, window.instant ? 5 : window.delay_settings.leaf_construct);
-
-    setTimeout(function(){
-        build_sentients($('.leaf-holder'), 'sentient', 8, 40);
-    }, window.instant ? 5 : window.delay_settings.leaf_construct);
-
-    var $egg = build_objects($slate, 'white',  36, 36,     1,     0,    0,    0,     0,   0);
-    $egg.css({zIndex: 3333});
-
 
 
 
@@ -353,6 +365,19 @@ function construct() {
                           }
                          );
         });
+
+
+
+        setTimeout(build_branch_upper, window.instant ? 5 : window.delay_settings.branch_construct);
+
+        setTimeout(function(){
+            build_leaves($('.leaf-holder'), 'leaf', 8, 40);
+        }, window.instant ? 5 : window.delay_settings.leaf_construct);
+
+        setTimeout(function(){
+            build_sentients($('.leaf-holder'), 'sentient', 8, 40);
+        }, window.instant ? 5 : window.delay_settings.leaf_construct);
+
     }
 
     return;

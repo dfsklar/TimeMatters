@@ -8,11 +8,16 @@
 
 .highlight {
     position: absolute;
+    opacity: 0;
     top: 0px;
+    transform: translate(0px,100px);
+    -webkit-transform: translate(0px,100px);
+    transition:         all 1s ease-out;
+    -webkit-transition: all 1s ease-out;
 }
 
 
-.highlight.egg {
+.highlight.objtype-egg {
     left: 30px;
 }
 .highlight.marriages {
@@ -25,7 +30,7 @@
     left: 670px;
 }
 
-.highlight.egg .arrow {
+.highlight.objtype-egg .arrow {
     height: 600px;
 }
 .highlight.marriages .arrow {
