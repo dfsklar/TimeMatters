@@ -467,9 +467,26 @@ function build_highlight_vizzes()
 
 
 
-
+// DOM IS READY !!!
 $(document).ready(function() {
 
+    // If not a phone, bail out
+    var uagent = navigator.userAgent;
+    var device_supp = false;
+    if (uagent.match(/iPhone/i)) {
+        device_supp = true;
+    }
+    if (uagent.match(/android/i)) {
+        device_supp = true;
+    }
+
+    if (!device_supp) {
+        window.location.href = "phone_only.html";
+        return;
+    }
+
+    //////////////
+    
     var $slate = $('.slate');
 
     window.instant = ('true' == getQueryParameterByName('instant', 'false'));

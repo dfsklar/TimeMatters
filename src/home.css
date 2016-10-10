@@ -54,6 +54,7 @@ sub {
 .project-header {
     font-family: Arial;
     position: absolute;
+    top: 0px;
     color: #DDDDDD;
     width: 100%;
 }
@@ -401,3 +402,15 @@ body, .ui-page {
 .circle-outer {
 }
 
+
+
+.project-sorry {
+    margin-top: 180px;
+    padding: 20px;
+}
+
+.project-sorry p {
+    color: white;
+    font-family: arial;
+    font-size: 18px;
+}
