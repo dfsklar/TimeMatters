@@ -534,6 +534,7 @@ $(document).ready(function() {
             var $T = buildTimeline($slate);
             $T.addClass('visible');
             $root.css({visibility: 'hidden'});
+            ga('send', 'event', 'IntroMovie', 'tap-to-proceed', '0');  // 0 means we don't know if they escaped-early or finished
         });
                  
     }, (window.instant ? 5 : window.delay_settings.invite_to_proceed));
