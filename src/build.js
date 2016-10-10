@@ -366,21 +366,24 @@ function construct() {
                          );
         });
 
-
-
-        setTimeout(build_branch_upper, window.instant ? 5 : window.delay_settings.branch_construct);
-
-        setTimeout(function(){
-            build_leaves($('.leaf-holder'), 'leaf', 8, 40);
-        }, window.instant ? 5 : window.delay_settings.leaf_construct);
-
-        setTimeout(function(){
-            build_sentients($('.leaf-holder'), 'sentient', 8, 40);
-        }, window.instant ? 5 : window.delay_settings.leaf_construct);
-
     }
 
     return;
+
+
+
+
+    setTimeout(build_branch_upper, window.instant ? 5 : window.delay_settings.branch_construct);
+
+    setTimeout(function(){
+            build_leaves($('.leaf-holder'), 'leaf', 8, 40);
+        }, window.instant ? 5 : window.delay_settings.leaf_construct);
+
+    setTimeout(function(){
+            build_sentients($('.leaf-holder'), 'sentient', 8, 40);
+        }, window.instant ? 5 : window.delay_settings.leaf_construct);
+
+
 
     // ***************
     // MIDDLE BRANCH
