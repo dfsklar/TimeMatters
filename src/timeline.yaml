@@ -36,7 +36,7 @@ seq_timeline:
    -
      x: 5.4
      time: 300 thousand years
-     label: Merging Matter
+     label: Unfolding
      description: The temperature dropped to 3000 degrees. Hydrogen and helium ruled the stretching space of a growing Universe.
 
    -
@@ -137,7 +137,7 @@ seq_timeline:
    -
      x: 21.5
      time: 10<sup>60</sup> years<br/>&nbsp;
-     label: Re-Death
+     label: Matter
      description: If matter continues to merge, then black holes will dominate the Universe. 
 
    - 
@@ -150,7 +150,7 @@ seq_timeline:
      x: 23.5
      time: 10<sup>10<sup>60</sup></sup> years<br/>&nbsp;
      label: The Future
-     description: The further away in time, the harder it is to use what we know of the past to predict the future. Yet most theories relate in some way to the rate of Universal expansion in comparison to the attraction and contraction of matter and whether the Universe is spinning. For example, one theory hypothesizes that rate of the Universe's expansion would tear matter apart to such an extent that it could not come together to form matter. In that scenario, in less 30 billion years, matter will cease to exist and only pure energy will remain.<p>In the dark era, matter will have disintegrated into pure Energy. Other theories say the matter will outpace the stretching of Universe, resulting in a super-massive black hole that will force the Universe to contract, into an infinitely dense matter that starts the process all over again.
+     description: The further away in time, the harder it is to use what we know of the past to predict the future. Yet most theories relate in some way to the rate of Universal expansion in comparison to the attraction of matter and whether the Universe is spinning. For example, one theory hypothesizes that rate of the Universe's expansion would tear matter apart to such an extent that it could not come together to form matter. In that scenario, in less 30 billion years, matter will cease to exist and only pure energy will remain.<p>In the dark era, matter will have disintegrated into pure Energy. Other theories say the matter will outpace the stretching of Universe, resulting in a super-massive black hole that will force the Universe to contract, into an infinitely dense matter that starts the process all over again.
 
 
 `;
