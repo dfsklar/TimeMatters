@@ -480,6 +480,12 @@ $(document).ready(function() {
         device_supp = true;
     }
 
+    var vpratio = ($(window).width() / $(window).height());
+
+    if (vpratio > 0.9) {
+        device_supp = false;
+    }
+
     if (!device_supp) {
         window.location.href = "phone_only.html";
         return;
