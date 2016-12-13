@@ -12,9 +12,11 @@ Download and unzipi this repository into your local file system's "Documents" fo
 
 Launch the chrome browser and point it at http://www.google.com
 
-Right click anywhere in blank space on that page and choose "Inspect"
+Right click anywhere in blank space on that page and choose "Inspect".
 
-In the upper-left corner of the development-assistant pane that comes up, tap on the icon representing "phone/tablet".
+A development-assistant pane will now pop up.  You may want to configure it to always appear on the right side of your browser window instead of hugging the bottom, to make phone-emulation development easier.  To do so, click on the "three dots" icon in the upper-right corner of that pane and play with the "Dock Side" chooser.
+
+Once you've got the pane docked where you'd like it:  In the upper-left corner of the development-assistant pane, tap on the icon representing "phone/tablet".
 
 The webpage you were looking at (google.com) is now appearing in a tablet/phone emulation pane.  Above it you will see a dropdown currently selecting "Responsive".  Choose "iPhone 6" instead.
 
